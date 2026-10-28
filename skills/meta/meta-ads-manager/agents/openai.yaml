@@ -1,0 +1,4 @@
+interface:
+  display_name: "Meta Ads Manager"
+  short_description: "Audit creatives and apply approved campaign naming"
+  default_prompt: "Use $meta-ads-manager to inspect this campaign and prepare professional names for approval before applying changes."
