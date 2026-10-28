@@ -33,3 +33,7 @@ The publication check covers Skill Creator validation for all 23 entrypoints, fo
 The T3 update skill was not found in local installed Codex/Claude skills, configured skill directories, or the source skill packages inspected on this Mac. Its presence on the VPS remains unverified. It has not been recreated or added under a guessed name.
 
 Use `vps-skill-collection-prompt.txt` from a VPS agent to inventory source packages, locate the T3 update skill, compare duplicates by contents and provenance, preserve uncertain variants, and publish supported additions. The VPS agent should write its own inventory rather than replacing the Mac source snapshot.
+
+## VPS collection completed on 28 October 2026 (UTC)
+
+The VPS follow-up above describes the earlier Mac-only state. The equivalent updater has now been found and collected as `update-osiris-t3`, with all nine other standalone installed VPS workflows. See [VPS collection notes](vps-collection-notes.md) and the separate [VPS inventory](vps-skill-inventory.json). The original Mac inventory remains an unchanged historical snapshot; its `vps_pending` field is superseded by the VPS inventory. The original Mac heading uses its source date; VPS timestamps are recorded independently in UTC.

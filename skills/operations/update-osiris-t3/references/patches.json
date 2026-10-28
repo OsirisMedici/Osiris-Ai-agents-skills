@@ -1,0 +1,27 @@
+{
+  "fork": "OsirisMedici/t3code",
+  "upstream": "pingdotgg/t3code",
+  "source_checkout": "~/projects/t3code-live-browser",
+  "suggested_release_branch": "osiris/live",
+  "default_channel": "nightly",
+  "patches": [
+    {
+      "id": "configured-browser",
+      "commit": "7911191adf758686c9238be7b27aaa4321bfe642",
+      "source_branch": "fix/live-3770-browser-executable",
+      "behavior": "Honor T3CODE_SERVER_BROWSER_EXECUTABLE without downloading a fallback for an invalid override; preserve browser profiles and sandbox behavior.",
+      "regression_files": ["apps/server/src/preview/PreviewBrowser.test.ts"]
+    },
+    {
+      "id": "browser-viewport-fit",
+      "commit": "616d5cb20fbd75ef72bcb91d4383a07d7b159420",
+      "source_branch": "fix/browser-agent-viewport-fit",
+      "pull_request": "https://github.com/OsirisMedici/t3code/pull/3",
+      "behavior": "Fit agent-controlled fill viewports to the selected viewer and preserve size across handoffs without stretching, input-control bypass, or multi-viewer resize fights.",
+      "regression_files": [
+        "apps/server/src/preview/ServerBrowser.test.ts",
+        "packages/client-runtime/src/preview/serverBrowserStream.test.ts"
+      ]
+    }
+  ]
+}

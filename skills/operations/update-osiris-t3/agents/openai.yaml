@@ -1,0 +1,4 @@
+interface:
+  display_name: "Update Osiris T3"
+  short_description: "Update T3 while keeping the Osiris fixes"
+  default_prompt: "Use $update-osiris-t3 to update my Osiris T3 build to the newest nightly, preserving my fixes and sessions, and install the tested server and desktop updates."
