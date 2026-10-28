@@ -1,6 +1,6 @@
 # Osiris Ai agents skills
 
-Private source library for Osiris's reusable operations, creative, product, and tool skills. Repository: [Osiris-Ai-agents-skills](https://github.com/OsirisMedici/Osiris-Ai-agents-skills). On 29 October 2026 its scope expanded beyond social and campaign operations to collect custom and adapted skills available on Mac and VPS.
+Public source library for Osiris's reusable operations, creative, product, and tool skills. Repository: [Osiris-Ai-agents-skills](https://github.com/OsirisMedici/Osiris-Ai-agents-skills). On 29 October 2026 its scope expanded beyond social and campaign operations to collect custom and adapted skills available on Mac and VPS.
 
 ## Catalog
 
@@ -28,4 +28,4 @@ Some skills target macOS, a local app, a private workspace, or specific MCP tool
 
 Keep skills in `skills/<category>/<skill-name>/`, including their references, helpers, templates, assets, metadata and existing licenses. Preserve attribution for adapted and curated upstream material. System/plugin caches and unrelated installed engineering collections are outside this custom-skill collection.
 
-Follow [AGENTS.md](AGENTS.md). Run the available Skill Creator `quick_validate.py` on changed skills and appropriate checks on modified helpers. Keep the repository private and retain client/account data in its authorized workspace.
+Follow [AGENTS.md](AGENTS.md). Run the available Skill Creator `quick_validate.py` on changed skills and appropriate checks on modified helpers. The owner authorized public visibility on 29 October 2026. Retain client/account data in its private authorized workspace.

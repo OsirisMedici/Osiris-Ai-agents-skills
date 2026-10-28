@@ -1,4 +1,4 @@
-Collect Osiris's custom skills from this VPS into https://github.com/OsirisMedici/Osiris-Ai-agents-skills and push the reconciled result. I authorize adding and updating these skill packages in that private repository. Do not run the workflows they describe or update/restart T3 itself.
+Collect Osiris's custom skills from this VPS into https://github.com/OsirisMedici/Osiris-Ai-agents-skills and push the reconciled result. I authorize adding and updating these skill packages in that public repository. Do not run the workflows they describe or update/restart T3 itself.
 
 Read the repository's AGENTS.md, README.md, docs/collection-notes.md, and docs/local-skill-inventory.json first. Follow applicable host instructions and Skill Creator guidance. Use an existing clean checkout or a fresh dedicated clone; preserve dirty checkouts and installed skill folders.
 
