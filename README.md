@@ -1,6 +1,6 @@
-# Osiris skills library
+# Osiris Ai agents skills
 
-Private source library for Osiris's reusable operations, creative, product, and tool skills. The repository retains its original `social-operations-skills` name. On 29 October 2026 its scope expanded beyond social and campaign operations to collect custom and adapted skills available on Mac and VPS.
+Private source library for Osiris's reusable operations, creative, product, and tool skills. Repository: [Osiris-Ai-agents-skills](https://github.com/OsirisMedici/Osiris-Ai-agents-skills). On 29 October 2026 its scope expanded beyond social and campaign operations to collect custom and adapted skills available on Mac and VPS.
 
 ## Catalog
 
