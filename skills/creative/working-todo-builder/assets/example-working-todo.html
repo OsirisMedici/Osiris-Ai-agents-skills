@@ -1,0 +1,2329 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sample App Working TODO</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+:root {
+  color-scheme: light;
+  --background: #f4efe5;
+  --foreground: #151411;
+  --card: #fffdf7;
+  --card-strong: #fffdf7;
+  --primary: #c95532;
+  --primary-dark: #a74225;
+  --primary-foreground: #ffffff;
+  --muted: #e8e1d5;
+  --muted-foreground: #413c35;
+  --accent: #3f8064;
+  --border: #bdb2a0;
+  --success: #2f7d5d;
+  --shadow: 0 2px 0 rgba(80, 67, 50, 0.08), 0 14px 28px rgba(56, 43, 28, 0.08);
+  --radius: 8px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background: var(--background);
+}
+
+body {
+  margin: 0;
+  min-width: 940px;
+  background:
+    linear-gradient(rgba(255, 255, 255, 0.38) 1px, transparent 1px),
+    var(--background);
+  background-size: 100% 28px;
+  color: var(--foreground);
+  font-family: "Space Grotesk", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  letter-spacing: 0;
+  text-rendering: geometricPrecision;
+  -webkit-font-smoothing: antialiased;
+}
+
+button {
+  font: inherit;
+}
+
+svg {
+  width: 20px;
+  height: 20px;
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 2;
+}
+
+.container {
+  width: min(100% - 56px, 1360px);
+  margin: 0 auto;
+}
+
+.app-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  border-bottom: 1px solid #bfb7a8;
+  background: #fffdf7;
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 68px;
+}
+
+.brand,
+.project-meta {
+  display: flex;
+  align-items: center;
+}
+
+.brand {
+  gap: 12px;
+}
+
+.brand-icon {
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius);
+  background: var(--primary);
+  color: var(--primary-foreground);
+}
+
+.brand strong {
+  font-family: "Space Grotesk", system-ui, sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.project-meta {
+  gap: 16px;
+  text-align: right;
+}
+
+.project-meta strong,
+.project-meta span {
+  display: block;
+}
+
+.project-meta strong {
+  font-size: 15px;
+}
+
+.project-meta span {
+  margin-top: 2px;
+  color: var(--muted-foreground);
+  font-size: 13px;
+}
+
+.client-avatar {
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 999px;
+  background: #f2ded6;
+  color: var(--primary);
+  font-weight: 800;
+}
+
+.app-main {
+  padding-top: 32px;
+}
+
+.hero-section {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 40px;
+  align-items: center;
+  margin-bottom: 30px;
+  animation: fadeIn 360ms ease both;
+}
+
+.tracker-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 10px;
+  color: var(--muted-foreground);
+  font-size: 13px;
+}
+
+.tracker-label span:first-child {
+  color: var(--primary);
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.tracker-label i {
+  width: 16px;
+  height: 1px;
+  background: var(--border);
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+  font-family: "Space Grotesk", system-ui, sans-serif;
+  letter-spacing: 0;
+}
+
+.hero-copy h1 {
+  max-width: 780px;
+  margin-bottom: 10px;
+  font-size: 42px;
+  line-height: 1.08;
+}
+
+.hero-copy p {
+  max-width: 620px;
+  margin: 0;
+  color: #46423b;
+  font-size: 17px;
+  line-height: 1.55;
+}
+
+.overall-card {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  min-width: 380px;
+  padding: 22px;
+  border: 1px solid #c6beb0;
+  border-radius: 12px;
+  background: var(--card);
+  box-shadow: var(--shadow);
+}
+
+.progress-ring {
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: 120px;
+  height: 120px;
+}
+
+.progress-ring svg {
+  width: 120px;
+  height: 120px;
+  transform: rotate(-90deg);
+}
+
+.progress-ring circle {
+  fill: none;
+  stroke-width: 8;
+}
+
+.ring-track {
+  stroke: #ddd7ce;
+}
+
+.ring-fill {
+  stroke: var(--primary);
+  stroke-dasharray: 326.73;
+  stroke-dashoffset: calc(326.73 - (326.73 * var(--progress) / 100));
+  stroke-linecap: round;
+  transition: stroke-dashoffset 700ms ease;
+}
+
+.progress-ring div {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.progress-ring strong {
+  font-family: "Space Grotesk", system-ui, sans-serif;
+  font-size: 30px;
+}
+
+.progress-ring span {
+  color: #5d574f;
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.overall-copy h2 {
+  margin-bottom: 4px;
+  font-size: 19px;
+}
+
+.overall-copy p {
+  margin: 0 0 14px;
+  color: #514c45;
+  font-size: 15px;
+}
+
+.overall-counts {
+  display: flex;
+  gap: 18px;
+  color: #514c45;
+  font-size: 14px;
+}
+
+.overall-counts strong {
+  color: var(--foreground);
+}
+
+.view-toggle {
+  display: inline-flex;
+  gap: 4px;
+  margin-bottom: 34px;
+  padding: 4px;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  background: #ece7df;
+}
+
+.view-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 40px;
+  border: 0;
+  border-radius: var(--radius);
+  padding: 0 16px;
+  background: transparent;
+  color: var(--muted-foreground);
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 700;
+  transition: background 160ms ease, color 160ms ease, transform 160ms ease;
+}
+
+.view-button:hover {
+  color: var(--foreground);
+  background: var(--muted);
+}
+
+.view-button.is-active {
+  background: var(--primary);
+  color: var(--primary-foreground);
+}
+
+.view-button svg {
+  width: 16px;
+  height: 16px;
+}
+
+.checklist-layout {
+  display: grid;
+  grid-template-columns: minmax(292px, 32%) minmax(0, 1fr);
+  gap: 28px;
+  padding-top: 4px;
+}
+
+.sticky-panel {
+  position: sticky;
+  top: 96px;
+}
+
+.phase-sidebar h2 {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 18px;
+  color: #141414;
+  font-size: 20px;
+  line-height: 1.2;
+}
+
+.phase-sidebar h2 span {
+  color: #4b4740;
+  font-family: "Space Grotesk", system-ui, sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.phase-list {
+  display: grid;
+  gap: 13px;
+}
+
+.phase-card {
+  position: relative;
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: 13px;
+  width: 100%;
+  min-height: 132px;
+  border: 1.5px solid #b8afa0;
+  border-radius: var(--radius);
+  padding: 17px;
+  background: var(--card);
+  color: var(--foreground);
+  cursor: pointer;
+  text-align: left;
+  transition: border-color 200ms ease, background 200ms ease, box-shadow 200ms ease, transform 200ms ease;
+}
+
+.phase-card:hover {
+  border-color: #d47a5d;
+  background: #fffefa;
+  box-shadow: 0 12px 28px rgba(25, 25, 25, 0.1);
+  transform: translateY(-1px);
+}
+
+.phase-card.is-selected {
+  border-color: var(--primary);
+  background: #fffefa;
+  box-shadow: 0 12px 30px rgba(201, 85, 50, 0.14);
+}
+
+.phase-card.is-selected::before {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 5px;
+  height: 40px;
+  border-radius: 0 999px 999px 0;
+  background: var(--primary);
+  content: "";
+  transform: translateY(-50%);
+}
+
+.phase-icon,
+.detail-icon {
+  display: grid;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  border-radius: var(--radius);
+  border: 1px solid #d1c8ba;
+  background: #ede8df;
+  color: #26231f;
+  transition: background 200ms ease, color 200ms ease, transform 200ms ease;
+}
+
+.phase-card.is-selected .phase-icon {
+  border-color: var(--primary);
+  background: var(--primary);
+  color: var(--primary-foreground);
+}
+
+.phase-card.status-complete {
+  border-color: #8db8a3;
+}
+
+.phase-card.status-complete .phase-icon {
+  background: var(--success);
+  color: #ffffff;
+}
+
+.phase-copy {
+  min-width: 0;
+}
+
+.phase-copy small,
+.phase-copy strong,
+.phase-copy em,
+.phase-progress-meta,
+.bar {
+  display: block;
+}
+
+.phase-copy small {
+  color: #4a453e;
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.phase-copy strong {
+  margin-top: 5px;
+  overflow: hidden;
+  font-family: "Space Grotesk", system-ui, sans-serif;
+  font-size: 18px;
+  line-height: 1.18;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.phase-copy em {
+  margin-top: 7px;
+  overflow: hidden;
+  color: #332f2a;
+  display: -webkit-box;
+  font-size: 14.5px;
+  font-style: normal;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+}
+
+.phase-progress-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 15px;
+  color: #423d36;
+  font-size: 13.5px;
+}
+
+.phase-progress-meta b {
+  color: var(--foreground);
+}
+
+.bar {
+  height: 8px;
+  margin-top: 8px;
+  overflow: hidden;
+  border-radius: 999px;
+  background: #d7d0c5;
+}
+
+.bar.large {
+  height: 10px;
+}
+
+.bar i {
+  display: block;
+  height: 100%;
+  border-radius: inherit;
+  background: var(--primary);
+  transition: width 500ms ease;
+}
+
+.phase-card.status-complete .bar i,
+.status-dot.complete {
+  background: var(--success);
+}
+
+.detail-card {
+  animation: slideInRight 260ms ease both;
+}
+
+.detail-head {
+  display: flex;
+  gap: 18px;
+  align-items: flex-start;
+  padding: 18px;
+  border: 1px solid #c8c0b3;
+  border-radius: var(--radius);
+  background: var(--card);
+  box-shadow: 0 10px 24px rgba(25, 25, 25, 0.06);
+  margin-bottom: 24px;
+}
+
+.detail-icon {
+  flex: 0 0 auto;
+  width: 50px;
+  height: 50px;
+  border: 1px solid #d8b3a4;
+  background: #f7e6de;
+  color: #9d3f23;
+}
+
+.detail-icon svg {
+  width: 25px;
+  height: 25px;
+}
+
+.detail-head p {
+  margin: 0 0 6px;
+  color: #9d3f23;
+  font-size: 13px;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.detail-head h2 {
+  margin-bottom: 7px;
+  color: #171717;
+  font-size: 32px;
+  line-height: 1.05;
+}
+
+.detail-head span {
+  color: #3f3a34;
+  font-size: 16px;
+  line-height: 1.45;
+}
+
+.check-progress {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 20px;
+  align-items: center;
+  margin-bottom: 22px;
+  padding: 19px;
+  border-radius: var(--radius);
+  border: 1.5px solid #bfb6a7;
+  background: var(--card);
+  box-shadow: 0 10px 24px rgba(25, 25, 25, 0.05);
+}
+
+.check-progress-text {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 9px;
+}
+
+.check-progress-text span {
+  color: #332f2a;
+  font-size: 15.5px;
+}
+
+.check-progress > strong {
+  min-width: 72px;
+  font-family: "Space Grotesk", system-ui, sans-serif;
+  color: #171717;
+  font-size: 40px;
+  text-align: right;
+}
+
+.checklist-items {
+  display: grid;
+  gap: 13px;
+}
+
+.checklist-row {
+  display: grid;
+  grid-template-columns: auto minmax(260px, 1fr) minmax(210px, auto) auto;
+  gap: 16px;
+  align-items: center;
+  width: 100%;
+  min-height: 62px;
+  border: 1.5px solid #b8afa0;
+  border-radius: var(--radius);
+  padding: 16px;
+  background: var(--card);
+  color: var(--foreground);
+  cursor: pointer;
+  text-align: left;
+  animation: fadeIn 260ms ease both;
+  animation-delay: var(--delay);
+  transition: border-color 180ms ease, background 180ms ease, box-shadow 180ms ease, transform 180ms ease;
+}
+
+.checklist-row:hover {
+  border-color: #d47a5d;
+  box-shadow: 0 10px 24px rgba(25, 25, 25, 0.11);
+  transform: translateY(-1px);
+}
+
+.checklist-row.is-complete {
+  border-color: #6fa489;
+  background: #fbfff8;
+}
+
+.checklist-row.just-toggled {
+  animation: checklistPulse 520ms ease both;
+}
+
+.checkbox {
+  display: grid;
+  place-items: center;
+  width: 28px;
+  height: 28px;
+  border: 2px solid #91887b;
+  border-radius: 6px;
+  color: #ffffff;
+  transition: border-color 180ms ease, background 180ms ease, transform 180ms ease;
+}
+
+.checklist-row:hover .checkbox {
+  border-color: #c95532;
+}
+
+.checklist-row.is-complete .checkbox {
+  border-color: var(--success);
+  background: var(--success);
+  transform: scale(1.04);
+}
+
+.checklist-row strong {
+  color: #171717;
+  font-size: 17px;
+  font-weight: 800;
+  line-height: 1.25;
+  transition: color 180ms ease;
+}
+
+.todo-main {
+  display: grid;
+  gap: 4px;
+  min-width: 0;
+}
+
+.todo-main small {
+  color: #615b52;
+  font-size: 12.5px;
+  font-weight: 650;
+}
+
+.checklist-row.is-complete strong {
+  color: #151411;
+  text-decoration: none;
+}
+
+.assignee-ui {
+  display: grid;
+  justify-items: end;
+  gap: 8px;
+}
+
+.assign-label {
+  color: #38332d;
+  font-size: 11.5px;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.assignee-options {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.assignee-chip {
+  display: grid;
+  place-items: center;
+  width: 32px;
+  height: 32px;
+  margin-left: 0;
+  border: 1.5px solid #bdb2a0;
+  border-radius: 999px;
+  background: #e6e0d7;
+  color: #211f1c;
+  font-size: 11px;
+  font-weight: 900;
+  box-shadow: none;
+}
+
+.assignee-chip:first-child {
+  margin-left: 0;
+}
+
+.assignee-chip.is-suggested {
+  background: var(--primary);
+  color: #ffffff;
+}
+
+.checklist-row em {
+  border-radius: 999px;
+  padding: 6px 10px;
+  border: 1px solid #c9bfaf;
+  background: #eee7dc;
+  color: #211f1c;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 800;
+}
+
+.checklist-row.is-complete em {
+  border-color: #8ab7a1;
+  background: #e5f4ec;
+  color: #215d45;
+}
+
+.checklist-row.is-complete .assignee-chip.is-suggested {
+  background: var(--success);
+}
+
+.timeline-view {
+  animation: fadeIn 260ms ease both;
+}
+
+.timeline-head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 18px;
+  margin-bottom: 20px;
+}
+
+.timeline-head h2 {
+  margin-bottom: 6px;
+  font-size: 24px;
+}
+
+.timeline-head p {
+  margin: 0;
+  color: var(--muted-foreground);
+}
+
+.timeline-title {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  margin-bottom: 6px;
+}
+
+.timeline-title-icon,
+.milestone-title span {
+  display: grid;
+  place-items: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 999px;
+  color: var(--primary);
+}
+
+.timeline-title-icon svg,
+.milestone-title svg {
+  width: 22px;
+  height: 22px;
+}
+
+.gantt-shell {
+  overflow: hidden;
+  border: 1.5px solid #b8afa0;
+  border-radius: 12px;
+  background: var(--card);
+}
+
+.gantt-header,
+.gantt-row {
+  display: grid;
+  grid-template-columns: 230px minmax(0, 1fr);
+}
+
+.gantt-header {
+  border-bottom: 1.5px solid #b8afa0;
+  background: #f3eee5;
+}
+
+.gantt-phase-header {
+  display: flex;
+  align-items: center;
+  min-height: 58px;
+  padding: 16px;
+  border-right: 1.5px solid #b8afa0;
+  color: #4a453e;
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.gantt-weeks {
+  overflow-x: auto;
+}
+
+.gantt-week-row {
+  display: flex;
+  min-width: max-content;
+}
+
+.gantt-week {
+  flex: 0 0 80px;
+  min-height: 58px;
+  padding: 10px 8px;
+  border-right: 1px solid #d1c8ba;
+  text-align: center;
+}
+
+.gantt-week strong,
+.gantt-week span {
+  display: block;
+}
+
+.gantt-week strong {
+  color: #4a453e;
+  font-size: 12px;
+}
+
+.gantt-week span {
+  margin-top: 3px;
+  color: #766e62;
+  font-size: 11px;
+}
+
+.gantt-row {
+  min-height: 78px;
+  border-bottom: 1px solid #d1c8ba;
+  transition: background 160ms ease;
+}
+
+.gantt-row:last-of-type {
+  border-bottom: 0;
+}
+
+.gantt-row:hover {
+  background: #fffaf2;
+}
+
+.gantt-phase-name {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: 10px;
+  align-content: center;
+  padding: 16px;
+  border-right: 1.5px solid #b8afa0;
+}
+
+.gantt-phase-name svg {
+  width: 18px;
+  height: 18px;
+  color: var(--primary);
+}
+
+.gantt-phase-name strong,
+.gantt-phase-name small {
+  display: block;
+}
+
+.gantt-phase-name strong {
+  overflow: hidden;
+  color: #151411;
+  font-size: 15px;
+  font-weight: 800;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.gantt-phase-name small {
+  margin-top: 3px;
+  color: #5c554c;
+  font-size: 12px;
+}
+
+.gantt-track-cell {
+  overflow-x: auto;
+  padding: 20px 18px;
+}
+
+.gantt-track {
+  position: relative;
+  height: 36px;
+  min-width: max-content;
+  border-radius: var(--radius);
+  background: #eee7dc;
+}
+
+.gantt-bar {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  overflow: hidden;
+  border: 2px solid #d1c8ba;
+  border-radius: var(--radius);
+  background: #fffdf7;
+}
+
+.gantt-bar i {
+  display: block;
+  height: 100%;
+  border-radius: 5px 0 0 5px;
+  background: #d8d1c5;
+  opacity: 0.9;
+  transition: width 500ms ease;
+}
+
+.gantt-bar.complete {
+  border-color: var(--primary);
+  background: #faece6;
+}
+
+.gantt-bar.complete i {
+  background: var(--primary);
+}
+
+.gantt-bar.active {
+  border-color: var(--accent);
+  background: #eef7f2;
+}
+
+.gantt-bar.active i {
+  background: var(--accent);
+}
+
+.gantt-bar.pending {
+  border-color: #d1c8ba;
+}
+
+.gantt-bar b {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  color: #151411;
+  font-size: 12px;
+  font-weight: 900;
+}
+
+.milestone-section {
+  margin-top: 30px;
+}
+
+.milestone-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 14px;
+}
+
+.milestone-title h3 {
+  font-size: 19px;
+}
+
+.milestone-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.milestone-card {
+  padding: 16px;
+  border: 2px solid #d1c8ba;
+  border-radius: var(--radius);
+  background: var(--card);
+}
+
+.milestone-card.complete {
+  border-color: var(--primary);
+}
+
+.milestone-card.active {
+  border-color: var(--accent);
+}
+
+.milestone-card > div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+.milestone-card > div svg {
+  width: 20px;
+  height: 20px;
+  color: var(--primary);
+}
+
+.milestone-card strong {
+  color: #151411;
+  font-size: 15px;
+}
+
+.milestone-card p {
+  margin: 4px 0;
+  color: #5c554c;
+  font-size: 13px;
+}
+
+.milestone-progress {
+  display: block;
+  margin-top: 12px;
+}
+
+.milestone-progress small {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 6px;
+  color: #5c554c;
+  font-size: 12px;
+}
+
+.milestone-progress em {
+  font-style: normal;
+}
+
+.milestone-progress i {
+  display: block;
+  height: 8px;
+  overflow: hidden;
+  border-radius: 999px;
+  background: #e0d9ce;
+}
+
+.milestone-progress mark {
+  display: block;
+  height: 100%;
+  border-radius: inherit;
+  background: var(--primary);
+}
+
+.timeline-legend {
+  display: flex;
+  gap: 18px;
+  margin-bottom: 18px;
+  color: var(--muted-foreground);
+  font-size: 14px;
+}
+
+.timeline-legend span {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.timeline-legend i,
+.status-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 999px;
+  background: var(--muted);
+}
+
+.timeline-legend .complete {
+  background: var(--primary);
+}
+
+.timeline-legend .active,
+.status-dot.active,
+.gantt-bar.active i {
+  background: var(--accent);
+}
+
+.footer {
+  margin-top: 64px;
+  border-top: 1px solid var(--border);
+  padding: 28px 0;
+  color: var(--muted-foreground);
+  text-align: center;
+  font-size: 13px;
+}
+
+.toast {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  z-index: 40;
+  max-width: 360px;
+  border-radius: var(--radius);
+  padding: 12px 14px;
+  background: var(--foreground);
+  color: #ffffff;
+  font-size: 13px;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(8px);
+  transition: opacity 160ms ease, transform 160ms ease;
+}
+
+.toast.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.is-hidden {
+  display: none;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 1;
+    transform: translateY(4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 1;
+    transform: translateX(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes checklistPulse {
+  0% {
+    transform: scale(1);
+  }
+  45% {
+    border-color: hsl(150 45% 42% / 0.45);
+    box-shadow: 0 14px 28px hsl(150 45% 42% / 0.14);
+    transform: scale(1.01);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@media (max-width: 1180px) {
+  body {
+    min-width: 900px;
+  }
+
+  .hero-section {
+    grid-template-columns: 1fr;
+  }
+
+  .overall-card {
+    width: fit-content;
+  }
+
+  .checklist-layout {
+    grid-template-columns: 290px minmax(0, 1fr);
+    gap: 22px;
+  }
+}
+
+    </style>
+    <style>
+      .working-todo .project-meta {
+        gap: 12px;
+      }
+
+      .working-todo .build-avatar {
+        display: grid;
+        place-items: center;
+        width: 40px;
+        height: 40px;
+        border-radius: 999px;
+        background: #f2ded6;
+        color: var(--primary);
+        font-weight: 800;
+      }
+
+      .working-todo .view-toggle {
+        margin-bottom: 28px;
+      }
+
+      .working-todo a.view-button {
+        text-decoration: none;
+      }
+
+      .working-todo .checklist-layout {
+        align-items: start;
+      }
+
+      .working-todo .sticky-panel,
+      .working-todo .phase-detail {
+        max-height: calc(100vh - 96px);
+        overflow-y: auto;
+        overscroll-behavior: contain;
+        padding-right: 8px;
+        scrollbar-gutter: stable;
+      }
+
+      .working-todo .phase-detail {
+        position: sticky;
+        top: 88px;
+        align-self: start;
+      }
+
+      .working-todo .sticky-panel {
+        top: 88px;
+      }
+
+      .working-todo .sticky-panel::-webkit-scrollbar,
+      .working-todo .phase-detail::-webkit-scrollbar {
+        width: 9px;
+      }
+
+      .working-todo .sticky-panel::-webkit-scrollbar-track,
+      .working-todo .phase-detail::-webkit-scrollbar-track {
+        background: #eee7dc;
+        border-radius: 999px;
+      }
+
+      .working-todo .sticky-panel::-webkit-scrollbar-thumb,
+      .working-todo .phase-detail::-webkit-scrollbar-thumb {
+        border: 2px solid #eee7dc;
+        border-radius: 999px;
+        background: #c9bbaa;
+      }
+
+      .working-todo .checklist-row {
+        grid-template-columns: auto minmax(0, 1fr) auto;
+      }
+
+      .working-todo .checklist-row.is-disapproved {
+        border-color: #b9afa1;
+        background: #f1ebe2;
+        opacity: 0.82;
+      }
+
+      .working-todo .checklist-row.is-disapproved strong {
+        color: #4d473f;
+        text-decoration: line-through;
+      }
+
+      .working-todo .todo-main small {
+        color: #5a554d;
+        font-size: 13px;
+        line-height: 1.35;
+      }
+
+      .working-todo .task-code {
+        display: inline-flex;
+        width: fit-content;
+        min-height: 22px;
+        align-items: center;
+        margin-bottom: 5px;
+        padding: 0 8px;
+        border-radius: 999px;
+        background: #f2ded6;
+        color: #9d3f23;
+        font-size: 11px;
+        font-weight: 900;
+        letter-spacing: 0.04em;
+      }
+
+      .working-todo .detail-head {
+        margin-bottom: 20px;
+      }
+
+      .working-todo .focus-card {
+        display: flex;
+        gap: 14px;
+        align-items: center;
+        margin-bottom: 20px;
+        padding: 15px 17px;
+        border: 1.5px solid #d8b3a4;
+        border-radius: var(--radius);
+        background: #fff8f3;
+        box-shadow: 0 10px 24px rgba(201, 85, 50, 0.08);
+      }
+
+      .working-todo .focus-card .detail-icon {
+        width: 42px;
+        height: 42px;
+      }
+
+      .working-todo .focus-card p {
+        margin: 0 0 4px;
+        color: #9d3f23;
+        font-size: 12px;
+        font-weight: 900;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
+      .working-todo .focus-card strong {
+        color: #171717;
+        font-size: 16px;
+      }
+
+      .working-todo .focus-card span {
+        display: block;
+        margin-top: 4px;
+        color: #4a453e;
+        font-size: 13px;
+        line-height: 1.4;
+      }
+
+      .working-todo .approval-card {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) auto;
+        gap: 18px;
+        align-items: center;
+        margin-bottom: 28px;
+        padding: 17px 19px;
+        border: 1.5px solid #bfb6a7;
+        border-radius: var(--radius);
+        background: var(--card);
+        box-shadow: 0 10px 24px rgba(25, 25, 25, 0.05);
+      }
+
+      .working-todo .approval-copy p {
+        margin: 0 0 5px;
+        color: #9d3f23;
+        font-size: 12px;
+        font-weight: 900;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
+      .working-todo .approval-copy strong {
+        display: block;
+        margin-bottom: 4px;
+        color: #171717;
+        font-size: 18px;
+        line-height: 1.2;
+      }
+
+      .working-todo .approval-copy span {
+        color: #4a453e;
+        font-size: 13.5px;
+        line-height: 1.4;
+      }
+
+      .working-todo .approval-actions {
+        display: flex;
+        gap: 8px;
+        align-items: center;
+        justify-content: flex-end;
+      }
+
+      .working-todo .approval-actions button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 40px;
+        border: 1px solid var(--border);
+        border-radius: var(--radius);
+        padding: 0 14px;
+        background: #fffdf7;
+        color: var(--foreground);
+        cursor: pointer;
+        font-size: 14px;
+        font-weight: 800;
+      }
+
+      .working-todo .approval-actions button:hover {
+        border-color: #d47a5d;
+        background: #fffefa;
+      }
+
+      .working-todo .approval-actions .primary-copy {
+        border-color: var(--primary);
+        background: var(--primary);
+        color: var(--primary-foreground);
+      }
+
+      .working-todo .approval-actions .primary-copy:hover {
+        background: var(--primary-dark);
+      }
+
+      .working-todo .copy-fallback {
+        display: none;
+        grid-column: 1 / -1;
+        margin-top: 12px;
+      }
+
+      .working-todo .copy-fallback.is-visible {
+        display: grid;
+        gap: 7px;
+      }
+
+      .working-todo .copy-fallback label {
+        color: #4a453e;
+        font-size: 12px;
+        font-weight: 800;
+      }
+
+      .working-todo .copy-fallback textarea {
+        width: 100%;
+        min-height: 154px;
+        resize: vertical;
+        border: 1.5px solid #bfb6a7;
+        border-radius: var(--radius);
+        padding: 12px;
+        background: #fffdf7;
+        color: var(--foreground);
+        font: inherit;
+        font-size: 13px;
+        line-height: 1.45;
+      }
+
+      .working-todo .task-actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        align-items: center;
+        justify-content: flex-end;
+      }
+
+      .working-todo .task-actions em {
+        min-width: 94px;
+        text-align: center;
+      }
+
+      .working-todo .brief-button,
+      .working-todo .disapprove-button {
+        min-height: 32px;
+        border: 1px solid #c9bfaf;
+        border-radius: 999px;
+        padding: 0 10px;
+        background: #eee7dc;
+        color: #211f1c;
+        cursor: pointer;
+        font-size: 13px;
+        font-weight: 800;
+      }
+
+      .working-todo .brief-button:hover,
+      .working-todo .disapprove-button:hover {
+        border-color: #d47a5d;
+        background: #fffefa;
+      }
+
+      .working-todo .brief-button.is-open {
+        border-color: #d47a5d;
+        background: #fff8f3;
+        color: #9d3f23;
+      }
+
+      .working-todo .checklist-row.is-disapproved .disapprove-button {
+        border-color: #9e9385;
+        background: #d8d0c3;
+      }
+
+      .working-todo .task-brief {
+        grid-column: 2 / -1;
+        display: grid;
+        gap: 9px;
+        margin-top: 2px;
+        padding: 14px 16px;
+        border: 1.5px solid #ead8ca;
+        border-radius: var(--radius);
+        background: #fffaf3;
+        box-shadow: inset 3px 0 0 #d65a38;
+        animation: briefReveal 220ms ease both;
+      }
+
+      .working-todo .task-brief small {
+        color: #9d3f23;
+        font-size: 11px;
+        font-weight: 900;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
+      .working-todo .task-brief p {
+        margin: 0;
+        color: #302d29;
+        font-size: 14px;
+        line-height: 1.5;
+      }
+
+      .working-todo .checklist-row.is-disapproved .task-brief {
+        background: #f6f0e7;
+        box-shadow: inset 3px 0 0 #9e9385;
+      }
+
+      .working-todo .plan-actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+      }
+
+      .working-todo .plan-actions a,
+      .working-todo .plan-actions button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 40px;
+        border: 1px solid var(--border);
+        border-radius: var(--radius);
+        padding: 0 14px;
+        background: #fffdf7;
+        color: var(--foreground);
+        cursor: pointer;
+        font-size: 14px;
+        font-weight: 800;
+        text-decoration: none;
+      }
+
+      .working-todo .plan-actions a:hover,
+      .working-todo .plan-actions button:hover {
+        border-color: #d47a5d;
+        background: #fffefa;
+      }
+
+      @keyframes briefReveal {
+        from {
+          opacity: 0;
+          transform: translateY(-4px);
+        }
+
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+    </style>
+  </head>
+  <body class="working-todo">
+    <header class="app-header">
+      <div class="container header-inner">
+        <div class="brand">
+          <div class="brand-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" role="img">
+              <path d="M4 5h16M4 12h16M4 19h16M8 3v18" />
+            </svg>
+          </div>
+          <strong>Working TODO</strong>
+        </div>
+
+        <div class="project-meta">
+          <div>
+            <strong>Sample App Build Room</strong>
+            <span>Osiris + Codex</span>
+          </div>
+          <div class="build-avatar">OC</div>
+        </div>
+      </div>
+    </header>
+
+    <main class="container app-main">
+      <section class="hero-section" aria-labelledby="projectTitle">
+        <div class="hero-copy">
+          <div class="tracker-label">
+            <span>Build Tracker</span>
+            <i aria-hidden="true"></i>
+            <span id="phaseCompletionText">0 of 14 phases complete</span>
+          </div>
+          <h1 id="projectTitle">Sample App Working Plan</h1>
+          <p>A reusable planning board for choosing the best next build tasks before writing code.</p>
+        </div>
+
+        <aside class="overall-card" aria-label="Overall build progress">
+          <div class="progress-ring" id="overallRing" style="--progress:0">
+            <svg viewBox="0 0 120 120" aria-hidden="true">
+              <circle class="ring-track" cx="60" cy="60" r="52"></circle>
+              <circle class="ring-fill" cx="60" cy="60" r="52"></circle>
+            </svg>
+            <div>
+              <strong id="overallProgress">0%</strong>
+              <span>Complete</span>
+            </div>
+          </div>
+          <div class="overall-copy">
+            <h2>Build Progress</h2>
+            <p>Across the full plan</p>
+            <div class="overall-counts">
+              <span><strong id="completedTotal">0</strong> approved</span>
+              <span><strong id="remainingTotal">0</strong> remaining</span>
+            </div>
+          </div>
+        </aside>
+      </section>
+
+      <div class="view-toggle" role="navigation" aria-label="Working plan links">
+        <button class="view-button is-active" type="button">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h6v6H4zM14 5h6v6h-6zM4 15h6v6H4zM14 15h6v6h-6z" /></svg>
+          Checklist
+        </button>
+        <a class="view-button" href="/client-feedback-bank.html#todo">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 19.5V5a2 2 0 0 1 2-2h13v18H6a2 2 0 0 1-2-1.5z" /><path d="M8 7h7M8 11h7" /></svg>
+          Plan Reference
+        </a>
+        <a class="view-button" href="/reference-stack.html">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5h18M3 12h18M3 19h18" /></svg>
+          Reference Stack
+        </a>
+      </div>
+
+      <section class="approval-card" aria-label="Recently approved tasks">
+        <div class="approval-copy">
+          <p>Approval queue</p>
+          <strong id="approvalQueueTitle">No recently approved tasks</strong>
+          <span id="approvalQueueCopy">Click tasks below to approve them for the next build pass. Then copy the approved list and paste it to Codex.</span>
+        </div>
+        <div class="approval-actions">
+          <button class="primary-copy" type="button" id="copyApprovedTasks">Copy Approved Tasks</button>
+          <button type="button" id="clearApprovedQueue">Clear Queue</button>
+        </div>
+        <div class="copy-fallback" id="copyFallback">
+          <label for="copyFallbackText">Paste block. If paste is empty, press Cmd+C while this text is selected.</label>
+          <textarea id="copyFallbackText" readonly></textarea>
+        </div>
+      </section>
+
+      <section class="checklist-layout" id="checklistView">
+        <aside class="phase-sidebar">
+          <div class="sticky-panel">
+            <h2>Project Phases <span>(click to view)</span></h2>
+            <div class="phase-list" id="phaseList"></div>
+          </div>
+        </aside>
+
+        <section class="phase-detail" id="phaseDetail" aria-live="polite"></section>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="plan-actions">
+          <button type="button" id="resetChecks">Reset Checks</button>
+          <a href="/client-feedback-bank.html#todo">Open Working Plan Reference</a>
+          <a href="/reference-stack.html">Back To Reference Stack</a>
+        </div>
+      </div>
+    </footer>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+    <script>
+      const storageKey = "and-os-working-todo-studio-flow-checks-v1";
+      const activePhaseKey = "and-os-working-todo-studio-flow-active-phase-v1";
+      const approvalQueueKey = "and-os-working-todo-approval-queue-v1";
+      const disapprovalKey = "and-os-working-todo-disapproved-v1";
+      const briefStateKey = "and-os-working-todo-open-briefs-v1";
+
+      const state = {
+        activePhaseId: localStorage.getItem(activePhaseKey) || "clarity",
+        lastToggledItemId: null,
+        resetDetailScrollOnRender: false,
+        checks: readChecks(),
+        approvalQueue: readApprovalQueue(),
+        disapproved: readDisapprovals(),
+        openBriefs: readOpenBriefs(),
+        phases: [
+          {
+                    "id": "clarity",
+                    "order": 1,
+                    "icon": "Layout",
+                    "name": "Clarity And Direction",
+                    "description": "Make the first build decisions clear before touching the product surface.",
+                    "checklist": [
+                              {
+                                        "id": "A01",
+                                        "code": "A01",
+                                        "label": "Define the real user",
+                                        "note": "Write who uses the app, what they need first, and what they should ignore.",
+                                        "brief": [
+                                                  "This task prevents the project from becoming a collection of features. Before building, decide who the first version is for and what problem the page or app must solve for that person.",
+                                                  "Approve this when the user and core use case are specific enough to guide UI choices. Disapprove it if the project already has a locked brief and this would slow down execution."
+                                        ]
+                              },
+                              {
+                                        "id": "A02",
+                                        "code": "A02",
+                                        "label": "Choose the first screen",
+                                        "note": "Decide what the user should see immediately when the app opens.",
+                                        "brief": [
+                                                  "The first screen controls the whole product feeling. Use this task to decide whether the app opens on a dashboard, checklist, calendar, canvas, table, or editor.",
+                                                  "Approve this when the first screen is still ambiguous. Disapprove it when the first screen is already obvious from the project type or reference app."
+                                        ]
+                              }
+                    ]
+          },
+          {
+                    "id": "ui",
+                    "order": 2,
+                    "icon": "Layers",
+                    "name": "UI Build Pass",
+                    "description": "Build only the interface that makes the product easier to understand and use.",
+                    "checklist": [
+                              {
+                                        "id": "B01",
+                                        "code": "B01",
+                                        "label": "Create paper-like task surface",
+                                        "note": "Use clear cards, readable contrast, restrained color, and no blur-heavy UI.",
+                                        "brief": [
+                                                  "This task keeps the product grounded in the Studio Flow feeling: clear, tactile, readable, and operational instead of decorative.",
+                                                  "Approve this when the current UI feels noisy, vague, or too SaaS-like. Disapprove it if the existing UI already has the correct visual foundation."
+                                        ]
+                              },
+                              {
+                                        "id": "B02",
+                                        "code": "B02",
+                                        "label": "Add approval states",
+                                        "note": "Let Osiris approve, disapprove, and copy selected tasks for Codex.",
+                                        "brief": [
+                                                  "Approval states turn the board into a decision layer. They help separate things we will build now from things we are parking for later.",
+                                                  "Approve this when the project needs collaborative planning. Disapprove it for a simple one-off page where approvals are unnecessary."
+                                        ]
+                              }
+                    ]
+          },
+          {
+                    "id": "later",
+                    "order": 3,
+                    "icon": "Sparkles",
+                    "name": "Later Parked Ideas",
+                    "description": "Keep useful but non-urgent ideas visible without pulling focus from the MVP.",
+                    "checklist": [
+                              {
+                                        "id": "C01",
+                                        "code": "C01",
+                                        "label": "Park future integrations",
+                                        "note": "Move cloud, login, sync, or automation ideas here until the local MVP works.",
+                                        "brief": [
+                                                  "This task protects the first version from becoming too wide. Future integrations can stay documented without turning into today's build work.",
+                                                  "Approve this when the project is being distracted by later-stage ideas. Disapprove it if the integration is essential to the very first usable version."
+                                        ]
+                              }
+                    ]
+          }
+]
+      };
+
+      const elements = {
+        phaseCompletionText: document.querySelector("#phaseCompletionText"),
+        overallRing: document.querySelector("#overallRing"),
+        overallProgress: document.querySelector("#overallProgress"),
+        completedTotal: document.querySelector("#completedTotal"),
+        remainingTotal: document.querySelector("#remainingTotal"),
+        phaseList: document.querySelector("#phaseList"),
+        phaseDetail: document.querySelector("#phaseDetail"),
+        toast: document.querySelector("#toast"),
+        resetChecks: document.querySelector("#resetChecks"),
+        copyApprovedTasks: document.querySelector("#copyApprovedTasks"),
+        clearApprovedQueue: document.querySelector("#clearApprovedQueue"),
+        approvalQueueTitle: document.querySelector("#approvalQueueTitle"),
+        approvalQueueCopy: document.querySelector("#approvalQueueCopy"),
+        copyFallback: document.querySelector("#copyFallback"),
+        copyFallbackText: document.querySelector("#copyFallbackText")
+      };
+
+      function readChecks() {
+        try {
+          return JSON.parse(localStorage.getItem(storageKey) || "{}");
+        } catch {
+          return {};
+        }
+      }
+
+      function readApprovalQueue() {
+        try {
+          const value = JSON.parse(localStorage.getItem(approvalQueueKey) || "[]");
+          return Array.isArray(value) ? value : [];
+        } catch {
+          return [];
+        }
+      }
+
+      function readDisapprovals() {
+        try {
+          return JSON.parse(localStorage.getItem(disapprovalKey) || "{}");
+        } catch {
+          return {};
+        }
+      }
+
+      function readOpenBriefs() {
+        try {
+          const value = JSON.parse(localStorage.getItem(briefStateKey) || "{}");
+          const openId = Object.keys(value).find((id) => value[id]);
+          return openId ? { [openId]: true } : {};
+        } catch {
+          return {};
+        }
+      }
+
+      function saveChecks() {
+        localStorage.setItem(storageKey, JSON.stringify(state.checks));
+      }
+
+      function saveApprovalQueue() {
+        localStorage.setItem(approvalQueueKey, JSON.stringify(state.approvalQueue));
+      }
+
+      function saveDisapprovals() {
+        localStorage.setItem(disapprovalKey, JSON.stringify(state.disapproved));
+      }
+
+      function saveOpenBriefs() {
+        localStorage.setItem(briefStateKey, JSON.stringify(state.openBriefs));
+      }
+
+      function render() {
+        renderOverview();
+        renderApprovalQueue();
+        renderPhaseList();
+        renderPhaseDetail();
+      }
+
+      function renderOverview() {
+        const overall = getOverallProgress();
+        const totals = getTaskTotals();
+        const completedPhases = state.phases.filter((phase) => getPhaseStatus(phase.id) === "complete").length;
+
+        elements.phaseCompletionText.textContent = `${completedPhases} of ${state.phases.length} phases approved`;
+        elements.overallRing.style.setProperty("--progress", overall);
+        elements.overallProgress.textContent = `${overall}%`;
+        elements.completedTotal.textContent = totals.completed;
+        elements.remainingTotal.textContent = totals.remaining;
+      }
+
+      function renderApprovalQueue() {
+        const approvedTasks = getQueuedTasks();
+        const checkedTasks = getAllTasks().filter((task) => state.checks[task.id] && !state.disapproved[task.id]);
+        const disapprovedCount = getAllTasks().filter((task) => state.disapproved[task.id]).length;
+        const count = approvedTasks.length;
+
+        elements.approvalQueueTitle.textContent = count
+          ? `${count} recently approved ${count === 1 ? "task" : "tasks"} ready to copy`
+          : checkedTasks.length
+            ? `${checkedTasks.length} approved ${checkedTasks.length === 1 ? "task" : "tasks"} available`
+            : "No recently approved tasks";
+
+        elements.approvalQueueCopy.textContent = count
+          ? approvedTasks.map((task) => `${task.code} ${task.label}`).join(" | ")
+          : checkedTasks.length
+            ? "Recent queue is empty, so copy will use all currently approved tasks."
+            : disapprovedCount
+              ? `${disapprovedCount} disapproved ${disapprovedCount === 1 ? "task is" : "tasks are"} excluded. Approve another task to copy it.`
+              : "Click tasks below to approve them for the next build pass. Then copy the approved list and paste it to Codex.";
+      }
+
+      function renderPhaseList() {
+        elements.phaseList.innerHTML = state.phases.map((phase) => {
+          const progress = getPhaseProgress(phase.id);
+          const status = getPhaseStatus(phase.id);
+          const classes = ["phase-card", `status-${status}`];
+          if (phase.id === state.activePhaseId) classes.push("is-selected");
+
+          return `
+            <button class="${classes.join(" ")}" type="button" data-phase-id="${escapeHtml(phase.id)}">
+              <span class="phase-icon">${svgIcon(status === "complete" ? "Check" : phase.icon)}</span>
+              <span class="phase-copy">
+                <small>Phase ${escapeHtml(String(phase.order))}</small>
+                <strong>${escapeHtml(phase.name)}</strong>
+                <em>${escapeHtml(phase.description)}</em>
+                <span class="phase-progress-meta">
+                  <span>Progress</span>
+                  <b>${progress}%</b>
+                </span>
+                <span class="bar"><i style="width:${progress}%"></i></span>
+              </span>
+            </button>
+          `;
+        }).join("");
+
+        elements.phaseList.querySelectorAll("[data-phase-id]").forEach((button) => {
+          button.addEventListener("click", () => {
+            state.activePhaseId = button.dataset.phaseId;
+            localStorage.setItem(activePhaseKey, state.activePhaseId);
+            state.lastToggledItemId = null;
+            state.resetDetailScrollOnRender = true;
+            render();
+          });
+        });
+      }
+
+      function renderPhaseDetail() {
+        const phase = getActivePhase();
+        const progress = getPhaseProgress(phase.id);
+        const completedCount = phase.checklist.filter((item) => state.checks[item.id]).length;
+        const nextTask = phase.checklist.find((item) => !state.checks[item.id]) || phase.checklist[phase.checklist.length - 1];
+
+        elements.phaseDetail.innerHTML = `
+          <div class="detail-card" data-phase="${escapeHtml(phase.id)}">
+            <div class="detail-head">
+              <span class="detail-icon">${svgIcon(phase.icon)}</span>
+              <div>
+                <p>Phase ${escapeHtml(String(phase.order))} of ${state.phases.length}</p>
+                <h2>${escapeHtml(phase.name)}</h2>
+                <span>${escapeHtml(phase.description)}</span>
+              </div>
+            </div>
+
+            <div class="focus-card">
+              <span class="detail-icon">${svgIcon("Flag")}</span>
+              <div>
+                <p>Next build focus</p>
+                <strong>${escapeHtml(nextTask.code)}. ${escapeHtml(nextTask.label)}</strong>
+                <span>${escapeHtml(nextTask.note)}</span>
+              </div>
+            </div>
+
+            <div class="check-progress">
+              <div>
+                <div class="check-progress-text">
+                  <strong>Approval Progress</strong>
+                  <span>${completedCount} of ${phase.checklist.length} tasks</span>
+                </div>
+                <span class="bar large"><i style="width:${progress}%"></i></span>
+              </div>
+              <strong>${progress}%</strong>
+            </div>
+
+            <div class="checklist-items">
+              ${phase.checklist.map((item, index) => checklistRow(item, index)).join("")}
+            </div>
+          </div>
+        `;
+
+        if (state.resetDetailScrollOnRender) {
+          elements.phaseDetail.scrollTop = 0;
+          state.resetDetailScrollOnRender = false;
+        }
+
+        elements.phaseDetail.querySelectorAll("[data-item-id]").forEach((button) => {
+          button.addEventListener("click", (event) => {
+            if (event.target.closest("[data-disapprove-id], [data-brief-id]")) return;
+            toggleChecklistItem(phase.id, button.dataset.itemId);
+          });
+          button.addEventListener("keydown", (event) => {
+            if (event.key !== "Enter" && event.key !== " ") return;
+            event.preventDefault();
+            toggleChecklistItem(phase.id, button.dataset.itemId);
+          });
+        });
+
+        elements.phaseDetail.querySelectorAll("[data-disapprove-id]").forEach((button) => {
+          button.addEventListener("click", (event) => {
+            event.stopPropagation();
+            toggleDisapproval(phase.id, button.dataset.disapproveId);
+          });
+        });
+
+        elements.phaseDetail.querySelectorAll("[data-brief-id]").forEach((button) => {
+          button.addEventListener("click", (event) => {
+            event.stopPropagation();
+            toggleTaskBrief(phase.id, button.dataset.briefId);
+          });
+        });
+      }
+
+      function checklistRow(item, index) {
+        const completed = Boolean(state.checks[item.id]);
+        const disapproved = Boolean(state.disapproved[item.id]);
+        const briefOpen = Boolean(state.openBriefs[item.id]);
+        const classes = ["checklist-row"];
+        if (completed) classes.push("is-complete");
+        if (disapproved) classes.push("is-disapproved");
+        if (item.id === state.lastToggledItemId) classes.push("just-toggled");
+        const statusText = disapproved ? "Disapproved" : completed ? "Approved" : "To approve";
+        const disapproveText = disapproved ? "Undo disapprove" : "Disapprove";
+        const briefText = briefOpen ? "Hide brief" : "Read brief";
+        const brief = getTaskBrief(item, getActivePhase());
+
+        return `
+          <div class="${classes.join(" ")}" role="button" tabindex="0" data-item-id="${escapeHtml(item.id)}" style="--delay:${index * 50}ms">
+            <span class="checkbox">${completed ? svgIcon("Check") : ""}</span>
+            <span class="todo-main">
+              <span class="task-code">${escapeHtml(item.code)}</span>
+              <strong>${escapeHtml(item.label)}</strong>
+              <small>${escapeHtml(item.note)}</small>
+            </span>
+            <span class="task-actions">
+              <em>${escapeHtml(statusText)}</em>
+              <button class="brief-button ${briefOpen ? "is-open" : ""}" type="button" data-brief-id="${escapeHtml(item.id)}" aria-expanded="${briefOpen ? "true" : "false"}">${escapeHtml(briefText)}</button>
+              <button class="disapprove-button" type="button" data-disapprove-id="${escapeHtml(item.id)}">${escapeHtml(disapproveText)}</button>
+            </span>
+            ${briefOpen ? `
+              <div class="task-brief">
+                <small>Decision brief</small>
+                ${brief.map((paragraph) => `<p>${escapeHtml(paragraph)}</p>`).join("")}
+              </div>
+            ` : ""}
+          </div>
+        `;
+      }
+
+      function toggleTaskBrief(phaseId, itemId) {
+        const isAlreadyOpen = Boolean(state.openBriefs[itemId]);
+        state.openBriefs = isAlreadyOpen ? {} : { [itemId]: true };
+        state.activePhaseId = phaseId;
+        localStorage.setItem(activePhaseKey, phaseId);
+        saveOpenBriefs();
+        render();
+      }
+
+      function toggleChecklistItem(phaseId, itemId) {
+        const phase = state.phases.find((entry) => entry.id === phaseId);
+        const item = phase?.checklist.find((entry) => entry.id === itemId);
+        if (!item) return;
+
+        const nextValue = !state.checks[itemId];
+        state.checks[itemId] = nextValue;
+        if (nextValue) {
+          state.disapproved[itemId] = false;
+          saveDisapprovals();
+        }
+        state.lastToggledItemId = itemId;
+        state.activePhaseId = phaseId;
+        localStorage.setItem(activePhaseKey, phaseId);
+        if (nextValue) {
+          addToApprovalQueue(itemId);
+        } else {
+          removeFromApprovalQueue(itemId);
+        }
+        saveChecks();
+        render();
+        showToast(`${item.code}. ${item.label} ${state.checks[itemId] ? "approved for build" : "removed from approval"}.`);
+      }
+
+      function toggleDisapproval(phaseId, itemId) {
+        const phase = state.phases.find((entry) => entry.id === phaseId);
+        const item = phase?.checklist.find((entry) => entry.id === itemId);
+        if (!item) return;
+
+        const nextValue = !state.disapproved[itemId];
+        state.disapproved[itemId] = nextValue;
+        if (nextValue) {
+          state.checks[itemId] = false;
+          removeFromApprovalQueue(itemId);
+        }
+        state.lastToggledItemId = itemId;
+        state.activePhaseId = phaseId;
+        localStorage.setItem(activePhaseKey, phaseId);
+        saveChecks();
+        saveDisapprovals();
+        render();
+        showToast(`${item.code}. ${item.label} ${nextValue ? "disapproved" : "back in discussion"}.`);
+      }
+
+      function addToApprovalQueue(itemId) {
+        state.approvalQueue = state.approvalQueue.filter((id) => id !== itemId);
+        state.approvalQueue.push(itemId);
+        saveApprovalQueue();
+      }
+
+      function removeFromApprovalQueue(itemId) {
+        state.approvalQueue = state.approvalQueue.filter((id) => id !== itemId);
+        saveApprovalQueue();
+      }
+
+      function getActivePhase() {
+        return state.phases.find((phase) => phase.id === state.activePhaseId) || state.phases[0];
+      }
+
+      function getPhaseProgress(phaseId) {
+        const phase = state.phases.find((entry) => entry.id === phaseId);
+        if (!phase || !phase.checklist.length) return 0;
+        return Math.round((phase.checklist.filter((item) => state.checks[item.id]).length / phase.checklist.length) * 100);
+      }
+
+      function getPhaseStatus(phaseId) {
+        const phaseIndex = state.phases.findIndex((phase) => phase.id === phaseId);
+        const activeIndex = state.phases.findIndex((phase) => phase.id === state.activePhaseId);
+        const progress = getPhaseProgress(phaseId);
+        if (progress === 100) return "complete";
+        if (phaseIndex <= activeIndex) return "active";
+        return "pending";
+      }
+
+      function getOverallProgress() {
+        const totals = getTaskTotals();
+        if (!totals.total) return 0;
+        return Math.round((totals.completed / totals.total) * 100);
+      }
+
+      function getTaskTotals() {
+        const tasks = getAllTasks();
+        const completed = tasks.filter((task) => state.checks[task.id]).length;
+        return {
+          total: tasks.length,
+          completed,
+          remaining: tasks.length - completed
+        };
+      }
+
+      function getAllTasks() {
+        return state.phases.flatMap((phase) => phase.checklist.map((task) => ({
+          ...task,
+          phaseId: phase.id,
+          phaseName: phase.name,
+          phaseOrder: phase.order,
+          phaseDescription: phase.description
+        })));
+      }
+
+      function getQueuedTasks() {
+        const tasks = getAllTasks();
+        return state.approvalQueue
+          .map((id) => tasks.find((task) => task.id === id && state.checks[id] && !state.disapproved[id]))
+          .filter(Boolean);
+      }
+
+      function getApprovedTasksForCopy() {
+        const queuedTasks = getQueuedTasks();
+        if (queuedTasks.length) {
+          return queuedTasks;
+        }
+
+        return getAllTasks().filter((task) => state.checks[task.id] && !state.disapproved[task.id]);
+      }
+
+      function buildApprovedTaskText(tasks) {
+        const lines = [
+          "AND OS Working TODO - Approved Build Tasks",
+          "Approval meaning: Osiris clicked these tasks in the Working TODO page.",
+          "Use these as official next tasks for Codex to work on.",
+          "Disapproved tasks are excluded from this list.",
+          "",
+          "Status tags available: #approved #disapproved #in-progress #working #completed",
+          ""
+        ];
+
+        tasks.forEach((task, index) => {
+          lines.push(`${index + 1}. ${task.code} - ${task.label}`);
+          lines.push(`   Phase: ${task.phaseOrder}. ${task.phaseName}`);
+          lines.push(`   Current status: #approved`);
+          lines.push(`   Next Codex status: #in-progress -> #working -> #completed`);
+          lines.push(`   Notes: ${task.note}`);
+          getTaskBrief(task).forEach((paragraph, paragraphIndex) => {
+            lines.push(`   Brief ${paragraphIndex + 1}: ${paragraph}`);
+          });
+          lines.push("");
+        });
+
+        return lines.join("\n").trim();
+      }
+
+      function getTaskBrief(task, phase = null) {
+        if (Array.isArray(task.brief) && task.brief.length) {
+          return task.brief;
+        }
+
+        const phaseName = phase?.name || task.phaseName || "the current phase";
+        const phaseDescription = phase?.description || task.phaseDescription || "Keep the decision connected to the real AND OS MVP.";
+        return [
+          `${task.label} is a planning decision inside ${phaseName}. ${task.note} The point is to decide whether this should enter the next build pass before we spend time changing the app.`,
+          `${phaseDescription} Approve this only if it makes the app clearer, closer to Studio Flow Pro, or more useful for Love sir's team this week. Disapprove it when it is interesting but not important for the local MVP right now.`
+        ];
+      }
+
+      async function copyTextToClipboard(text) {
+        let copied = false;
+
+        try {
+          const response = await fetch("/api/clipboard", {
+            method: "POST",
+            headers: { "content-type": "application/json" },
+            body: JSON.stringify({ text })
+          });
+          copied = response.ok;
+        } catch (error) {
+          copied = false;
+        }
+
+        if (!copied && window.parent && window.parent !== window && typeof window.parent.copyWorkingTodoText === "function") {
+          try {
+            copied = await window.parent.copyWorkingTodoText(text);
+          } catch (error) {
+            copied = false;
+          }
+        }
+
+        if (!copied && navigator.clipboard?.writeText) {
+          try {
+            await navigator.clipboard.writeText(text);
+            copied = true;
+          } catch (error) {
+            copied = false;
+          }
+        }
+
+        if (!copied) {
+          copied = copySelectedFallback();
+        }
+
+        return copied;
+      }
+
+      function showCopyFallback(text) {
+        elements.copyFallbackText.value = text;
+        elements.copyFallbackText.textContent = text;
+        elements.copyFallback.classList.add("is-visible");
+        selectFallbackText();
+      }
+
+      function selectFallbackText() {
+        elements.copyFallbackText.focus();
+        elements.copyFallbackText.select();
+        elements.copyFallbackText.setSelectionRange(0, elements.copyFallbackText.value.length);
+      }
+
+      function copySelectedFallback() {
+        selectFallbackText();
+
+        try {
+          return document.execCommand("copy");
+        } catch (error) {
+          return false;
+        }
+      }
+
+      async function copyApprovedTasks() {
+        const tasks = getApprovedTasksForCopy();
+        if (!tasks.length) {
+          showToast("No approved tasks to copy yet.");
+          return;
+        }
+
+        const text = buildApprovedTaskText(tasks);
+        showCopyFallback(text);
+        const copied = await copyTextToClipboard(text);
+
+        if (copied) {
+          showToast(`${tasks.length} approved ${tasks.length === 1 ? "task" : "tasks"} copied. Paste now, or press Cmd+C if paste is empty.`);
+        } else {
+          showToast("Clipboard blocked. Text selected for manual copy.");
+        }
+      }
+
+      function svgIcon(name) {
+        const icons = {
+          Layout: '<path d="M3 5h18M3 12h18M3 19h18" />',
+          Layers: '<path d="M12 2 3 7l9 5 9-5-9-5Z" /><path d="m3 12 9 5 9-5" /><path d="m3 17 9 5 9-5" />',
+          FileText: '<path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z" /><path d="M14 2v6h6" /><path d="M8 13h8M8 17h5" />',
+          Users: '<path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" /><circle cx="9" cy="7" r="4" /><path d="M22 21v-2a4 4 0 0 0-3-3.87" /><path d="M16 3.13a4 4 0 0 1 0 7.75" />',
+          BookOpen: '<path d="M2 4h7a4 4 0 0 1 4 4v13a3 3 0 0 0-3-3H2Z" /><path d="M22 4h-7a4 4 0 0 0-4 4v13a3 3 0 0 1 3-3h8Z" />',
+          MessageSquare: '<path d="M21 15a4 4 0 0 1-4 4H8l-5 3V7a4 4 0 0 1 4-4h10a4 4 0 0 1 4 4Z" />',
+          Clipboard: '<path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2" /><rect x="8" y="2" width="8" height="4" rx="1" />',
+          HardDrive: '<path d="M22 12H2" /><path d="M5.45 5.11 2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.45-6.89A2 2 0 0 0 16.76 4H7.24a2 2 0 0 0-1.79 1.11Z" /><path d="M6 16h.01M10 16h.01" />',
+          Sparkles: '<path d="m12 3-1.9 5.8L4 11l6.1 2.2L12 19l1.9-5.8L20 11l-6.1-2.2Z" /><path d="M5 3v4M3 5h4M19 17v4M17 19h4" />'
+        };
+
+        if (name === "Check") {
+          return '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6L9 17l-5-5" /></svg>';
+        }
+
+        if (name === "CheckCircle") {
+          return '<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9" /><path d="M8 12l2.5 2.5L16 9" /></svg>';
+        }
+
+        if (name === "Calendar") {
+          return '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3v3M17 3v3M4 9h16M5 5h14a1 1 0 0 1 1 1v14H4V6a1 1 0 0 1 1-1z" /></svg>';
+        }
+
+        if (name === "Flag") {
+          return '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 22V4" /><path d="M5 4h12l-1.5 4L17 12H5" /></svg>';
+        }
+
+        return `<svg viewBox="0 0 24 24" aria-hidden="true">${icons[name] || icons.FileText}</svg>`;
+      }
+
+      function showToast(message) {
+        elements.toast.textContent = message;
+        elements.toast.classList.add("is-visible");
+        window.clearTimeout(showToast.timer);
+        showToast.timer = window.setTimeout(() => {
+          elements.toast.classList.remove("is-visible");
+        }, 2400);
+      }
+
+      function escapeHtml(value) {
+        return String(value)
+          .replaceAll("&", "&amp;")
+          .replaceAll("<", "&lt;")
+          .replaceAll(">", "&gt;")
+          .replaceAll('"', "&quot;")
+          .replaceAll("'", "&#039;");
+      }
+
+      elements.resetChecks.addEventListener("click", () => {
+        state.checks = {};
+        state.approvalQueue = [];
+        state.disapproved = {};
+        state.openBriefs = {};
+        state.lastToggledItemId = null;
+        saveChecks();
+        saveApprovalQueue();
+        saveDisapprovals();
+        saveOpenBriefs();
+        render();
+        showToast("Working TODO checks reset.");
+      });
+
+      elements.copyApprovedTasks.addEventListener("click", copyApprovedTasks);
+
+      elements.clearApprovedQueue.addEventListener("click", () => {
+        state.approvalQueue = [];
+        saveApprovalQueue();
+        render();
+        showToast("Recent approval queue cleared.");
+      });
+
+      render();
+    </script>
+  </body>
+</html>

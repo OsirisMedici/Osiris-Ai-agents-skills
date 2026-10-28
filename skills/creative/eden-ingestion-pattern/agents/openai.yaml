@@ -1,0 +1,4 @@
+interface:
+  display_name: "Eden Ingestion Pattern"
+  short_description: "Design a low-cost content ingestion vault"
+  default_prompt: "Use $eden-ingestion-pattern to design a low-cost local content vault with deferred transcription."

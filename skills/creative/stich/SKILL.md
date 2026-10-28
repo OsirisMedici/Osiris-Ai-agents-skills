@@ -1,0 +1,172 @@
+---
+name: stich
+description: Drive the Stich video editor over its MCP tools. Use BEFORE calling any stich MCP tool — when the user wants to edit video in Stich (cut, trim, arrange a timeline, add captions or voiceover) or author/update a Motif (animated overlay).
+---
+
+# Driving Stich
+
+Use only the "stich" MCP connection for this app. The separate "weftcut" connection controls the official WeftCut app and may be editing another project. Never substitute that connection or open its active project without user direction.
+
+
+Stich is a desktop video editor; you operate it over MCP while the user
+watches the same project live in the app. Every mutation you commit lands in
+their undo history and on their screen. Each tool's own description carries its
+contract, and each refusal names its cause and options — this skill covers only
+what no single tool can: how a session should go.
+
+## In ten lines
+
+The server sends these as its `initialize` instructions, so a client without
+this skill reads the same etiquette; the long form follows.
+
+Stich is a desktop video editor; the user watches the same project live, and every edit you commit lands in their undo history.
+1. Read `project://tracks` (or `read_project` with view "tracks") before your first edit. Ids come from reads, never from memory.
+2. Every mutator answers with the committed record: the ids it minted, the span as it landed, `adjusted` for any grid snap. Verify from that answer before reporting.
+3. A refusal is an isError result whose text names the cause and the fix. Act on it; never retry a rejected call verbatim.
+4. Times are microseconds on the composition's frame grid: an off-grid time is snapped and echoed, a time outside its layer is refused.
+5. Call `create_checkpoint` before your first edit. For a batch (a rough cut, a pause pass, a caption track): ask the user, then `begin_agent_session`, `set_history_lock` around the batch, `dry_run` where supported, and `end_agent_session` when done, on failure too.
+6. The user or another agent may edit concurrently; when a commit fails for that reason, re-read and reapply.
+7. Stich MVP exports through `stich_export`: poll `stich_status`; completion requires a verified output file. The local runtime stays open.
+8. Project tools refuse while no project is open: `open_project` or `create_project` the one the user asked for, else ask which.
+The stich skill (Settings > Agent) carries the longer etiquette, the common flows and the Motif authoring contract.
+
+## Session etiquette
+
+1. Read `project://tracks` before your first mutation — never write against a
+   guessed state; `project://current` is the whole project when you need it.
+   If your client cannot read MCP resources, `read_project` returns the same
+   views as a tool result.
+2. Call `create_checkpoint` before your first edit, so the user has a one-step
+   restore point.
+3. A small change (a handful of tool calls) needs no more ceremony than that:
+   edit, verify, report.
+4. A batch job (rough-cutting a video, a pause pass, building a caption
+   track) uses a work session: ASK whether to begin the batch and enter the
+   lightweight agent view unless already authorized, then call
+   `begin_agent_session`. It creates a checkpoint once per session. Wrap the
+   batch in `set_history_lock`, both ways, rehearse with `dry_run` where
+   supported, and call `end_agent_session` when finished (also on failure).
+   Use a finally-style cleanup so a failed tool does not leave undo locked.
+   Manual view switching neither starts nor ends work. The user can end work
+   or unlock locally; closing your connection ends its owned session, and the
+   app closes a session whose connection has gone quiet. If `begin_agent_session`
+   answers `AgentSessionBusy`, the message names the holder — wait, or take over
+   with `end_agent_session { force: true }` when that holder is gone.
+   None of these cancels running calls or prohibits later tools. Do not infer
+   that a session ended because the user returned to the editor.
+5. Errors are instructions: Stich errors name the cause and list concrete
+   options. Pick one; never retry a rejected call verbatim.
+6. A commit can also fail because the user (or another agent) edited
+   concurrently — re-read the resource and reapply.
+7. Use `stich_export` for an MP4. Poll `stich_status` until complete or error; metadata verification does not prove audible/visual playback.
+
+## Browser and transcript MVP
+
+`open_stich_editor` returns a one-time localhost launch URL. Open it in Codex's in-app browser. The page's WebMCP operations and server MCP share the native project actor. Keep the full human timeline visible; opening a work session does not change the layout.
+
+Use `stich_setup_local_speech` once to install/select local Whisper Base. Select the main clip, then `stich_transcribe { layerId, language }`, with `auto`, `en` or `hi` for Hindi/Hinglish. Poll the returned job. Recognition is local, with no provider substitution. `stich_read_transcript` returns source word IDs, Roman display text, current workspace and revision. Read fresh before a change. `stich_correct_text` changes spelling only. `stich_cut_words` removes a consecutive range from one normal-speed clip and its linked audio in one undo step. Both require workspace, revision and a unique requestId. Reuse the exact request and ID only when retrying an unknown outcome.
+
+Create a checkpoint before editing an existing project. Checkpoints and undo last for the current open session; save preserves the edited project, not that history. The user chooses the editorial workflow in chat; no automatic trimming recipe is compulsory. Audition every cut and use `trim_layer` to refine edges. Preserve the recording. `stich_save_project` flushes edits; `stich_move_project` refuses an existing target. A completed export must be played before reporting it as ready to hand off. Transcription cancellation discards the result after the current local engine request finishes; it does not yet interrupt inference immediately.
+
+## Working rhythm
+
+Read → analyze → mutate → **verify**: every mutator answers with the committed
+record — the ids it minted, the span as it landed, `adjusted` for any grid snap,
+the link `siblings` it carried along — so check that answer first, and re-read
+`project://tracks` or `project://current` only for what the record does not
+carry, before reporting the edit done.
+
+Common flows, one line each — parameters and caveats live in the tool
+descriptions:
+
+- Animation: `set_keyframe` creates or updates one key by time; `set_param_track`
+  replaces a whole track with keys needing only time and value. Key and path-node
+  IDs are generated by Stich — never invent them or send them in bulk authoring
+  inputs. To edit/delete one existing key, read its ID with `get_param_track`.
+  When copying read records into a bulk replacement, omit IDs and read-only
+  `t_local_us` and `preset_id`; preserve `time_fraction` when present, along with
+  the desired values and curves. `set_position`
+  also generates IDs and returns the committed position. Its key times are
+  layer-local; other keyframe tools use timeline time.
+- Cut pauses: `remove_pauses` cuts every pause out of a clip and closes the
+  gaps, as one undoable edit — `pad_us` of each pause stays at both ends, so
+  the speech either side keeps its breath (or mark them to review first:
+  `detect_pauses` → an anchored region `add_marker` per pause; both packaged
+  as the `/cut-pauses` prompt).
+- Make room, or move the tail: `shift_layers` shifts every layer from a time
+  (or a named set, link partners included) by one delta as one undoable edit —
+  a positive delta from a time is the ripple insert; then place into the gap.
+- Captions: `transcribe_clip` → inspect the returned `segments` → `apply_transcripts`,
+  passing the envelope's `segments` and `word_timing` through (also
+  `/auto-caption`). A subtitle FILE the user already has: `import_media` it,
+  then `apply_subtitles { media_id, t_start_us? }` — the whole document, its
+  time 0 at `t_start_us`. Correcting names and jargon: put the script or
+  notes in `set_project_settings { correction_script }`, then
+  `correct_caption_text`. Restyle every caption at once with `restyle_captions`.
+- Retime: `retime_layers` sets an absolute rational rate or target duration,
+  preserving the selected source window. Pass every intended clip explicitly:
+  links do not expand the selection. `set_preserve_pitch` sets the Audio/Group
+  pitch policy. The ordinary duration/trim tools trim instead of changing rate.
+- Captions with your own speech model: `extract_clip_audio` returns a 16 kHz
+  mono source WAV block plus the window and `playback_rate` (at most 60 s of
+  source audio per call; use timeline windows no longer than
+  `60000000 / playback_rate` microseconds). Map each WAV offset with
+  `t_start_us + offset / playback_rate`, then `apply_transcripts` with `word_timing:
+  "exact"` (or `"none"` and empty `words` if your model gives cue times only).
+- Voiceover: `synthesize_speech` appends a spoken script to the timeline
+  (also `/voiceover`).
+- Rough cut: `analyze_clip` or `auto_split_by_shot`, then trim and delete
+  segments — `delete_layers` with `ripple: true` when the gap a cut leaves
+  should close behind it.
+- Music, sound effects, a separate voice track: `add_audio_layer`. It is the
+  only tool that places audio-only media — `add_video_layer` builds a visual
+  layer and refuses an audio file.
+- Music alignment: `analyze_audio { media_id, start_us?, end_us? }` reads source
+  waveform energy, onset candidates and energy changes, at most 60 s per call.
+  Times are source-absolute, including outside existing trims. To align a
+  `source_us` candidate to timeline T on a rate-1 clip without fractional source
+  endpoints, set `src_in_us = source_us - (T - layer.t_start_us)` and keep the
+  clip duration when setting `src_out_us` via `update_layer_params`. For retimed
+  clips, use the returned rational time_map and source_phase for the mapping;
+  do not apply that rate-1 formula. Check source bounds and audition: amplitude onsets do
+  not identify beats or main melodies. Missing waveform: wait for generation.
+- A title, a lower third, a credit: `add_text_layer`, then style it with
+  `update_layer_params`. Subtitles from a document are `apply_subtitles`.
+- A track that refuses every edit is locked: `set_track_flags` clears the lock
+  (and hides or shows a track's output). A layer carries its own lock, which
+  `update_layer` clears.
+- Going back further than one undo: read `project://history` and `jump_to` a row
+  by its absolute index — the way back to a state that is neither one undo away
+  nor a checkpoint.
+
+## Motifs (animated overlays)
+
+To author or update a Motif, first read `motif-authoring.md` next to this file
+— the document contract, whose one law is that visible state is a function of
+`t`, never an accumulation. Then:
+
+1. `list_motifs`, and read the closest existing Motif with `get_motif_source`
+   — base your draft on what already renders correctly.
+2. `write_motif_draft` (pass `from` when your draft updates an existing Motif).
+3. **The user approves, not you.** Place the draft with `add_motif_layer`, ask the
+   user to play it in the app, and call `install_motif` only after they
+   confirm. If you can read images, pre-check with `preview_motif_draft` at
+   three timestamps (start, middle, near the end) and once with non-default
+   props before involving the user — their confirmation is still the gate.
+4. After installing, remove the trial layer unless the user wants it kept.
+
+**3D Motifs can use Three.js (`WebGLRenderer`).** Current limits:
+
+- Supply Three.js and addons inline or as local package files; there is no
+  built-in `THREE` global, npm resolution or CDN access. Local ES modules may
+  use an import map. Resources must come from the Motif's own directory or
+  supported `data:` / `blob:` URLs.
+- Await asset loading in `setup`; calculate animation from absolute `t` and
+  call `renderer.render(scene, camera)` in `frame(t)`. Avoid accumulated
+  deltas or a self-running animation loop; keep `settle_rafs: 2`.
+- Workers and WASM compilation remain disabled. Use uncompressed models and
+  ordinary image textures; Draco/KTX2 decoder pipelines are not supported yet.
+- MCP drafts accept HTML, not binary uploads. Inline resources, inherit an
+  existing package with `from`, or use the app's **Import Motif** for a resource
+  ZIP. **Export Motif ZIP** shares the complete folder with its resources.
+  See `motif-authoring.md` for the full loading contract.

@@ -1,0 +1,7 @@
+interface:
+  display_name: "Product motion"
+  short_description: "Purposeful, responsive animation for product UI"
+  default_prompt: "Use $product-motion to design, implement, or review motion for this product interaction."
+
+policy:
+  allow_implicit_invocation: true

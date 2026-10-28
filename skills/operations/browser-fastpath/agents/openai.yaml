@@ -1,0 +1,4 @@
+interface:
+  display_name: "Browser Fastpath"
+  short_description: "Save the fastest reusable browser path after messy live work."
+  default_prompt: "Save the browser fastpath from this session."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "FTI - Feedback task intake"
+  short_description: "Save Feedback tasks with the shared template"
+  default_prompt: "Use $fti-feedback-task-intake to capture this task in Feedback with the shared template."

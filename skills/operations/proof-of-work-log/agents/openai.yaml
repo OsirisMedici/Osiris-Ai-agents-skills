@@ -1,0 +1,3 @@
+display_name: Proof Log
+short_description: "Generate copy-paste proof logs"
+default_prompt: "Turn this completed work into a copy-paste-ready proof log using the Communication template: Title, Domain / Area, What Exactly Happened, What We Did, Outcome, and Proof of work screenshots. Include image previews in chat when screenshot files exist."

@@ -1,0 +1,1131 @@
+{
+  "captured_at": "2026-10-29",
+  "source": "Mac custom skill installation",
+  "skills": [
+    {
+      "name": "browser-fastpath",
+      "path": "skills/operations/browser-fastpath",
+      "source": "~/.codex/skills/browser-fastpath",
+      "files": [
+        {
+          "path": "SKILL.md",
+          "source_sha256": "78409e08be7bcccd35c5f25ac0a8e05940d318f00806c3ebb8db130729c376a7",
+          "package_sha256": "ff258139ea8e3f636352ce104523895db652ffd915a471edca53311fbe204969",
+          "transformed": true
+        },
+        {
+          "path": "agents/openai.yaml",
+          "source_sha256": "2b85f73cc6fac89dbcbf35d8186230b86f35e1e02aeb5bdfbf5ae55d7e193961",
+          "package_sha256": "2b85f73cc6fac89dbcbf35d8186230b86f35e1e02aeb5bdfbf5ae55d7e193961",
+          "transformed": false
+        }
+      ]
+    },
+    {
+      "name": "clean-pinned-tasks",
+      "path": "skills/operations/clean-pinned-tasks",
+      "source": "~/.codex/skills/clean-pinned-tasks",
+      "files": [
+        {
+          "path": "SKILL.md",
+          "source_sha256": "96c21a033d5b65edd3cdf80bc862314da4436098f890dcbb9d8ad7fa5b505662",
+          "package_sha256": "96c21a033d5b65edd3cdf80bc862314da4436098f890dcbb9d8ad7fa5b505662",
+          "transformed": false
+        },
+        {
+          "path": "agents/openai.yaml",
+          "source_sha256": "ec2c1c3e3cc600f5f4832efec33c6fad1fd1b9e3b58134402d295d929162f3b8",
+          "package_sha256": "ec2c1c3e3cc600f5f4832efec33c6fad1fd1b9e3b58134402d295d929162f3b8",
+          "transformed": false
+        }
+      ]
+    },
+    {
+      "name": "fti-feedback-task-intake",
+      "path": "skills/operations/fti-feedback-task-intake",
+      "source": "~/.codex/skills/fti-feedback-task-intake",
+      "files": [
+        {
+          "path": "SKILL.md",
+          "source_sha256": "a4b5d4c8badd309bdeb46f7d33690c22403b3d3882aa62259ad001d2447797d0",
+          "package_sha256": "0953edbfec6be7b008d6a9c7e96b7361ec9cec705544b0a33543f7993bfffcf3",
+          "transformed": true
+        },
+        {
+          "path": "agents/openai.yaml",
+          "source_sha256": "ab1e4eaae4326c5172c64b0645547c86c0d29ca37127f6a4c2827b4fb624f1a8",
+          "package_sha256": "ab1e4eaae4326c5172c64b0645547c86c0d29ca37127f6a4c2827b4fb624f1a8",
+          "transformed": false
+        },
+        {
+          "path": "references/task-template.md",
+          "source_sha256": "0ddd03bc5fa9e7428b01f3eba33cabcecf810d03519176a890fc87cfb2f25f0d",
+          "package_sha256": "aa11c47cd06a9f3cf3defca8f75b22d1d772a2d44e69370af6c00e7723f37682",
+          "transformed": true
+        }
+      ]
+    },
+    {
+      "name": "go-highlevel-operator",
+      "path": "skills/operations/go-highlevel-operator",
+      "source": "~/.codex/skills/go-highlevel-operator",
+      "files": [
+        {
+          "path": "SKILL.md",
+          "source_sha256": "4db697cae4dff3d6d62ddcef1896efbbfd4d8fb2d42f69658b4a6e3f6d52f93a",
+          "package_sha256": "0d9da9ff4c26ff52486441d37316c11e8b8498bd993023034600bb41a4a020e7",
+          "transformed": true
+        },
+        {
+          "path": "agents/openai.yaml",
+          "source_sha256": "9cb6ab69d061e644062f5fb5bcd678d23cf5436f0ed5cc17029716a609246d18",
+          "package_sha256": "9cb6ab69d061e644062f5fb5bcd678d23cf5436f0ed5cc17029716a609246d18",
+          "transformed": false
+        },
+        {
+          "path": "references/field-guide.md",
+          "source_sha256": "f2f2633b2ca7d5531bbe7072922b11757b78fdb349561feb376a716338082fcb",
+          "package_sha256": "f2f2633b2ca7d5531bbe7072922b11757b78fdb349561feb376a716338082fcb",
+          "transformed": false
+        }
+      ]
+    },
+    {
+      "name": "mac-rescue",
+      "path": "skills/operations/mac-rescue",
+      "source": "~/.codex/skills/mac-rescue",
+      "files": [
+        {
+          "path": "SKILL.md",
+          "source_sha256": "9aefd978ac121d7d11119a65624564e22807e157f13ece96a7d51baf7e68d83b",
+          "package_sha256": "9aefd978ac121d7d11119a65624564e22807e157f13ece96a7d51baf7e68d83b",
+          "transformed": false
+        },
+        {
+          "path": "agents/openai.yaml",
+          "source_sha256": "73ffbe94e8f348cdc326810f46dde8575c5af4fc5134dc4487b230b1c70637cb",
+          "package_sha256": "73ffbe94e8f348cdc326810f46dde8575c5af4fc5134dc4487b230b1c70637cb",
+          "transformed": false
+        },
+        {
+          "path": "references/storage-and-ssd.md",
+          "source_sha256": "7e510ba147c29237fe645d512c3fef63b180774d3bd916405ecc0065fc25b51d",
+          "package_sha256": "7e510ba147c29237fe645d512c3fef63b180774d3bd916405ecc0065fc25b51d",
+          "transformed": false
+        },
+        {
+          "path": "scripts/snapshot.py",
+          "source_sha256": "bae5e310515dc7cda23ade3e0389f7c08e567af638d9a317c013f6a55e9db631",
+          "package_sha256": "bae5e310515dc7cda23ade3e0389f7c08e567af638d9a317c013f6a55e9db631",
+          "transformed": false
+        },
+        {
+          "path": "scripts/storage_inventory.py",
+          "source_sha256": "b932cda8465aeb4249f71d8b421d01bfc1c370073670301e04a4e0a33da1c324",
+          "package_sha256": "b932cda8465aeb4249f71d8b421d01bfc1c370073670301e04a4e0a33da1c324",
+          "transformed": false
+        }
+      ]
+    },
+    {
+      "name": "proof-of-work-log",
+      "path": "skills/operations/proof-of-work-log",
+      "source": "~/.codex/skills/proof-of-work-log",
+      "files": [
+        {
+          "path": "SKILL.md",
+          "source_sha256": "c964db0a928c0bdeb73eb65ee8718e37569dcef1cf04d1622d73ba441be1bc1e",
+          "package_sha256": "65c868ccd9cb3ed5da2243ce3e79f2a5c8bcc672a79936417ad1f94ee0f49105",
+          "transformed": true
+        },
+        {
+          "path": "agents/openai.yaml",
+          "source_sha256": "9c1478d72285c82a2c60469ec30011becb6a236637316cc346e20082d6882017",
+          "package_sha256": "3d20531619e771c327d36fde97cf2442193f3cc51783c42897b36191a77916c1",
+          "transformed": true
+        },
+        {
+          "path": "references/notion-database.md",
+          "source_sha256": "1ae6006acfa43b709ccf62e07ac51a008d57d300a54dbc0f53ed50a5ce310d8c",
+          "package_sha256": "5f5dcde1be5bbe22751fda3dda485870ac3e5395ec31832c6b3237d98e3a0032",
+          "transformed": true
+        }
+      ]
+    },
+    {
+      "name": "content-engine-osiris",
+      "path": "skills/creative/content-engine-osiris",
+      "source": "~/.codex/skills/content-engine-osiris",
+      "files": [
+        {
+          "path": "SKILL.md",
+          "source_sha256": "1b11881f19e4f6381d3127c6294ffdf27ad9ca5f75c9527e05d5d1dfeb6200d2",
+          "package_sha256": "1b11881f19e4f6381d3127c6294ffdf27ad9ca5f75c9527e05d5d1dfeb6200d2",
+          "transformed": false
+        },
+        {
+          "path": "agents/openai.yaml",
+          "source_sha256": "f73649f71b2546814d7a7baf5cd68a194faaed2925da2b00d7c6ab9f2107eeb4",
+          "package_sha256": "f73649f71b2546814d7a7baf5cd68a194faaed2925da2b00d7c6ab9f2107eeb4",
+          "transformed": false
+        },
+        {
+          "path": "references/operating-manual.md",
+          "source_sha256": "9436af07da293bfe2d4891fc3a58af3fc2b3f154a4aab7a3b0761ac1d9f065af",
+          "package_sha256": "9436af07da293bfe2d4891fc3a58af3fc2b3f154a4aab7a3b0761ac1d9f065af",
+          "transformed": false
+        }
+      ]
+    },
+    {
+      "name": "eden-ingestion-pattern",
+      "path": "skills/creative/eden-ingestion-pattern",
+      "source": "~/.codex/skills/eden-ingestion-pattern",
+      "files": [
+        {
+          "path": "SKILL.md",
+          "source_sha256": "acc590037a2ed3303e19698699a525a95b77e51e553d3fef060b5c116b83eca4",
+          "package_sha256": "acc590037a2ed3303e19698699a525a95b77e51e553d3fef060b5c116b83eca4",
+          "transformed": false
+        },
+        {
+          "path": "agents/openai.yaml",
+          "source_sha256": "055f6aba7be1ae80ba36dbc1746e0d2640b486f6d0697af2b0d965ed02be4cbe",
+          "package_sha256": "055f6aba7be1ae80ba36dbc1746e0d2640b486f6d0697af2b0d965ed02be4cbe",
+          "transformed": false
+        },
+        {
+          "path": "references/recording-2026-07-13.md",
+          "source_sha256": "9d739324bd386fbb76283410b74c09a9d34bf15b274ea3f7ad9c45fc10b95fad",
+          "package_sha256": "d2e93fa019137680b5d0c27e76bd9adecf8e00fe3062cfba88d0fcc6cbe95cb7",
+          "transformed": true
+        }
+      ]
+    },
+    {
+      "name": "eden-workspace-feel",
+      "path": "skills/creative/eden-workspace-feel",
+      "source": "~/.codex/skills/eden-workspace-feel",
+      "files": [
+        {
+          "path": "SKILL.md",
+          "source_sha256": "5a4194375473e250bf8e82e1e9db6300995ae17a37d9b285d56c65e4068ef9be",
+          "package_sha256": "5a4194375473e250bf8e82e1e9db6300995ae17a37d9b285d56c65e4068ef9be",
+          "transformed": false
+        },
+        {
+          "path": "agents/openai.yaml",
+          "source_sha256": "0155ffd6bfdf1d38acc91a4df815d8d5ff18567c29d72abb1e54769f5795d260",
+          "package_sha256": "0155ffd6bfdf1d38acc91a4df815d8d5ff18567c29d72abb1e54769f5795d260",
+          "transformed": false
+        },
+        {
+          "path": "references/recording-2026-07-02.md",
+          "source_sha256": "4995d34eedaad1f83c6a3e8eff650553cefed9be2b401d4587ace7cda76dddd1",
+          "package_sha256": "24712b3cda4a5ff3f22e8efdf8a0d32793764491675cbae37eca44361e842524",
+          "transformed": true
+        },
+        {
+          "path": "references/recording-2026-07-15-pane-behavior.md",
+          "source_sha256": "3a758ebdcdbbf3ec29c9ef1026953c33291aa4972f86f0a75cee9c0e9fb9234c",
+          "package_sha256": "fb880df7433b2a3d060070e6f3dc3b67f7507d320359d99b2e74ba88380a7e38",
+          "transformed": true
+        }
+      ]
+    },
+    {
+      "name": "hatch-pet",
+      "path": "skills/creative/hatch-pet",
+      "source": "~/.codex/skills/hatch-pet",
+      "files": [
+        {
+          "path": "LICENSE.txt",
+          "source_sha256": "4dd13869245e356246a5b770723247bbb80a8f07a181d1d3d873a1734297cdb9",
+          "package_sha256": "4dd13869245e356246a5b770723247bbb80a8f07a181d1d3d873a1734297cdb9",
+          "transformed": false
+        },
+        {
+          "path": "SKILL.md",
+          "source_sha256": "7ab0f01e8561085d1b494a6ca74abed766c655da8ec98284fb38a362c19d6871",
+          "package_sha256": "7ab0f01e8561085d1b494a6ca74abed766c655da8ec98284fb38a362c19d6871",
+          "transformed": false
+        },
+        {
+          "path": "agents/openai.yaml",
+          "source_sha256": "b97c303df63c69a8857047bd87b8e681a2b7800138ede0d0b6aaac440d503d23",
+          "package_sha256": "b97c303df63c69a8857047bd87b8e681a2b7800138ede0d0b6aaac440d503d23",
+          "transformed": false
+        },
+        {
+          "path": "references/animation-rows.md",
+          "source_sha256": "5bdbb5693334a447128ed74af41981212d746bcbc21452671c21bdae8a39492f",
+          "package_sha256": "5bdbb5693334a447128ed74af41981212d746bcbc21452671c21bdae8a39492f",
+          "transformed": false
+        },
+        {
+          "path": "references/codex-pet-contract.md",
+          "source_sha256": "ce9a9d2cef4d9cdb16c3ae53c106681d98b8ae3919a56fe74323f6f88a06f90d",
+          "package_sha256": "ce9a9d2cef4d9cdb16c3ae53c106681d98b8ae3919a56fe74323f6f88a06f90d",
+          "transformed": false
+        },
+        {
+          "path": "references/qa-rubric.md",
+          "source_sha256": "f2eab6f7fb85dcde5c9d7ba1a7a4b0e371ab95aa61ca8cd7783cca67275a5cc7",
+          "package_sha256": "f2eab6f7fb85dcde5c9d7ba1a7a4b0e371ab95aa61ca8cd7783cca67275a5cc7",
+          "transformed": false
+        },
+        {
+          "path": "scripts/compose_atlas.py",
+          "source_sha256": "a76d7c8b81033353004f5cafab8fa174c314f1d79158b69bc83a2f0bd6047fdf",
+          "package_sha256": "a76d7c8b81033353004f5cafab8fa174c314f1d79158b69bc83a2f0bd6047fdf",
+          "transformed": false
+        },
+        {
+          "path": "scripts/derive_running_left_from_running_right.py",
+          "source_sha256": "b3fc9b4a160ba39803a84ea61b7c4729ff8dc9e92bbc9399246350bffa04681f",
+          "package_sha256": "b3fc9b4a160ba39803a84ea61b7c4729ff8dc9e92bbc9399246350bffa04681f",
+          "transformed": false
+        },
+        {
+          "path": "scripts/extract_strip_frames.py",
+          "source_sha256": "c9a251acf4532831b32c03d169b6c39ba891aa37ba65ea79e5d08dae297ea497",
+          "package_sha256": "c9a251acf4532831b32c03d169b6c39ba891aa37ba65ea79e5d08dae297ea497",
+          "transformed": false
+        },
+        {
+          "path": "scripts/inspect_frames.py",
+          "source_sha256": "f196917c645e910a0d594608fa43cfb043ed294a4c60dffdf3846061b65c53c7",
+          "package_sha256": "f196917c645e910a0d594608fa43cfb043ed294a4c60dffdf3846061b65c53c7",
+          "transformed": false
+        },
+        {
+          "path": "scripts/make_contact_sheet.py",
+          "source_sha256": "28ab6f17909dd471ba6c9529b343fd9303ec9e35c551ceac23c98808224e701c",
+          "package_sha256": "28ab6f17909dd471ba6c9529b343fd9303ec9e35c551ceac23c98808224e701c",
+          "transformed": false
+        },
+        {
+          "path": "scripts/prepare_pet_run.py",
+          "source_sha256": "200b19089148be7a0467cfb5224a7286c76bc7ca5634210eeb2e8112d2016711",
+          "package_sha256": "200b19089148be7a0467cfb5224a7286c76bc7ca5634210eeb2e8112d2016711",
+          "transformed": false
+        },
+        {
+          "path": "scripts/render_animation_previews.py",
+          "source_sha256": "911e8813e1b79b7f9da44fae8a667c044818e8c71f41eaa4b280e91c78cde61e",
+          "package_sha256": "911e8813e1b79b7f9da44fae8a667c044818e8c71f41eaa4b280e91c78cde61e",
+          "transformed": false
+        },
+        {
+          "path": "scripts/validate_atlas.py",
+          "source_sha256": "649a9a242d171da032de0cab1744f11629db3a2c88253fd3215e1a1174c29465",
+          "package_sha256": "649a9a242d171da032de0cab1744f11629db3a2c88253fd3215e1a1174c29465",
+          "transformed": false
+        }
+      ]
+    },
+    {
+      "name": "osiris-tweets",
+      "path": "skills/creative/osiris-tweets",
+      "source": "~/.codex/skills/osiris-tweets",
+      "files": [
+        {
+          "path": "SKILL.md",
+          "source_sha256": "42b5adc79ce34e5ef997cb5f6dac8d6b227b55a4850338016fb3b5f6435385db",
+          "package_sha256": "42b5adc79ce34e5ef997cb5f6dac8d6b227b55a4850338016fb3b5f6435385db",
+          "transformed": false
+        },
+        {
+          "path": "agents/openai.yaml",
+          "source_sha256": "beb95e77a4c4b04f0dbbbee969097cd046af5a8b5cf297fa2eb680c688e205ed",
+          "package_sha256": "beb95e77a4c4b04f0dbbbee969097cd046af5a8b5cf297fa2eb680c688e205ed",
+          "transformed": false
+        },
+        {
+          "path": "references/creator-notes.md",
+          "source_sha256": "f3adc8bc126c7af5d55e8e20e1adde0d3c5cf21d4c2d13238200b6841b8b3ba4",
+          "package_sha256": "f3adc8bc126c7af5d55e8e20e1adde0d3c5cf21d4c2d13238200b6841b8b3ba4",
+          "transformed": false
+        }
+      ]
+    },
+    {
+      "name": "product-motion",
+      "path": "skills/creative/product-motion",
+      "source": "~/.codex/skills/product-motion",
+      "files": [
+        {
+          "path": "SKILL.md",
+          "source_sha256": "544aaf3bbd058869a0836257df5468ce53b951f3922ff64ae8fdb50a190ecda8",
+          "package_sha256": "544aaf3bbd058869a0836257df5468ce53b951f3922ff64ae8fdb50a190ecda8",
+          "transformed": false
+        },
+        {
+          "path": "agents/openai.yaml",
+          "source_sha256": "c4f5592157b3def5d249e43b8494d1cb072ad779c167cd05f75896ce8d6b5c17",
+          "package_sha256": "c4f5592157b3def5d249e43b8494d1cb072ad779c167cd05f75896ce8d6b5c17",
+          "transformed": false
+        },
+        {
+          "path": "references/sources.md",
+          "source_sha256": "357cac1b0cc27c35e924f899aecd53d6c424a8a9802c97ca5bedcbe91116b8bb",
+          "package_sha256": "357cac1b0cc27c35e924f899aecd53d6c424a8a9802c97ca5bedcbe91116b8bb",
+          "transformed": false
+        }
+      ]
+    },
+    {
+      "name": "stich",
+      "path": "skills/creative/stich",
+      "source": "~/.codex/skills/stich",
+      "files": [
+        {
+          "path": "SKILL.md",
+          "source_sha256": "1f39fee05dcbed63b611a9908662bb08505bc8ac80ec8f425b9e47ba8553dec2",
+          "package_sha256": "1f39fee05dcbed63b611a9908662bb08505bc8ac80ec8f425b9e47ba8553dec2",
+          "transformed": false
+        },
+        {
+          "path": "motif-authoring.md",
+          "source_sha256": "a125be45ac041299b8b01cb4f43b63d6f2bae3e51b267c95397bd432ddb2946e",
+          "package_sha256": "a125be45ac041299b8b01cb4f43b63d6f2bae3e51b267c95397bd432ddb2946e",
+          "transformed": false
+        }
+      ]
+    },
+    {
+      "name": "tesseract-design",
+      "path": "skills/creative/tesseract-design",
+      "source": "~/.codex/skills/tesseract-design",
+      "files": [
+        {
+          "path": "SKILL.md",
+          "source_sha256": "59de0be2c55a13fd19d1826175b295cb3f44845dc49475e7d5e4c36e2d99e30c",
+          "package_sha256": "59de0be2c55a13fd19d1826175b295cb3f44845dc49475e7d5e4c36e2d99e30c",
+          "transformed": false
+        },
+        {
+          "path": "agents/openai.yaml",
+          "source_sha256": "bc7c7c65f249e861a6a08801030554d806df6ca1671fa67f9ea4ec8a0772d399",
+          "package_sha256": "bc7c7c65f249e861a6a08801030554d806df6ca1671fa67f9ea4ec8a0772d399",
+          "transformed": false
+        },
+        {
+          "path": "assets/icon.svg",
+          "source_sha256": "300666174a294a191fdc9bf74eecd332d569210a28d1872f5751d612d7ffc855",
+          "package_sha256": "300666174a294a191fdc9bf74eecd332d569210a28d1872f5751d612d7ffc855",
+          "transformed": false
+        },
+        {
+          "path": "references/cli-version.txt",
+          "source_sha256": "40b8eb4000a913a7791090535f291d3d369874162a89ef3c9e3d4e887a1b9e79",
+          "package_sha256": "40b8eb4000a913a7791090535f291d3d369874162a89ef3c9e3d4e887a1b9e79",
+          "transformed": false
+        },
+        {
+          "path": "references/conversion.md",
+          "source_sha256": "e9d468fc7e9c35e7f1d387f7c122bc5500565cbd18258778174295a978900c8b",
+          "package_sha256": "e9d468fc7e9c35e7f1d387f7c122bc5500565cbd18258778174295a978900c8b",
+          "transformed": false
+        },
+        {
+          "path": "references/installation.md",
+          "source_sha256": "c5091a4ac8aac84430c264fb2da2b518ccf3a3e24766556c2d4cbbc25b9064b6",
+          "package_sha256": "c5091a4ac8aac84430c264fb2da2b518ccf3a3e24766556c2d4cbbc25b9064b6",
+          "transformed": false
+        },
+        {
+          "path": "references/static-authoring.md",
+          "source_sha256": "ca30f53c9cd7e8363a84b1c00ffcb9e4ef469decd3903a48393d246c513ef59e",
+          "package_sha256": "ca30f53c9cd7e8363a84b1c00ffcb9e4ef469decd3903a48393d246c513ef59e",
+          "transformed": false
+        },
+        {
+          "path": "references/telemetry.md",
+          "source_sha256": "d8e43ad5691de74f15b16284706518ae22eb24040f49ee8c127dd32ecfbe22ce",
+          "package_sha256": "d8e43ad5691de74f15b16284706518ae22eb24040f49ee8c127dd32ecfbe22ce",
+          "transformed": false
+        },
+        {
+          "path": "references/versions.md",
+          "source_sha256": "076925d1a3a166bd56b281467342c2d984cd55e0d60a3861392cdc916ae0a4fc",
+          "package_sha256": "076925d1a3a166bd56b281467342c2d984cd55e0d60a3861392cdc916ae0a4fc",
+          "transformed": false
+        }
+      ]
+    },
+    {
+      "name": "tesseract-editor",
+      "path": "skills/creative/tesseract-editor",
+      "source": "~/.codex/skills/tesseract-editor",
+      "files": [
+        {
+          "path": "SKILL.md",
+          "source_sha256": "436d49511e3c00ef6ddea1e8db1f21636143e8865609c944ba47951d9c2e6aef",
+          "package_sha256": "436d49511e3c00ef6ddea1e8db1f21636143e8865609c944ba47951d9c2e6aef",
+          "transformed": false
+        },
+        {
+          "path": "agents/openai.yaml",
+          "source_sha256": "a92de78d2727f239c87fdf047f2e86d5e2556ffc5da40c416830b4974c6d9f18",
+          "package_sha256": "a92de78d2727f239c87fdf047f2e86d5e2556ffc5da40c416830b4974c6d9f18",
+          "transformed": false
+        },
+        {
+          "path": "assets/icon.svg",
+          "source_sha256": "300666174a294a191fdc9bf74eecd332d569210a28d1872f5751d612d7ffc855",
+          "package_sha256": "300666174a294a191fdc9bf74eecd332d569210a28d1872f5751d612d7ffc855",
+          "transformed": false
+        },
+        {
+          "path": "examples/bouncing-ball/README.md",
+          "source_sha256": "4c296c30f3058aa4bf6485098fa5f0ba9240302ec3f4e527b8dac213faf95628",
+          "package_sha256": "4c296c30f3058aa4bf6485098fa5f0ba9240302ec3f4e527b8dac213faf95628",
+          "transformed": false
+        },
+        {
+          "path": "examples/bouncing-ball/app.js",
+          "source_sha256": "30b9a906643220c0c7f5ec6a486fecabc13a72d1d8b6ae9ea9f16d56d4ed4079",
+          "package_sha256": "30b9a906643220c0c7f5ec6a486fecabc13a72d1d8b6ae9ea9f16d56d4ed4079",
+          "transformed": false
+        },
+        {
+          "path": "examples/bouncing-ball/ball.tsrct",
+          "source_sha256": "3c76255bef3d80d7bba18dbaa78be132d0c24cc069848c9ffbd2c9954b89e4a7",
+          "package_sha256": "3c76255bef3d80d7bba18dbaa78be132d0c24cc069848c9ffbd2c9954b89e4a7",
+          "transformed": false
+        },
+        {
+          "path": "examples/bouncing-ball/index.html",
+          "source_sha256": "0cc9bba173f5c1f1ef728a40a059f2629e097638d2831220b64ce5fb62bc365c",
+          "package_sha256": "0cc9bba173f5c1f1ef728a40a059f2629e097638d2831220b64ce5fb62bc365c",
+          "transformed": false
+        },
+        {
+          "path": "examples/bouncing-ball/motion.js",
+          "source_sha256": "bdd20d015814215f8e1f69f5023289d25452058acf29498f40edfc87514a7caf",
+          "package_sha256": "bdd20d015814215f8e1f69f5023289d25452058acf29498f40edfc87514a7caf",
+          "transformed": false
+        },
+        {
+          "path": "examples/bouncing-ball/style.css",
+          "source_sha256": "359337cd2ecab310808348c6ea9d27cb080f5188ddd7c7b3b62e90f62c9ac3d0",
+          "package_sha256": "359337cd2ecab310808348c6ea9d27cb080f5188ddd7c7b3b62e90f62c9ac3d0",
+          "transformed": false
+        },
+        {
+          "path": "examples/timeline-editor/README.md",
+          "source_sha256": "b4e8ef58ff8ad8ce534c0a945b880531357ee1356093381e3061d070bb7f8dbf",
+          "package_sha256": "b4e8ef58ff8ad8ce534c0a945b880531357ee1356093381e3061d070bb7f8dbf",
+          "transformed": false
+        },
+        {
+          "path": "examples/timeline-editor/app.js",
+          "source_sha256": "589b865b5b0402d792db934288fc25a0c8fd96f1ac2c819634c88c86f6fc67c3",
+          "package_sha256": "589b865b5b0402d792db934288fc25a0c8fd96f1ac2c819634c88c86f6fc67c3",
+          "transformed": false
+        },
+        {
+          "path": "examples/timeline-editor/index.html",
+          "source_sha256": "6df27774e45fe61887319ae5ba4b3cc15b07bfc1def52627e4ce970ed766d42d",
+          "package_sha256": "6df27774e45fe61887319ae5ba4b3cc15b07bfc1def52627e4ce970ed766d42d",
+          "transformed": false
+        },
+        {
+          "path": "examples/timeline-editor/style.css",
+          "source_sha256": "e5819976015a01c0cf04bc9306a35a49f46dfa986ccf6b5ddfc91f38a70406e7",
+          "package_sha256": "e5819976015a01c0cf04bc9306a35a49f46dfa986ccf6b5ddfc91f38a70406e7",
+          "transformed": false
+        },
+        {
+          "path": "references/browser-api.md",
+          "source_sha256": "92c148d623b92e2adee1d8db978acefd3d51c755b1357cc04a4ea1255c752886",
+          "package_sha256": "92c148d623b92e2adee1d8db978acefd3d51c755b1357cc04a4ea1255c752886",
+          "transformed": false
+        },
+        {
+          "path": "references/cli-version.txt",
+          "source_sha256": "40b8eb4000a913a7791090535f291d3d369874162a89ef3c9e3d4e887a1b9e79",
+          "package_sha256": "40b8eb4000a913a7791090535f291d3d369874162a89ef3c9e3d4e887a1b9e79",
+          "transformed": false
+        },
+        {
+          "path": "references/conversion.md",
+          "source_sha256": "e9d468fc7e9c35e7f1d387f7c122bc5500565cbd18258778174295a978900c8b",
+          "package_sha256": "e9d468fc7e9c35e7f1d387f7c122bc5500565cbd18258778174295a978900c8b",
+          "transformed": false
+        },
+        {
+          "path": "references/installation.md",
+          "source_sha256": "c5091a4ac8aac84430c264fb2da2b518ccf3a3e24766556c2d4cbbc25b9064b6",
+          "package_sha256": "c5091a4ac8aac84430c264fb2da2b518ccf3a3e24766556c2d4cbbc25b9064b6",
+          "transformed": false
+        },
+        {
+          "path": "references/versions.md",
+          "source_sha256": "076925d1a3a166bd56b281467342c2d984cd55e0d60a3861392cdc916ae0a4fc",
+          "package_sha256": "076925d1a3a166bd56b281467342c2d984cd55e0d60a3861392cdc916ae0a4fc",
+          "transformed": false
+        }
+      ]
+    },
+    {
+      "name": "tesseract-motion",
+      "path": "skills/creative/tesseract-motion",
+      "source": "~/.codex/skills/tesseract-motion",
+      "files": [
+        {
+          "path": "SKILL.md",
+          "source_sha256": "726088fab0a7aee8be33739cbcd8d1670c396b532903ed6b134cfe4cc85f0519",
+          "package_sha256": "726088fab0a7aee8be33739cbcd8d1670c396b532903ed6b134cfe4cc85f0519",
+          "transformed": false
+        },
+        {
+          "path": "agents/openai.yaml",
+          "source_sha256": "ef8bf090f198396f998659d3c33b81fc79c633fcfe3ec18890a6bc26fc4b23cf",
+          "package_sha256": "ef8bf090f198396f998659d3c33b81fc79c633fcfe3ec18890a6bc26fc4b23cf",
+          "transformed": false
+        },
+        {
+          "path": "assets/icon.svg",
+          "source_sha256": "300666174a294a191fdc9bf74eecd332d569210a28d1872f5751d612d7ffc855",
+          "package_sha256": "300666174a294a191fdc9bf74eecd332d569210a28d1872f5751d612d7ffc855",
+          "transformed": false
+        },
+        {
+          "path": "references/ad-hooks.md",
+          "source_sha256": "82c0f25fea19e23cdfaeaf2cda17f452c2fb79c68f0061a356391b28de41f56c",
+          "package_sha256": "82c0f25fea19e23cdfaeaf2cda17f452c2fb79c68f0061a356391b28de41f56c",
+          "transformed": false
+        },
+        {
+          "path": "references/audio-and-timing.md",
+          "source_sha256": "fac50f1f8adc7eff266c9d811f34b17843a0afc0962874a302e7ecfd25af5780",
+          "package_sha256": "fac50f1f8adc7eff266c9d811f34b17843a0afc0962874a302e7ecfd25af5780",
+          "transformed": false
+        },
+        {
+          "path": "references/capabilities.md",
+          "source_sha256": "425a8647bb85cfe10b100e0e81d456660e6ad48d3e42b8461efa346482de9520",
+          "package_sha256": "425a8647bb85cfe10b100e0e81d456660e6ad48d3e42b8461efa346482de9520",
+          "transformed": false
+        },
+        {
+          "path": "references/cli-version.txt",
+          "source_sha256": "40b8eb4000a913a7791090535f291d3d369874162a89ef3c9e3d4e887a1b9e79",
+          "package_sha256": "40b8eb4000a913a7791090535f291d3d369874162a89ef3c9e3d4e887a1b9e79",
+          "transformed": false
+        },
+        {
+          "path": "references/color-grading.md",
+          "source_sha256": "7c0e300a4d17dbcdd79f8b4166042d37a08257e5bcb89bae35c874f5c7082beb",
+          "package_sha256": "7c0e300a4d17dbcdd79f8b4166042d37a08257e5bcb89bae35c874f5c7082beb",
+          "transformed": false
+        },
+        {
+          "path": "references/conversion.md",
+          "source_sha256": "e9d468fc7e9c35e7f1d387f7c122bc5500565cbd18258778174295a978900c8b",
+          "package_sha256": "e9d468fc7e9c35e7f1d387f7c122bc5500565cbd18258778174295a978900c8b",
+          "transformed": false
+        },
+        {
+          "path": "references/custom-shader.md",
+          "source_sha256": "591d665829063045925087fd08260f62eb92819962f57cb96c7ce5eff5e268e3",
+          "package_sha256": "591d665829063045925087fd08260f62eb92819962f57cb96c7ce5eff5e268e3",
+          "transformed": false
+        },
+        {
+          "path": "references/editorial-decisions.md",
+          "source_sha256": "c467c249abefc0c82ba7d7ae8101bda63e9b17a0973f7823bad77bb4ce6f257e",
+          "package_sha256": "c467c249abefc0c82ba7d7ae8101bda63e9b17a0973f7823bad77bb4ce6f257e",
+          "transformed": false
+        },
+        {
+          "path": "references/filmstrip-review.md",
+          "source_sha256": "f4e587e943ede4f8879474bb48bd5cc1d8f36ab4dbd9d9958f33b7b10185ba77",
+          "package_sha256": "f4e587e943ede4f8879474bb48bd5cc1d8f36ab4dbd9d9958f33b7b10185ba77",
+          "transformed": false
+        },
+        {
+          "path": "references/fx-authoring.md",
+          "source_sha256": "8d7e59a600b6e749d2dbbe1ecf0f532694c537061e14cf07dfc102f3d680c548",
+          "package_sha256": "8d7e59a600b6e749d2dbbe1ecf0f532694c537061e14cf07dfc102f3d680c548",
+          "transformed": false
+        },
+        {
+          "path": "references/hdr-blend-modes.md",
+          "source_sha256": "1ed3509cf2d687b181556fa15a3625169b2e3308231cf3ad18fe3f6a385d73dc",
+          "package_sha256": "1ed3509cf2d687b181556fa15a3625169b2e3308231cf3ad18fe3f6a385d73dc",
+          "transformed": false
+        },
+        {
+          "path": "references/installation.md",
+          "source_sha256": "c5091a4ac8aac84430c264fb2da2b518ccf3a3e24766556c2d4cbbc25b9064b6",
+          "package_sha256": "c5091a4ac8aac84430c264fb2da2b518ccf3a3e24766556c2d4cbbc25b9064b6",
+          "transformed": false
+        },
+        {
+          "path": "references/local-operation.md",
+          "source_sha256": "5d7b06e9adf5840d7809949845501e44e6f2ea7a8bfecffa189aca607e281dc0",
+          "package_sha256": "5d7b06e9adf5840d7809949845501e44e6f2ea7a8bfecffa189aca607e281dc0",
+          "transformed": false
+        },
+        {
+          "path": "references/media-import.md",
+          "source_sha256": "198dfa0ca9169e3bb2d271c89ab59efcd3ad13ee472d3b29fb002873b5da4d5a",
+          "package_sha256": "198dfa0ca9169e3bb2d271c89ab59efcd3ad13ee472d3b29fb002873b5da4d5a",
+          "transformed": false
+        },
+        {
+          "path": "references/motion-design.md",
+          "source_sha256": "9a124d0145af6a6afa5f55e11d85b3fd2afbc333bf9dc5a8a21aa3075d827112",
+          "package_sha256": "9a124d0145af6a6afa5f55e11d85b3fd2afbc333bf9dc5a8a21aa3075d827112",
+          "transformed": false
+        },
+        {
+          "path": "references/motion.md",
+          "source_sha256": "a6815b8ed4dbbf727a70739047704ac7e82029a06d3df56a17582044ac283729",
+          "package_sha256": "a6815b8ed4dbbf727a70739047704ac7e82029a06d3df56a17582044ac283729",
+          "transformed": false
+        },
+        {
+          "path": "references/native-authoring.md",
+          "source_sha256": "083efe3c39aa4f77167a5c36abdb811c09bde8854136e08dcf98d1b4096246ad",
+          "package_sha256": "083efe3c39aa4f77167a5c36abdb811c09bde8854136e08dcf98d1b4096246ad",
+          "transformed": false
+        },
+        {
+          "path": "references/review-and-delivery.md",
+          "source_sha256": "9231bb079cefd7736e55961fc9c1d22acc3a3e21b72cca0a94bb296d83164fea",
+          "package_sha256": "9231bb079cefd7736e55961fc9c1d22acc3a3e21b72cca0a94bb296d83164fea",
+          "transformed": false
+        },
+        {
+          "path": "references/sound-design.md",
+          "source_sha256": "c773ea9fdfffcad1f468b16330e63b99f8cf568733c894ae3030a5ab69d4dafc",
+          "package_sha256": "c773ea9fdfffcad1f468b16330e63b99f8cf568733c894ae3030a5ab69d4dafc",
+          "transformed": false
+        },
+        {
+          "path": "references/speech-cleanup.md",
+          "source_sha256": "dd1d36d23f7dbe3e1532976f1721411dc8a89a7a8f6ecb37b4158f68d85f27b7",
+          "package_sha256": "dd1d36d23f7dbe3e1532976f1721411dc8a89a7a8f6ecb37b4158f68d85f27b7",
+          "transformed": false
+        },
+        {
+          "path": "references/telemetry.md",
+          "source_sha256": "d8e43ad5691de74f15b16284706518ae22eb24040f49ee8c127dd32ecfbe22ce",
+          "package_sha256": "d8e43ad5691de74f15b16284706518ae22eb24040f49ee8c127dd32ecfbe22ce",
+          "transformed": false
+        },
+        {
+          "path": "references/versions.md",
+          "source_sha256": "076925d1a3a166bd56b281467342c2d984cd55e0d60a3861392cdc916ae0a4fc",
+          "package_sha256": "076925d1a3a166bd56b281467342c2d984cd55e0d60a3861392cdc916ae0a4fc",
+          "transformed": false
+        },
+        {
+          "path": "references/waveform-editing.md",
+          "source_sha256": "ddf75be2cef9d4e8541246d99c467a2fa64f0cbf9c9c46489a701796a2c63850",
+          "package_sha256": "ddf75be2cef9d4e8541246d99c467a2fa64f0cbf9c9c46489a701796a2c63850",
+          "transformed": false
+        },
+        {
+          "path": "scripts/tesseract_media.py",
+          "source_sha256": "eb81589a02e499ce41dc6c1bceb09dd808543505a3e3478ef05af21edb3aadd4",
+          "package_sha256": "eb81589a02e499ce41dc6c1bceb09dd808543505a3e3478ef05af21edb3aadd4",
+          "transformed": false
+        },
+        {
+          "path": "scripts/tesseract_sound.py",
+          "source_sha256": "ca2f6326c2c298c7ec2c40aa95cfa37b20e5d3acfdcac7edad807234ea5bfdfa",
+          "package_sha256": "ca2f6326c2c298c7ec2c40aa95cfa37b20e5d3acfdcac7edad807234ea5bfdfa",
+          "transformed": false
+        },
+        {
+          "path": "scripts/tesseract_waveform.py",
+          "source_sha256": "8463688e63cf3445ed78ced39f5b74100dc925acbf36cf4d951288e09f9b5177",
+          "package_sha256": "8463688e63cf3445ed78ced39f5b74100dc925acbf36cf4d951288e09f9b5177",
+          "transformed": false
+        }
+      ]
+    },
+    {
+      "name": "tesseract-video",
+      "path": "skills/creative/tesseract-video",
+      "source": "~/.codex/skills/tesseract-video",
+      "files": [
+        {
+          "path": "SKILL.md",
+          "source_sha256": "251ce1621a186b1b645b6be2e581c5fa269f0451d7c8c83eb9bf0f33107d662e",
+          "package_sha256": "251ce1621a186b1b645b6be2e581c5fa269f0451d7c8c83eb9bf0f33107d662e",
+          "transformed": false
+        },
+        {
+          "path": "agents/openai.yaml",
+          "source_sha256": "9a4839de012e06e0cfba36066e2e21edc92df41a50080ba3c53969b8d393ac68",
+          "package_sha256": "9a4839de012e06e0cfba36066e2e21edc92df41a50080ba3c53969b8d393ac68",
+          "transformed": false
+        },
+        {
+          "path": "assets/icon.svg",
+          "source_sha256": "300666174a294a191fdc9bf74eecd332d569210a28d1872f5751d612d7ffc855",
+          "package_sha256": "300666174a294a191fdc9bf74eecd332d569210a28d1872f5751d612d7ffc855",
+          "transformed": false
+        },
+        {
+          "path": "references/ad-hooks.md",
+          "source_sha256": "82c0f25fea19e23cdfaeaf2cda17f452c2fb79c68f0061a356391b28de41f56c",
+          "package_sha256": "82c0f25fea19e23cdfaeaf2cda17f452c2fb79c68f0061a356391b28de41f56c",
+          "transformed": false
+        },
+        {
+          "path": "references/audio-and-timing.md",
+          "source_sha256": "fac50f1f8adc7eff266c9d811f34b17843a0afc0962874a302e7ecfd25af5780",
+          "package_sha256": "fac50f1f8adc7eff266c9d811f34b17843a0afc0962874a302e7ecfd25af5780",
+          "transformed": false
+        },
+        {
+          "path": "references/capabilities.md",
+          "source_sha256": "425a8647bb85cfe10b100e0e81d456660e6ad48d3e42b8461efa346482de9520",
+          "package_sha256": "425a8647bb85cfe10b100e0e81d456660e6ad48d3e42b8461efa346482de9520",
+          "transformed": false
+        },
+        {
+          "path": "references/cli-version.txt",
+          "source_sha256": "40b8eb4000a913a7791090535f291d3d369874162a89ef3c9e3d4e887a1b9e79",
+          "package_sha256": "40b8eb4000a913a7791090535f291d3d369874162a89ef3c9e3d4e887a1b9e79",
+          "transformed": false
+        },
+        {
+          "path": "references/color-grading.md",
+          "source_sha256": "7c0e300a4d17dbcdd79f8b4166042d37a08257e5bcb89bae35c874f5c7082beb",
+          "package_sha256": "7c0e300a4d17dbcdd79f8b4166042d37a08257e5bcb89bae35c874f5c7082beb",
+          "transformed": false
+        },
+        {
+          "path": "references/conversion.md",
+          "source_sha256": "e9d468fc7e9c35e7f1d387f7c122bc5500565cbd18258778174295a978900c8b",
+          "package_sha256": "e9d468fc7e9c35e7f1d387f7c122bc5500565cbd18258778174295a978900c8b",
+          "transformed": false
+        },
+        {
+          "path": "references/custom-shader.md",
+          "source_sha256": "591d665829063045925087fd08260f62eb92819962f57cb96c7ce5eff5e268e3",
+          "package_sha256": "591d665829063045925087fd08260f62eb92819962f57cb96c7ce5eff5e268e3",
+          "transformed": false
+        },
+        {
+          "path": "references/editorial-decisions.md",
+          "source_sha256": "c467c249abefc0c82ba7d7ae8101bda63e9b17a0973f7823bad77bb4ce6f257e",
+          "package_sha256": "c467c249abefc0c82ba7d7ae8101bda63e9b17a0973f7823bad77bb4ce6f257e",
+          "transformed": false
+        },
+        {
+          "path": "references/filmstrip-review.md",
+          "source_sha256": "f4e587e943ede4f8879474bb48bd5cc1d8f36ab4dbd9d9958f33b7b10185ba77",
+          "package_sha256": "f4e587e943ede4f8879474bb48bd5cc1d8f36ab4dbd9d9958f33b7b10185ba77",
+          "transformed": false
+        },
+        {
+          "path": "references/fx-authoring.md",
+          "source_sha256": "8d7e59a600b6e749d2dbbe1ecf0f532694c537061e14cf07dfc102f3d680c548",
+          "package_sha256": "8d7e59a600b6e749d2dbbe1ecf0f532694c537061e14cf07dfc102f3d680c548",
+          "transformed": false
+        },
+        {
+          "path": "references/hdr-blend-modes.md",
+          "source_sha256": "1ed3509cf2d687b181556fa15a3625169b2e3308231cf3ad18fe3f6a385d73dc",
+          "package_sha256": "1ed3509cf2d687b181556fa15a3625169b2e3308231cf3ad18fe3f6a385d73dc",
+          "transformed": false
+        },
+        {
+          "path": "references/installation.md",
+          "source_sha256": "c5091a4ac8aac84430c264fb2da2b518ccf3a3e24766556c2d4cbbc25b9064b6",
+          "package_sha256": "c5091a4ac8aac84430c264fb2da2b518ccf3a3e24766556c2d4cbbc25b9064b6",
+          "transformed": false
+        },
+        {
+          "path": "references/local-operation.md",
+          "source_sha256": "5d7b06e9adf5840d7809949845501e44e6f2ea7a8bfecffa189aca607e281dc0",
+          "package_sha256": "5d7b06e9adf5840d7809949845501e44e6f2ea7a8bfecffa189aca607e281dc0",
+          "transformed": false
+        },
+        {
+          "path": "references/media-import.md",
+          "source_sha256": "198dfa0ca9169e3bb2d271c89ab59efcd3ad13ee472d3b29fb002873b5da4d5a",
+          "package_sha256": "198dfa0ca9169e3bb2d271c89ab59efcd3ad13ee472d3b29fb002873b5da4d5a",
+          "transformed": false
+        },
+        {
+          "path": "references/motion-design.md",
+          "source_sha256": "9a124d0145af6a6afa5f55e11d85b3fd2afbc333bf9dc5a8a21aa3075d827112",
+          "package_sha256": "9a124d0145af6a6afa5f55e11d85b3fd2afbc333bf9dc5a8a21aa3075d827112",
+          "transformed": false
+        },
+        {
+          "path": "references/motion.md",
+          "source_sha256": "a6815b8ed4dbbf727a70739047704ac7e82029a06d3df56a17582044ac283729",
+          "package_sha256": "a6815b8ed4dbbf727a70739047704ac7e82029a06d3df56a17582044ac283729",
+          "transformed": false
+        },
+        {
+          "path": "references/native-authoring.md",
+          "source_sha256": "083efe3c39aa4f77167a5c36abdb811c09bde8854136e08dcf98d1b4096246ad",
+          "package_sha256": "083efe3c39aa4f77167a5c36abdb811c09bde8854136e08dcf98d1b4096246ad",
+          "transformed": false
+        },
+        {
+          "path": "references/review-and-delivery.md",
+          "source_sha256": "9231bb079cefd7736e55961fc9c1d22acc3a3e21b72cca0a94bb296d83164fea",
+          "package_sha256": "9231bb079cefd7736e55961fc9c1d22acc3a3e21b72cca0a94bb296d83164fea",
+          "transformed": false
+        },
+        {
+          "path": "references/sound-design.md",
+          "source_sha256": "c773ea9fdfffcad1f468b16330e63b99f8cf568733c894ae3030a5ab69d4dafc",
+          "package_sha256": "c773ea9fdfffcad1f468b16330e63b99f8cf568733c894ae3030a5ab69d4dafc",
+          "transformed": false
+        },
+        {
+          "path": "references/speech-cleanup.md",
+          "source_sha256": "dd1d36d23f7dbe3e1532976f1721411dc8a89a7a8f6ecb37b4158f68d85f27b7",
+          "package_sha256": "dd1d36d23f7dbe3e1532976f1721411dc8a89a7a8f6ecb37b4158f68d85f27b7",
+          "transformed": false
+        },
+        {
+          "path": "references/telemetry.md",
+          "source_sha256": "d8e43ad5691de74f15b16284706518ae22eb24040f49ee8c127dd32ecfbe22ce",
+          "package_sha256": "d8e43ad5691de74f15b16284706518ae22eb24040f49ee8c127dd32ecfbe22ce",
+          "transformed": false
+        },
+        {
+          "path": "references/versions.md",
+          "source_sha256": "076925d1a3a166bd56b281467342c2d984cd55e0d60a3861392cdc916ae0a4fc",
+          "package_sha256": "076925d1a3a166bd56b281467342c2d984cd55e0d60a3861392cdc916ae0a4fc",
+          "transformed": false
+        },
+        {
+          "path": "references/waveform-editing.md",
+          "source_sha256": "ddf75be2cef9d4e8541246d99c467a2fa64f0cbf9c9c46489a701796a2c63850",
+          "package_sha256": "ddf75be2cef9d4e8541246d99c467a2fa64f0cbf9c9c46489a701796a2c63850",
+          "transformed": false
+        },
+        {
+          "path": "scripts/tesseract_media.py",
+          "source_sha256": "eb81589a02e499ce41dc6c1bceb09dd808543505a3e3478ef05af21edb3aadd4",
+          "package_sha256": "eb81589a02e499ce41dc6c1bceb09dd808543505a3e3478ef05af21edb3aadd4",
+          "transformed": false
+        },
+        {
+          "path": "scripts/tesseract_sound.py",
+          "source_sha256": "ca2f6326c2c298c7ec2c40aa95cfa37b20e5d3acfdcac7edad807234ea5bfdfa",
+          "package_sha256": "ca2f6326c2c298c7ec2c40aa95cfa37b20e5d3acfdcac7edad807234ea5bfdfa",
+          "transformed": false
+        },
+        {
+          "path": "scripts/tesseract_waveform.py",
+          "source_sha256": "8463688e63cf3445ed78ced39f5b74100dc925acbf36cf4d951288e09f9b5177",
+          "package_sha256": "8463688e63cf3445ed78ced39f5b74100dc925acbf36cf4d951288e09f9b5177",
+          "transformed": false
+        }
+      ]
+    },
+    {
+      "name": "weftcut",
+      "path": "skills/creative/weftcut",
+      "source": "~/.codex/skills/weftcut",
+      "files": [
+        {
+          "path": "SKILL.md",
+          "source_sha256": "d0e6e5a8ef8a41ef9224750de8428489ca5c15a5bfdda4e6735344655dfc5b06",
+          "package_sha256": "d0e6e5a8ef8a41ef9224750de8428489ca5c15a5bfdda4e6735344655dfc5b06",
+          "transformed": false
+        },
+        {
+          "path": "motif-authoring.md",
+          "source_sha256": "a125be45ac041299b8b01cb4f43b63d6f2bae3e51b267c95397bd432ddb2946e",
+          "package_sha256": "a125be45ac041299b8b01cb4f43b63d6f2bae3e51b267c95397bd432ddb2946e",
+          "transformed": false
+        }
+      ]
+    },
+    {
+      "name": "working-todo-builder",
+      "path": "skills/creative/working-todo-builder",
+      "source": "~/.codex/skills/working-todo-builder",
+      "files": [
+        {
+          "path": "SKILL.md",
+          "source_sha256": "0359f6842621c6b7d578a9e5c9938790300328e13276125460da1812376e45d2",
+          "package_sha256": "0359f6842621c6b7d578a9e5c9938790300328e13276125460da1812376e45d2",
+          "transformed": false
+        },
+        {
+          "path": "agents/openai.yaml",
+          "source_sha256": "404a35ca0a1690a8cc786f9a2bf55e25a23e1764369fae34d530e36255d4f151",
+          "package_sha256": "404a35ca0a1690a8cc786f9a2bf55e25a23e1764369fae34d530e36255d4f151",
+          "transformed": false
+        },
+        {
+          "path": "assets/example-plan.json",
+          "source_sha256": "7adc06137bb1a6dda8be45aa0b842de63c815b81037bd25f392ab90ecde66c13",
+          "package_sha256": "7adc06137bb1a6dda8be45aa0b842de63c815b81037bd25f392ab90ecde66c13",
+          "transformed": false
+        },
+        {
+          "path": "assets/example-reference-stack.html",
+          "source_sha256": "065c1b89693c1df7c06493cfbb45fabd085b2e396af56da0cb5aa71b01ca47d5",
+          "package_sha256": "065c1b89693c1df7c06493cfbb45fabd085b2e396af56da0cb5aa71b01ca47d5",
+          "transformed": false
+        },
+        {
+          "path": "assets/example-working-todo.html",
+          "source_sha256": "3a3e11047b712c7ebcd07793e1d5fc0cc10de4f02aea27377df80e7479cce5db",
+          "package_sha256": "3a3e11047b712c7ebcd07793e1d5fc0cc10de4f02aea27377df80e7479cce5db",
+          "transformed": false
+        },
+        {
+          "path": "assets/reference-stack-template.html",
+          "source_sha256": "3a13999aec2038629f67858cdcdf7164c65d1c9edc309df347f5a09dc0431c17",
+          "package_sha256": "3a13999aec2038629f67858cdcdf7164c65d1c9edc309df347f5a09dc0431c17",
+          "transformed": false
+        },
+        {
+          "path": "assets/working-todo-template.html",
+          "source_sha256": "afbde55075793ae1426e9663aa011983d642eea818cd98b323796030f43b9b69",
+          "package_sha256": "afbde55075793ae1426e9663aa011983d642eea818cd98b323796030f43b9b69",
+          "transformed": false
+        },
+        {
+          "path": "references/plan-authoring.md",
+          "source_sha256": "5c157424a86dae3a5a2338cb550d7d80e2fbbf2b662b7aa6c724c3390a2e6d85",
+          "package_sha256": "5c157424a86dae3a5a2338cb550d7d80e2fbbf2b662b7aa6c724c3390a2e6d85",
+          "transformed": false
+        },
+        {
+          "path": "scripts/create_working_todo.py",
+          "source_sha256": "8a51d9cb6acea152b232260c81ec55c4e1314da320fc32b25f551d1081833a02",
+          "package_sha256": "8a51d9cb6acea152b232260c81ec55c4e1314da320fc32b25f551d1081833a02",
+          "transformed": false
+        }
+      ]
+    },
+    {
+      "name": "youtube-cleaner",
+      "path": "skills/youtube/youtube-cleaner",
+      "source": "~/.codex/skills/youtube-cleaner",
+      "files": [
+        {
+          "path": "SKILL.md",
+          "source_sha256": "38972cb3626cde5b8f9a715dba081027b3b7966df57e94ccead07403644c91f9",
+          "package_sha256": "38972cb3626cde5b8f9a715dba081027b3b7966df57e94ccead07403644c91f9",
+          "transformed": false
+        },
+        {
+          "path": "agents/openai.yaml",
+          "source_sha256": "7e27a936e818f3845ca162d1817e91eef3886b0989efb517530d95bb323bcef6",
+          "package_sha256": "7e27a936e818f3845ca162d1817e91eef3886b0989efb517530d95bb323bcef6",
+          "transformed": false
+        },
+        {
+          "path": "references/browser-fastpath.md",
+          "source_sha256": "a49a9484d3ce4b7f7edcd8db0779c165f4d126661927b3e2964da155acfcc08a",
+          "package_sha256": "a49a9484d3ce4b7f7edcd8db0779c165f4d126661927b3e2964da155acfcc08a",
+          "transformed": false
+        },
+        {
+          "path": "references/playlist-context.md",
+          "source_sha256": "82ea3b756b0fe21fdc309bdae16192492c9467cb6cdd6cbda0ad1951b03df710",
+          "package_sha256": "734cc2bd34bf509c8444ab5d266ef1f6cb0a8dc4420c27cde605d3004595e7c9",
+          "transformed": true
+        }
+      ]
+    },
+    {
+      "name": "youtube-watch-later",
+      "path": "skills/youtube/youtube-watch-later",
+      "source": "~/.codex/skills/youtube-watch-later",
+      "files": [
+        {
+          "path": "SKILL.md",
+          "source_sha256": "175bfb0995cb82cfb69e4b32eb3e5f20e02c5747b18a67bad04f11e3ab156f7e",
+          "package_sha256": "175bfb0995cb82cfb69e4b32eb3e5f20e02c5747b18a67bad04f11e3ab156f7e",
+          "transformed": false
+        },
+        {
+          "path": "agents/openai.yaml",
+          "source_sha256": "5e498ca5299d5209f3fad1f5030b7cf7fe2b05d2f40541624c5868fcaa5a513e",
+          "package_sha256": "5e498ca5299d5209f3fad1f5030b7cf7fe2b05d2f40541624c5868fcaa5a513e",
+          "transformed": false
+        }
+      ]
+    },
+    {
+      "name": "cli-hub-meta-skill",
+      "path": "skills/tools/cli-hub-meta-skill",
+      "source": "~/.codex/skills/cli-hub-meta-skill",
+      "files": [
+        {
+          "path": "SKILL.md",
+          "source_sha256": "66a65c056120d50d0e4e9cfd87187504b47b82bd08233f2401d5920b76af2558",
+          "package_sha256": "66a65c056120d50d0e4e9cfd87187504b47b82bd08233f2401d5920b76af2558",
+          "transformed": false
+        }
+      ]
+    }
+  ],
+  "excluded": "System skills, plugin caches, imported engineering and orchestration skill collections, and older Claude-only skills are outside this custom-skill sync.",
+  "vps_pending": [
+    "osiris-t3-update"
+  ],
+  "excluded_local_skill_names": [
+    "arena",
+    "ask-matt",
+    "babysit-pr",
+    "blast-radius",
+    "bro",
+    "code-review",
+    "codebase-design",
+    "council",
+    "diagnosing-bugs",
+    "domain-modeling",
+    "file-pr",
+    "find-skills",
+    "full-send",
+    "full-stop",
+    "grill-me",
+    "grill-with-docs",
+    "grilling",
+    "handoff",
+    "how",
+    "implement",
+    "improve-codebase-architecture",
+    "interrogate",
+    "leaving-pr-comments",
+    "modernize",
+    "principle-encode-lessons-in-structure",
+    "principle-laziness-protocol",
+    "principle-prove-it-works",
+    "principle-redesign-from-first-principles",
+    "principle-separate-before-serializing-shared-state",
+    "prototype",
+    "research",
+    "setup-matt-pocock-skills",
+    "show-me-your-work",
+    "sol-loop",
+    "takeover",
+    "tdd",
+    "teach",
+    "technical-writing",
+    "to-questionnaire",
+    "to-spec",
+    "to-tickets",
+    "unslop",
+    "wait-what",
+    "wayfinder",
+    "why",
+    "wizard",
+    "writing-for-agents"
+  ]
+}

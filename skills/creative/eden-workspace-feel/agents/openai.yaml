@@ -1,0 +1,4 @@
+interface:
+  display_name: "Eden Workspace Feel"
+  short_description: "Shape calm workspaces and persistent panes"
+  default_prompt: "Use $eden-workspace-feel to design a calm creative workspace with focused artifacts and persistent companion panes."

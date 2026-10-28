@@ -1,0 +1,4 @@
+interface:
+  display_name: "YouTube Watch Later"
+  short_description: "Save videos in T3, verify them, and clean up tabs"
+  default_prompt: "Use $youtube-watch-later to save these videos to my Watch Later playlist, verify each one, and close unused task tabs."

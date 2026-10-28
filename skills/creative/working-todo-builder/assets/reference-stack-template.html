@@ -1,0 +1,315 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>__STACK_TITLE__</title>
+    <style>
+      :root {
+        color-scheme: light;
+        --ink: #141a20;
+        --muted: #4f5660;
+        --nav: #16252f;
+        --nav-soft: #223844;
+        --paper: #f8f5ef;
+        --line: #c8c0b3;
+        --accent: #c85f3a;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        height: 100vh;
+        overflow: hidden;
+        background: var(--paper);
+        color: var(--ink);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      }
+
+      .stack {
+        display: grid;
+        grid-template-columns: 248px minmax(0, 1fr);
+        height: 100vh;
+      }
+
+      aside {
+        display: flex;
+        flex-direction: column;
+        min-height: 0;
+        padding: 18px;
+        background: var(--nav);
+        color: #ffffff;
+      }
+
+      .brand {
+        display: grid;
+        grid-template-columns: 42px minmax(0, 1fr);
+        gap: 12px;
+        align-items: center;
+        margin-bottom: 28px;
+      }
+
+      .mark {
+        display: grid;
+        place-items: center;
+        width: 42px;
+        height: 42px;
+        border: 1px solid rgba(255, 255, 255, 0.18);
+        background: #13212a;
+        font-weight: 900;
+      }
+
+      .brand strong {
+        display: block;
+        font-size: 17px;
+      }
+
+      .brand span {
+        display: block;
+        margin-top: 2px;
+        color: #e2e8ec;
+        font-size: 13px;
+      }
+
+      .section-label {
+        margin: 0 0 10px;
+        color: #d4dde3;
+        font-size: 11px;
+        font-weight: 800;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+      }
+
+      nav {
+        display: grid;
+        gap: 8px;
+      }
+
+      button {
+        width: 100%;
+        padding: 12px;
+        border: 1px solid transparent;
+        border-radius: 8px;
+        background: transparent;
+        color: #f3f7f9;
+        cursor: pointer;
+        font: inherit;
+        text-align: left;
+      }
+
+      button:hover {
+        background: rgba(255, 255, 255, 0.07);
+      }
+
+      button.is-active {
+        border-color: rgba(200, 95, 58, 0.72);
+        background: var(--nav-soft);
+        color: #ffffff;
+      }
+
+      button strong {
+        display: block;
+        margin-bottom: 3px;
+        font-size: 14px;
+      }
+
+      button span {
+        display: block;
+        color: #d7e0e6;
+        font-size: 12px;
+      }
+
+      .sidebar-note {
+        margin-top: auto;
+        padding-top: 18px;
+        color: #d7e0e6;
+        font-size: 12px;
+        line-height: 1.5;
+      }
+
+      main {
+        display: grid;
+        grid-template-rows: auto minmax(0, 1fr);
+        min-width: 0;
+        min-height: 0;
+      }
+
+      .topbar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+        padding: 14px 18px;
+        border-bottom: 1px solid var(--line);
+        background: #ffffff;
+      }
+
+      .current strong {
+        display: block;
+        font-size: 16px;
+      }
+
+      .current span {
+        display: block;
+        margin-top: 2px;
+        color: var(--muted);
+        font-size: 13px;
+      }
+
+      .actions {
+        display: flex;
+        gap: 8px;
+      }
+
+      .link {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 38px;
+        padding: 0 13px;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: #ffffff;
+        color: var(--ink);
+        font-size: 13px;
+        font-weight: 800;
+        text-decoration: none;
+      }
+
+      .link.primary {
+        border-color: var(--accent);
+        background: var(--accent);
+        color: #ffffff;
+      }
+
+      iframe {
+        display: block;
+        width: 100%;
+        height: 100%;
+        border: 0;
+        background: #ffffff;
+        color-scheme: light;
+      }
+
+      @media (max-width: 820px) {
+        .stack {
+          grid-template-columns: 1fr;
+          grid-template-rows: auto minmax(0, 1fr);
+        }
+
+        aside {
+          padding: 14px;
+        }
+
+        .brand,
+        .sidebar-note {
+          display: none;
+        }
+
+        nav {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="stack">
+      <aside>
+        <div class="brand">
+          <div class="mark">__BRAND_MARK__</div>
+          <div>
+            <strong>__BRAND_TITLE__</strong>
+            <span>__BRAND_SUBTITLE__</span>
+          </div>
+        </div>
+
+        <p class="section-label">Working apps</p>
+        <nav aria-label="Local reference apps">
+__NAV_BUTTONS__
+        </nav>
+
+        <p class="sidebar-note">
+          __SIDEBAR_NOTE__
+        </p>
+      </aside>
+
+      <main>
+        <div class="topbar">
+          <div class="current">
+            <strong id="currentName">__DEFAULT_NAME__</strong>
+            <span id="currentUrl">__DEFAULT_URL__</span>
+          </div>
+          <div class="actions">
+            <a class="link" id="openDirect" href="__DEFAULT_URL__" target="_blank" rel="noreferrer">Open Tab</a>
+            <a class="link primary" href="__PRIMARY_URL__" target="_self">__PRIMARY_LABEL__</a>
+          </div>
+        </div>
+        <iframe id="viewer" src="__DEFAULT_URL__" title="Local reference viewer" allow="clipboard-read; clipboard-write"></iframe>
+      </main>
+    </div>
+
+    <script>
+      const viewer = document.querySelector("#viewer");
+      const currentName = document.querySelector("#currentName");
+      const currentUrl = document.querySelector("#currentUrl");
+      const openDirect = document.querySelector("#openDirect");
+      const buttons = Array.from(document.querySelectorAll("button[data-url]"));
+
+      async function copyWorkingTodoText(text) {
+        let copied = false;
+
+        if (navigator.clipboard?.writeText) {
+          try {
+            await navigator.clipboard.writeText(text);
+            copied = true;
+          } catch (error) {
+            copied = false;
+          }
+        }
+
+        if (copied) return true;
+
+        const textarea = document.createElement("textarea");
+        textarea.value = text;
+        textarea.setAttribute("readonly", "");
+        textarea.style.position = "fixed";
+        textarea.style.top = "0";
+        textarea.style.left = "0";
+        textarea.style.width = "1px";
+        textarea.style.height = "1px";
+        textarea.style.opacity = "0.01";
+        document.body.append(textarea);
+        textarea.focus({ preventScroll: true });
+        textarea.select();
+        textarea.setSelectionRange(0, text.length);
+
+        try {
+          copied = document.execCommand("copy");
+        } catch (error) {
+          copied = false;
+        }
+
+        textarea.remove();
+        return copied;
+      }
+
+      window.copyWorkingTodoText = copyWorkingTodoText;
+
+      buttons.forEach((button) => {
+        button.addEventListener("click", () => {
+          const url = button.dataset.url;
+          const name = button.dataset.name;
+
+          buttons.forEach((item) => item.classList.toggle("is-active", item === button));
+          currentName.textContent = name;
+          currentUrl.textContent = url;
+          openDirect.href = url;
+          viewer.src = url;
+        });
+      });
+    </script>
+  </body>
+</html>

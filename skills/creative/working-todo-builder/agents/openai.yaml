@@ -1,0 +1,4 @@
+interface:
+  display_name: "Working TODO Builder"
+  short_description: "Generate Studio Flow planning boards."
+  default_prompt: "Create a personalized Working TODO page for this project using the same UI and approval workflow."

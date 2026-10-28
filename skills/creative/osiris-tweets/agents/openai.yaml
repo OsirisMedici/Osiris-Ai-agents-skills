@@ -1,0 +1,4 @@
+interface:
+  display_name: "Osiris Tweets"
+  short_description: "Turn real observations into clear, personal tweets"
+  default_prompt: "Use $osiris-tweets to draft a few tweets from what I have been thinking about today."

@@ -1,0 +1,115 @@
+{
+  "html_title": "Sample App Working TODO",
+  "workspace_name": "Sample App Build Room",
+  "workspace_subtitle": "Osiris + Codex",
+  "avatar": "OC",
+  "project_title": "Sample App Working Plan",
+  "project_description": "A reusable planning board for choosing the best next build tasks before writing code.",
+  "sidebar": {
+    "title": "Reference Stack",
+    "subtitle": "Localhost sidebar",
+    "mark": "APP",
+    "primary_label": "App",
+    "primary_url": "./index.html",
+    "note": "Keep this page open while building. Use the sidebar to compare the current app, inspiration references, and the active Working TODO plan.",
+    "apps": [
+      {
+        "name": "Current App",
+        "label": "Current App",
+        "description": "Live project app",
+        "url": "./index.html"
+      },
+      {
+        "name": "Working TODO",
+        "label": "Working TODO",
+        "description": "Build plan checklist",
+        "url": "./working-todo.html"
+      },
+      {
+        "name": "Reference Notes",
+        "label": "Reference Notes",
+        "description": "Planning docs or feedback bank",
+        "url": "./notes.html"
+      }
+    ]
+  },
+  "phases": [
+    {
+      "id": "clarity",
+      "order": 1,
+      "icon": "Layout",
+      "name": "Clarity And Direction",
+      "description": "Make the first build decisions clear before touching the product surface.",
+      "checklist": [
+        {
+          "id": "A01",
+          "code": "A01",
+          "label": "Define the real user",
+          "note": "Write who uses the app, what they need first, and what they should ignore.",
+          "brief": [
+            "This task prevents the project from becoming a collection of features. Before building, decide who the first version is for and what problem the page or app must solve for that person.",
+            "Approve this when the user and core use case are specific enough to guide UI choices. Disapprove it if the project already has a locked brief and this would slow down execution."
+          ]
+        },
+        {
+          "id": "A02",
+          "code": "A02",
+          "label": "Choose the first screen",
+          "note": "Decide what the user should see immediately when the app opens.",
+          "brief": [
+            "The first screen controls the whole product feeling. Use this task to decide whether the app opens on a dashboard, checklist, calendar, canvas, table, or editor.",
+            "Approve this when the first screen is still ambiguous. Disapprove it when the first screen is already obvious from the project type or reference app."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ui",
+      "order": 2,
+      "icon": "Layers",
+      "name": "UI Build Pass",
+      "description": "Build only the interface that makes the product easier to understand and use.",
+      "checklist": [
+        {
+          "id": "B01",
+          "code": "B01",
+          "label": "Create paper-like task surface",
+          "note": "Use clear cards, readable contrast, restrained color, and no blur-heavy UI.",
+          "brief": [
+            "This task keeps the product grounded in the Studio Flow feeling: clear, tactile, readable, and operational instead of decorative.",
+            "Approve this when the current UI feels noisy, vague, or too SaaS-like. Disapprove it if the existing UI already has the correct visual foundation."
+          ]
+        },
+        {
+          "id": "B02",
+          "code": "B02",
+          "label": "Add approval states",
+          "note": "Let Osiris approve, disapprove, and copy selected tasks for Codex.",
+          "brief": [
+            "Approval states turn the board into a decision layer. They help separate things we will build now from things we are parking for later.",
+            "Approve this when the project needs collaborative planning. Disapprove it for a simple one-off page where approvals are unnecessary."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "later",
+      "order": 3,
+      "icon": "Sparkles",
+      "name": "Later Parked Ideas",
+      "description": "Keep useful but non-urgent ideas visible without pulling focus from the MVP.",
+      "checklist": [
+        {
+          "id": "C01",
+          "code": "C01",
+          "label": "Park future integrations",
+          "note": "Move cloud, login, sync, or automation ideas here until the local MVP works.",
+          "brief": [
+            "This task protects the first version from becoming too wide. Future integrations can stay documented without turning into today's build work.",
+            "Approve this when the project is being distracted by later-stage ideas. Disapprove it if the integration is essential to the very first usable version."
+          ]
+        }
+      ]
+    }
+  ]
+}

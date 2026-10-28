@@ -1,0 +1,4 @@
+interface:
+  display_name: "Mac rescue"
+  short_description: "Diagnose slowness, reclaim space, plan SSD moves"
+  default_prompt: "Use $mac-rescue to diagnose this slow Mac, assess storage and external SSD options, and prepare one exact approval plan before making changes."

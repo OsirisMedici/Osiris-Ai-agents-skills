@@ -1,0 +1,4 @@
+interface:
+  display_name: "Content Engine Osiris"
+  short_description: "Operate the local content engine"
+  default_prompt: "Use Content Engine Osiris to open the local carousel engine, create the next post from caption-first creative direction, operate the existing UI, and ask permission before changing product code."

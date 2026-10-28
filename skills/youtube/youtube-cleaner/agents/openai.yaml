@@ -1,0 +1,4 @@
+interface:
+  display_name: "YouTube cleaner"
+  short_description: "Organize Watch Later and clean up saved videos"
+  default_prompt: "Use $youtube-cleaner to organize my Watch Later into my existing playlists and review what can be removed."
