@@ -11,3 +11,5 @@ The JSON inventory records source and published hashes. No client reports, scree
 The PDF renderers require Python with ReportLab, pypdf and Pillow, plus a Unicode TrueType font. The report renderer can accept explicit font paths and otherwise looks for the bundled runtime or system fonts. Browser export uses the supported in-app Browser. These packages do not include those runtimes or signed-in sessions.
 
 The eight added or updated packages passed Skill Creator validation, YAML parsing, Python syntax and relative-reference checks. The report renderer was exercised on the client issue report, and the faithful-export helper was checked with a continuous-PDF fixture. Offline validation does not establish provider delivery or browser acceptance on another machine.
+
+The faithful PDF joiner was also checked against a real multi-section browser export. Its integrity check now compares every non-whitespace character, because pypdf can infer different line-break spacing after a coordinate transform. Visual QA remains required; this does not relax image or layout checks.

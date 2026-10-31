@@ -72,8 +72,10 @@ def join_pdf(source, destination, title):
     assert len(check.pages) == 1
     physical_width = float(check.pages[0].mediabox.width) * float(check.pages[0].get('/UserUnit', 1))
     assert abs(physical_width - A4_WIDTH) < 0.01
-    before = re.findall(r'\S+', '\n'.join(p.extract_text() or '' for p in reader.pages))
-    after = re.findall(r'\S+', check.pages[0].extract_text() or '')
+    # A coordinate transform can change pypdf's inferred line-break spacing.
+    # Compare every non-whitespace character; visual QA still checks layout.
+    before = re.sub(r'\s+', '', '\n'.join(p.extract_text() or '' for p in reader.pages))
+    after = re.sub(r'\s+', '', check.pages[0].extract_text() or '')
     assert before == after, 'Printed text changed during joining'
     return {'pages': 1, 'width_mm': physical_width / 72 * 25.4,
             'height_points': total_height, 'user_unit': unit, 'path': str(destination)}

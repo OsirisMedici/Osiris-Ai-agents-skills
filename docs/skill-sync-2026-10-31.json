@@ -118,8 +118,8 @@
         },
         {
           "path": "scripts/join_continuous.py",
-          "source_sha256": "613cc92a9a0361c903384457f91ddd291c160a93e9ce534796a4c0a6aded3617",
-          "package_sha256": "613cc92a9a0361c903384457f91ddd291c160a93e9ce534796a4c0a6aded3617",
+          "source_sha256": "15d970725bfcb2315dc924847a4bef37ce155eb7025503a8b7645162a2bea305",
+          "package_sha256": "15d970725bfcb2315dc924847a4bef37ce155eb7025503a8b7645162a2bea305",
           "transformed": false
         },
         {
