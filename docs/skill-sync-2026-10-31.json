@@ -1,0 +1,232 @@
+{
+  "captured_at": "2026-10-31",
+  "scope": "New custom issue workflows, one required adapted writing dependency, and two confirmed local refinements. Installed source skills remain unchanged.",
+  "skills": [
+    {
+      "name": "feedback-to-issue",
+      "path": "skills/operations/feedback-to-issue",
+      "source": "~/.codex/skills/feedback-to-issue",
+      "change": "added",
+      "files": [
+        {
+          "path": "SKILL.md",
+          "source_sha256": "6ec936641a506065c6655e3087fc8e8972e8c29708ef5f44d29b9c68d074ed41",
+          "package_sha256": "6ec936641a506065c6655e3087fc8e8972e8c29708ef5f44d29b9c68d074ed41",
+          "transformed": false
+        },
+        {
+          "path": "agents/openai.yaml",
+          "source_sha256": "9afdf008ca156664f3260643d791495e6f489f064cc458c728b56dbe57f0be80",
+          "package_sha256": "9afdf008ca156664f3260643d791495e6f489f064cc458c728b56dbe57f0be80",
+          "transformed": false
+        },
+        {
+          "path": "references/feedback-access.md",
+          "source_sha256": "ac1a6afa87b3a5283672906510a055b84231bfe12fe9a0ce57f92d428e18ae85",
+          "package_sha256": "ac1a6afa87b3a5283672906510a055b84231bfe12fe9a0ce57f92d428e18ae85",
+          "transformed": false
+        },
+        {
+          "path": "references/issue-template.md",
+          "source_sha256": "16d6c7e49bb719dd19bb483a273c5a8be09ef51314661e3954a97659246f00d2",
+          "package_sha256": "16d6c7e49bb719dd19bb483a273c5a8be09ef51314661e3954a97659246f00d2",
+          "transformed": false
+        }
+      ]
+    },
+    {
+      "name": "feedback-to-issue-cleanup",
+      "path": "skills/operations/feedback-to-issue-cleanup",
+      "source": "~/.codex/skills/feedback-to-issue-cleanup",
+      "change": "added",
+      "files": [
+        {
+          "path": "SKILL.md",
+          "source_sha256": "9c674ce2e2581210c498f07e81d8870a88fcd7f680f1191774e45b2abb84053e",
+          "package_sha256": "9c674ce2e2581210c498f07e81d8870a88fcd7f680f1191774e45b2abb84053e",
+          "transformed": false
+        },
+        {
+          "path": "agents/openai.yaml",
+          "source_sha256": "9dc145e3ef6bbbf8496c70da2c8334ed181a2f4d8a66cfcd270b53c45dc8e831",
+          "package_sha256": "9dc145e3ef6bbbf8496c70da2c8334ed181a2f4d8a66cfcd270b53c45dc8e831",
+          "transformed": false
+        },
+        {
+          "path": "references/images-and-history.md",
+          "source_sha256": "da1205c622b0590b0d49443c5cf99ecba56a75c09cd6e2c160bed1ff39f4f5aa",
+          "package_sha256": "da1205c622b0590b0d49443c5cf99ecba56a75c09cd6e2c160bed1ff39f4f5aa",
+          "transformed": false
+        }
+      ]
+    },
+    {
+      "name": "github-issue-report",
+      "path": "skills/operations/github-issue-report",
+      "source": "~/.codex/skills/github-issue-report",
+      "change": "added",
+      "files": [
+        {
+          "path": "SKILL.md",
+          "source_sha256": "2f25c5444f66e7eaca5e1d53f91e8bed87e2a302e0c0a83ccbaa826271afed32",
+          "package_sha256": "2f25c5444f66e7eaca5e1d53f91e8bed87e2a302e0c0a83ccbaa826271afed32",
+          "transformed": false
+        },
+        {
+          "path": "agents/openai.yaml",
+          "source_sha256": "b96d72b2640c6ac4f3377f0f02280401e1c804d2678a65a8d7a0d09930468972",
+          "package_sha256": "b96d72b2640c6ac4f3377f0f02280401e1c804d2678a65a8d7a0d09930468972",
+          "transformed": false
+        },
+        {
+          "path": "references/report-input.md",
+          "source_sha256": "e68e778ed5e49bd3fbf73c10a04b7738d8c8bc6f2748901639a0f7f37b23e355",
+          "package_sha256": "e68e778ed5e49bd3fbf73c10a04b7738d8c8bc6f2748901639a0f7f37b23e355",
+          "transformed": false
+        },
+        {
+          "path": "scripts/render_report.py",
+          "source_sha256": "01106b27a66553528479bbdfda86fec5c25d2f0015bf00757c3d9385815c2c30",
+          "package_sha256": "01106b27a66553528479bbdfda86fec5c25d2f0015bf00757c3d9385815c2c30",
+          "transformed": false
+        }
+      ]
+    },
+    {
+      "name": "github-issue-to-pdf",
+      "path": "skills/operations/github-issue-to-pdf",
+      "source": "~/.codex/skills/github-issue-to-pdf",
+      "change": "added",
+      "files": [
+        {
+          "path": "SKILL.md",
+          "source_sha256": "d55a8bb41faffa3ef0337fc1159da319e65dfe6ddaa70668e6c2d74bf98c4e43",
+          "package_sha256": "d55a8bb41faffa3ef0337fc1159da319e65dfe6ddaa70668e6c2d74bf98c4e43",
+          "transformed": false
+        },
+        {
+          "path": "agents/openai.yaml",
+          "source_sha256": "dbc5652501a690473fb2aedf13670de7e06603267fa8aaedd04a3676ac40560d",
+          "package_sha256": "dbc5652501a690473fb2aedf13670de7e06603267fa8aaedd04a3676ac40560d",
+          "transformed": false
+        },
+        {
+          "path": "references/browser-export.md",
+          "source_sha256": "5a5c25568974e496439ebd0c8853f2ea64ec7fb14ab3207e4285d51d763176c2",
+          "package_sha256": "5a5c25568974e496439ebd0c8853f2ea64ec7fb14ab3207e4285d51d763176c2",
+          "transformed": false
+        },
+        {
+          "path": "scripts/join_continuous.py",
+          "source_sha256": "613cc92a9a0361c903384457f91ddd291c160a93e9ce534796a4c0a6aded3617",
+          "package_sha256": "613cc92a9a0361c903384457f91ddd291c160a93e9ce534796a4c0a6aded3617",
+          "transformed": false
+        },
+        {
+          "path": "scripts/prepare_export.js",
+          "source_sha256": "268acd31ca08d81c1c7f5502375e83745b85bb272ac5023c39fadd4348bd64cb",
+          "package_sha256": "268acd31ca08d81c1c7f5502375e83745b85bb272ac5023c39fadd4348bd64cb",
+          "transformed": false
+        }
+      ]
+    },
+    {
+      "name": "issue-work-log",
+      "path": "skills/operations/issue-work-log",
+      "source": "~/.codex/skills/issue-work-log",
+      "change": "added",
+      "files": [
+        {
+          "path": "SKILL.md",
+          "source_sha256": "4189fcff51f66d45670b1f32ac950c5ba65791004d85c813e0c3d25ca06029dc",
+          "package_sha256": "4189fcff51f66d45670b1f32ac950c5ba65791004d85c813e0c3d25ca06029dc",
+          "transformed": false
+        },
+        {
+          "path": "agents/openai.yaml",
+          "source_sha256": "a0c492d8b97ca5c83c312cb41b84e18b0967e243e222add67bc16dbab7890f5a",
+          "package_sha256": "a0c492d8b97ca5c83c312cb41b84e18b0967e243e222add67bc16dbab7890f5a",
+          "transformed": false
+        },
+        {
+          "path": "references/attachments.md",
+          "source_sha256": "c0220b7402776d4e101b67de4113fadceed31c61d4b7b009a552024dd3947bc8",
+          "package_sha256": "c0220b7402776d4e101b67de4113fadceed31c61d4b7b009a552024dd3947bc8",
+          "transformed": false
+        },
+        {
+          "path": "references/progress-template.md",
+          "source_sha256": "bc9106e34437bbed7e9e8a46427eeef25c019902305d893554d3abd87cf7f7ad",
+          "package_sha256": "bc9106e34437bbed7e9e8a46427eeef25c019902305d893554d3abd87cf7f7ad",
+          "transformed": false
+        },
+        {
+          "path": "scripts/proof_manifest.py",
+          "source_sha256": "96dea849c7a5c86bf3223ba2f22dc14b637ef1a233c441f91fbebd863f1dae6d",
+          "package_sha256": "96dea849c7a5c86bf3223ba2f22dc14b637ef1a233c441f91fbebd863f1dae6d",
+          "transformed": false
+        }
+      ]
+    },
+    {
+      "name": "unslop",
+      "path": "skills/writing/unslop",
+      "source": "~/.codex/skills/unslop",
+      "change": "added",
+      "files": [
+        {
+          "path": "LICENSE",
+          "source_sha256": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
+          "package_sha256": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
+          "transformed": false
+        },
+        {
+          "path": "SKILL.md",
+          "source_sha256": "af42812182510744a3eacafd368773e6157f45903a7968deea159d6cd7f02d11",
+          "package_sha256": "af42812182510744a3eacafd368773e6157f45903a7968deea159d6cd7f02d11",
+          "transformed": false
+        },
+        {
+          "path": "agents/openai.yaml",
+          "source_sha256": "8619a54e8c098122a7f3881394f84ca89b684366e848233a29ad18b6ec363935",
+          "package_sha256": "8619a54e8c098122a7f3881394f84ca89b684366e848233a29ad18b6ec363935",
+          "transformed": false
+        }
+      ]
+    },
+    {
+      "name": "council",
+      "path": "skills/engineering/council",
+      "source": "~/.codex/skills/council",
+      "change": "updated",
+      "previous_package_sha256": "da8b4166f19defb2b6916e8f8fe30fa93b8bd2eabaf870ba87e9accaa038e2b8",
+      "files": [
+        {
+          "path": "SKILL.md",
+          "source_sha256": "598fb2c7cdd48ddd9643cb22999e1b624c357aa6579aa0af0e7268ae16a8a164",
+          "package_sha256": "598fb2c7cdd48ddd9643cb22999e1b624c357aa6579aa0af0e7268ae16a8a164",
+          "transformed": false
+        }
+      ]
+    },
+    {
+      "name": "full-stop",
+      "path": "skills/engineering/full-stop",
+      "source": "~/.codex/skills/full-stop",
+      "change": "updated",
+      "previous_package_sha256": "243ed08a040df888e35a5db8da704dced345270efdd0afa74252a766e05a4b09",
+      "files": [
+        {
+          "path": "SKILL.md",
+          "source_sha256": "091dcabfcba73e009ddb8e32c498a993a6bb60f8c223d3e21e917f4e52ab9939",
+          "package_sha256": "091dcabfcba73e009ddb8e32c498a993a6bb60f8c223d3e21e917f4e52ab9939",
+          "transformed": false
+        }
+      ]
+    }
+  ],
+  "preserved_variants": [
+    "Public-safe transformations recorded in local-skill-inventory.json",
+    "Other unchanged upstream and vendor collections remain inventory-only."
+  ]
+}

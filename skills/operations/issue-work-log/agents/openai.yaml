@@ -1,0 +1,4 @@
+interface:
+  display_name: "Issue work log"
+  short_description: "Post verified progress and proof to a GitHub issue"
+  default_prompt: "Use $issue-work-log to update the linked GitHub issue with this chat's actual progress and every useful distinct proof image, removing only duplicates with no image-count limit, then return the verified comment link."

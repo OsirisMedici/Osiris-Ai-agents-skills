@@ -1,0 +1,4 @@
+interface:
+  display_name: "GitHub issue report"
+  short_description: "Create a clean continuous PDF progress report"
+  default_prompt: "Use $github-issue-report to turn this issue into a client progress report: <issue URL>"

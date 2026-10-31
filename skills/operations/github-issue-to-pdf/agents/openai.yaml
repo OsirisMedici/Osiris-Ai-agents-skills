@@ -1,0 +1,4 @@
+interface:
+  display_name: "GitHub issue to PDF"
+  short_description: "Export issues as A4-width continuous light-mode PDFs"
+  default_prompt: "Use $github-issue-to-pdf with this GitHub issue URL to export one continuous light-mode PDF at exactly A4 width, preserving all useful distinct proof images and naming it after the exact issue title."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Feedback to issue cleanup"
+  short_description: "Trim repeated text and keep all distinct proof images"
+  default_prompt: "Use $feedback-to-issue-cleanup on this issue to make the text human-readable, preserve every useful distinct proof image, and remove only duplicate images."

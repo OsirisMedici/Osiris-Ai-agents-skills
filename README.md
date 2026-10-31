@@ -11,6 +11,8 @@ Public source library for Osiris's reusable operations, creative, product, and t
 | Creative and product | [content-engine-osiris](skills/creative/content-engine-osiris/SKILL.md), [eden-ingestion-pattern](skills/creative/eden-ingestion-pattern/SKILL.md), [eden-workspace-feel](skills/creative/eden-workspace-feel/SKILL.md), [hatch-pet](skills/creative/hatch-pet/SKILL.md), [osiris-tweets](skills/creative/osiris-tweets/SKILL.md), [product-motion](skills/creative/product-motion/SKILL.md), [stich](skills/creative/stich/SKILL.md), [tesseract-design](skills/creative/tesseract-design/SKILL.md), [tesseract-editor](skills/creative/tesseract-editor/SKILL.md), [tesseract-motion](skills/creative/tesseract-motion/SKILL.md), [tesseract-video](skills/creative/tesseract-video/SKILL.md), [weftcut](skills/creative/weftcut/SKILL.md), [working-todo-builder](skills/creative/working-todo-builder/SKILL.md) |
 | YouTube | [youtube-cleaner](skills/youtube/youtube-cleaner/SKILL.md), [youtube-watch-later](skills/youtube/youtube-watch-later/SKILL.md) |
 | Engineering workflows (VPS) | [babysit-pr](skills/engineering/babysit-pr/SKILL.md), [council](skills/engineering/council/SKILL.md), [file-pr](skills/engineering/file-pr/SKILL.md), [full-send](skills/engineering/full-send/SKILL.md), [full-stop](skills/engineering/full-stop/SKILL.md), [leaving-pr-comments](skills/engineering/leaving-pr-comments/SKILL.md), [modernize](skills/engineering/modernize/SKILL.md), [sol-loop](skills/engineering/sol-loop/SKILL.md), [takeover](skills/engineering/takeover/SKILL.md) |
+| Issue workflows | [feedback-to-issue](skills/operations/feedback-to-issue/SKILL.md), [feedback-to-issue-cleanup](skills/operations/feedback-to-issue-cleanup/SKILL.md), [github-issue-report](skills/operations/github-issue-report/SKILL.md), [github-issue-to-pdf](skills/operations/github-issue-to-pdf/SKILL.md), [issue-work-log](skills/operations/issue-work-log/SKILL.md) |
+| Writing | [unslop](skills/writing/unslop/SKILL.md) |
 | Tools | [cli-hub-meta-skill](skills/tools/cli-hub-meta-skill/SKILL.md) |
 
 ## Collection status
@@ -18,6 +20,8 @@ Public source library for Osiris's reusable operations, creative, product, and t
 The Mac collection adds 22 custom and adapted skills alongside the existing Meta skill. The [source inventory](docs/local-skill-inventory.json) records included paths, file hashes, and packaging differences. [Collection notes](docs/collection-notes.md) describe validation and external dependencies.
 
 The VPS collection adds all 10 standalone non-system installed packages: `update-osiris-t3` and nine T3-aware engineering workflows. The updater was found at `~/.codex/skills/update-osiris-t3`; its five files match the delivery ZIP exactly. The library now has 33 skill entrypoints. The [VPS inventory](docs/vps-skill-inventory.json) records hashes, identical mirrors, upstream content variants, provenance limits and search coverage; [VPS collection notes](docs/vps-collection-notes.md) record validation and dependencies. Vendor/system packages remain inventory-only. Some other-user and deployment directories were unreadable; coverage is limited to accessible configured homes and sources.
+
+The 31 October collection adds five custom issue workflows and the adapted `unslop` dependency, bringing the library to 39 entrypoints. It also updates two local engineering refinements. See [sync notes](docs/skill-sync-2026-10-31.md) and the [file inventory](docs/skill-sync-2026-10-31.json).
 
 ## Install and use
 

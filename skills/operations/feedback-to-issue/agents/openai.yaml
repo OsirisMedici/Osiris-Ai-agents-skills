@@ -1,0 +1,4 @@
+interface:
+  display_name: "Feedback to issue"
+  short_description: "Turn a Feedback task into a planned GitHub issue"
+  default_prompt: "Use $feedback-to-issue with this Feedback task URL to save its requirements, outcome-first plan, and ordered checklist in the correct GitHub issue."
