@@ -1,0 +1,4 @@
+interface:
+  display_name: "GHL Visual Newsletter by Scale"
+  short_description: "Create reusable visual newsletters in GoHighLevel"
+  default_prompt: "Use $ghl-visual-newsletter-by-scale to create a reusable visual newsletter draft in the correct client GHL account."

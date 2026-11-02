@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "created_at": "2026-11-02",
+  "name": "ghl-visual-newsletter-by-scale",
+  "path": "skills/operations/ghl-visual-newsletter-by-scale",
+  "origin": "New reusable workflow authored at owner request from completed private GHL newsletter tasks; not copied from a vendor skill.",
+  "source_boundary": "Private task exports and approvals remain in the authorized source workspace. This public package contains only generalized procedures and writing-method page locators.",
+  "basis": [
+    "Owner preference: existing GHL first, preserve approved design, duplicate before rewriting, useful relaxed note and gentle reply invitation.",
+    "Observed native Design Editor import, editing, save/reload and preview behavior; historical observations require live rediscovery.",
+    "Nicolas Cole writing-method references paraphrased with page locators; canonical PDF and client copy are not bundled."
+  ],
+  "transformations": [
+    "Removed all client names, account/template IDs, customer contact details, private URLs, image exports and subscriber-specific tracking.",
+    "Generalized case-specific image restrictions and copy direction without implying universal campaign authorization."
+  ],
+  "dependencies": [
+    "Authenticated access to the intended GHL account and supported host browser or suitable connected tools.",
+    "Authorized client source material and assets.",
+    "Writer book-only mode additionally needs its locally authorized canonical PDF; not required to operate GHL elsewhere."
+  ],
+  "validation": {
+    "skill_creator": "passed",
+    "yaml_and_relative_links": "passed",
+    "private_mapping_and_credential_scan": "passed",
+    "live_run": "Not run by packaging; underlying procedure comes from completed tasks. No customer action performed during packaging."
+  },
+  "files": [
+    {
+      "path": "SKILL.md",
+      "sha256": "164cb1c314afa67c23a44f5a15dbcca10ba6940dccec18595ec765e27f8df3d1"
+    },
+    {
+      "path": "agents/openai.yaml",
+      "sha256": "43d8ff3b05aeec897022dbaa827e023e9018b0fc450db06d8b54a80e6ceaab38"
+    },
+    {
+      "path": "references/editor-notes.md",
+      "sha256": "a2afba7ebf698e7e2020a0b39abc99b453918d0e3d812cf5c2736481928e6767"
+    }
+  ],
+  "exclusions": [
+    "No client exports, screenshots, logos, contact data, account mappings, browser state, credentials or canonical book material.",
+    "No new license; existing repository licensing and attribution preserved."
+  ],
+  "unresolved": "No new unresolved VPS source variant. Broader historical provenance/access limitations remain in the existing inventories."
+}
