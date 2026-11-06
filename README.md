@@ -38,3 +38,28 @@ Some skills target macOS, a local app, a private workspace, or specific MCP tool
 Keep skills in `skills/<category>/<skill-name>/`, including their references, helpers, templates, assets, metadata and existing licenses. Preserve attribution for adapted and curated upstream material. System/plugin caches and unrelated installed engineering collections are outside this custom-skill collection.
 
 Follow [AGENTS.md](AGENTS.md). Run the available Skill Creator `quick_validate.py` on changed skills and appropriate checks on modified helpers. The owner authorized public visibility on 29 October 2026. Retain client/account data in its private authorized workspace.
+
+## Sync across computers
+
+For the first install, run these commands with Git and Python 3.9 or later.
+
+```sh
+git clone https://github.com/OsirisMedici/Osiris-Ai-agents-skills.git
+cd Osiris-Ai-agents-skills
+python3 skills/tools/osiris-skills-sync/scripts/sync.py --apply
+```
+
+On Windows, use `py -3` if Python is installed under that command. Reopen your
+agent session to discover the new skills. For later updates, invoke
+[`$osiris-skills-sync`](skills/tools/osiris-skills-sync/SKILL.md). Pulling
+requires no GitHub account. Pass `--skills-dir` to target another supported
+agent's user skill folder.
+
+The sync installs missing packages and updates tracked copies with no local
+edits. It reports differing pre-existing copies and leaves those in place.
+Each updated copy has a local backup. Run the script without flags to preview
+the work. GitHub contributors can also publish reviewed packages with
+`--apply --publish NAME` or `--apply --publish NAME:CATEGORY`.
+
+The [sync inventory](docs/skill-sync-inventory.json) lists the current packages
+and file hashes.

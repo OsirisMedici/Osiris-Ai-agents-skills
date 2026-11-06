@@ -1,0 +1,4 @@
+interface:
+  display_name: "Osiris skills sync"
+  short_description: "Sync the Osiris skills library across computers"
+  default_prompt: "Use $osiris-skills-sync to pull missing skills and push reviewed local changes."

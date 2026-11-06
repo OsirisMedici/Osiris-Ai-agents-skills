@@ -1,0 +1,4 @@
+interface:
+  display_name: "Osiris T3"
+  short_description: "Choose where to work, connect, and update T3"
+  default_prompt: "Use $osiris-t3 to check my setup and guide my next step."
