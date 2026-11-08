@@ -124,7 +124,7 @@
     "path": "skills/operations/feedback-to-issue",
     "files": {
       "SKILL.md": {
-        "sha256": "f998f6aa7a2c65e09f3090a88a3efb68f0fc8026103255789aa2e88a2feabadd",
+        "sha256": "b36ffeda643dd2789055f156f71e715296389105a4e01c16445135826c5d28f0",
         "executable": false
       },
       "agents/openai.yaml": {
@@ -136,7 +136,7 @@
         "executable": false
       },
       "references/issue-template.md": {
-        "sha256": "16d6c7e49bb719dd19bb483a273c5a8be09ef51314661e3954a97659246f00d2",
+        "sha256": "791c50fe62ba5f8b0fa174613f344bb855f0034dac5409bd23fc617a2a7bc32d",
         "executable": false
       }
     }

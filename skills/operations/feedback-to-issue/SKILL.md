@@ -75,9 +75,9 @@ Completion criterion: one repository and one existing issue, or a justified no-m
 
 ## 3. Build the issue content
 
-Read [the issue template](references/issue-template.md) when drafting. Retain source requirements and acceptance criteria faithfully, including constraints, dependencies, dates, and relevant links. Preserve meaningful list order. Separate source requirements, confirmed user decisions, observed facts, assumptions, and proposals. Omit credentials and unnecessary personal data while preserving the requirement they support. Respect repository visibility and audience.
+Read [the issue template](references/issue-template.md) when drafting. For bugs, use its reproduction-first opening and ordered fix checklist. For other work, use the general implementation template. Apply the visual evidence rules to every GitHub issue this workflow creates or updates. Retain source requirements and acceptance criteria faithfully, including constraints, dependencies, dates, and relevant links. Preserve meaningful list order. Separate source requirements, confirmed user decisions, observed facts, assumptions, and proposals. Omit credentials and unnecessary personal data while preserving the requirement they support. Respect repository visibility and audience.
 
-Explain the plan in this order:
+For non-bug work, explain the plan in this order:
 
 1. What we are building and who uses it.
 2. Why it matters and what becomes easier.
@@ -98,7 +98,7 @@ Reread the current issue body immediately before editing. Preserve other authors
 
 Discover current GitHub schemas. Prefer connected read/search/create/update/comment tools; use authenticated `gh` only for gaps. CLI writes use an exact UTF-8 body file with `--body-file` or JSON file input. Never interpolate body text into shell code. Send only intended fields. On conflicts, reread and merge; on an unknown save outcome, read back before retrying.
 
-Fetch the saved issue/comment. Compare requirements, full plan, checklist, source marker when applicable, and links with the intended draft. A returned number or HTTP success alone is insufficient. In routes 2 and 4, add one native linked reference to the verified Feedback task using its current version and preserving other blocks. An identical backlink is a no-op. Reopen/read the task to verify the saved link and unchanged metadata. Route 3 is read-only in Feedback: report any matching task but do not alter it. A Feedback write blocker leaves the verified issue usable; report backlink status separately and retain a retry receipt.
+Fetch the saved issue/comment. Compare requirements, full plan, checklist, source marker when applicable, image embeds, and links with the intended draft. Verify that the saved images render for the intended audience. A returned number or HTTP success alone is insufficient. In routes 2 and 4, add one native linked reference to the verified Feedback task using its current version and preserving other blocks. An identical backlink is a no-op. Reopen/read the task to verify the saved link and unchanged metadata. Route 3 is read-only in Feedback: report any matching task but do not alter it. A Feedback write blocker leaves the verified issue usable; report backlink status separately and retain a retry receipt.
 
 ## Handoff
 
