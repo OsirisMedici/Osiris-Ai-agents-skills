@@ -120,6 +120,31 @@
       }
     }
   },
+  "edits-video-workflow": {
+    "path": "skills/creative/edits-video-workflow",
+    "files": {
+      "SKILL.md": {
+        "sha256": "562822241f1fc5f5c52884cb76ee16f044a05d54c128500cf5cedda467a4b7a1",
+        "executable": false
+      },
+      "agents/openai.yaml": {
+        "sha256": "4e49641433616de429fc6f3aeb7335915369c2cfe81d59a407ffe064d719aa0a",
+        "executable": false
+      },
+      "references/edits-mac.md": {
+        "sha256": "4d12160a7aa2c37b700b699f1adb4c0228d542f22a3eb3e8866dd26cffb861b3",
+        "executable": false
+      },
+      "scripts/check_overlay_track.py": {
+        "sha256": "ac76b784dde56af8ad44615978ad54fc515326f194b139815e0a6b6f30ede9a7",
+        "executable": false
+      },
+      "scripts/edits_mcp.py": {
+        "sha256": "f93a38e1c6497c91b0e50994aa23ae8f779fc1802ab0358419b63ffa611e9caf",
+        "executable": false
+      }
+    }
+  },
   "feedback-to-issue": {
     "path": "skills/operations/feedback-to-issue",
     "files": {
