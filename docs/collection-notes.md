@@ -37,3 +37,7 @@ Use `vps-skill-collection-prompt.txt` from a VPS agent to inventory source packa
 ## VPS collection completed on 28 October 2026 (UTC)
 
 The VPS follow-up above describes the earlier Mac-only state. The equivalent updater has now been found and collected as `update-osiris-t3`, with all nine other standalone installed VPS workflows. See [VPS collection notes](vps-collection-notes.md) and the separate [VPS inventory](vps-skill-inventory.json). The original Mac inventory remains an unchanged historical snapshot; its `vps_pending` field is superseded by the VPS inventory. The original Mac heading uses its source date; VPS timestamps are recorded independently in UTC.
+
+## Edits video workflow, 9 November 2026
+
+Added `edits-video-workflow` under creative. The original package records a Mac Edits workflow for footage selection, captions, phrase-matched overlays, and export checks. The skill includes a loopback MCP client and a frame coverage checker. The client connected to a saved Edits project, and the checker accepted its continuous lane and rejected a deliberately introduced one-frame gap. Client names, media, account data, and project records remain in private storage. The sync inventory records the published package hashes.
