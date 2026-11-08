@@ -1,4 +1,4 @@
 interface:
-  display_name: "Feedback to issue"
-  short_description: "Turn a Feedback task into a planned GitHub issue"
-  default_prompt: "Use $feedback-to-issue with this Feedback task URL to save its requirements, outcome-first plan, and ordered checklist in the correct GitHub issue."
+  display_name: "Feedback and issue intake"
+  short_description: "Choose a Feedback and GitHub issue intake route"
+  default_prompt: "Use $feedback-to-issue. First show me the four route choices: create a Feedback task; turn a Feedback task into a GitHub issue; create a GitHub issue and check Feedback; or check both systems and create what is missing."

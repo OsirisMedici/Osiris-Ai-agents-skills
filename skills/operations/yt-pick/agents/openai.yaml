@@ -1,0 +1,4 @@
+interface:
+  display_name: "yt-pick"
+  short_description: "Choose what to watch, learn, or build next"
+  default_prompt: "Use $yt-pick to ask me a few questions and help me choose what to watch or do on YouTube."

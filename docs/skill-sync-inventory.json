@@ -124,11 +124,11 @@
     "path": "skills/operations/feedback-to-issue",
     "files": {
       "SKILL.md": {
-        "sha256": "6ec936641a506065c6655e3087fc8e8972e8c29708ef5f44d29b9c68d074ed41",
+        "sha256": "f998f6aa7a2c65e09f3090a88a3efb68f0fc8026103255789aa2e88a2feabadd",
         "executable": false
       },
       "agents/openai.yaml": {
-        "sha256": "9afdf008ca156664f3260643d791495e6f489f064cc458c728b56dbe57f0be80",
+        "sha256": "f5dea8d923f7c6ccf1c782e62a9f88f3b2bc660f3a56e205726813ef6e4699eb",
         "executable": false
       },
       "references/feedback-access.md": {
@@ -1071,6 +1071,19 @@
       },
       "agents/openai.yaml": {
         "sha256": "5e498ca5299d5209f3fad1f5030b7cf7fe2b05d2f40541624c5868fcaa5a513e",
+        "executable": false
+      }
+    }
+  },
+  "yt-pick": {
+    "path": "skills/operations/yt-pick",
+    "files": {
+      "SKILL.md": {
+        "sha256": "0f2c8b9b9adaf0b3f8cd8f9299d0096fb22963cf53048d52d876cd96766fe5b3",
+        "executable": false
+      },
+      "agents/openai.yaml": {
+        "sha256": "3bb47ba6f136fa699888fdebfe96d31923106360a0eec89ef3393e2ed1650f96",
         "executable": false
       }
     }
