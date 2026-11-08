@@ -4,10 +4,19 @@ Adapt this structure to repository conventions. Replace braces with actual conte
 
 ## Bug reports
 
-Adapt the [T3 Code bug report form](https://github.com/pingdotgg/t3code/blob/ade473018d32003658b7d38693e083ee2e314bd8/.github/ISSUE_TEMPLATE/bug_report.yml). Name the symptom and affected area in the title. Lead with the reproduction. Keep the Feedback identity marker when applicable and put its human-readable source link after the bug evidence.
+Open with the triage fields adapted from the [T3 Code bug report form](https://github.com/pingdotgg/t3code/blob/ade473018d32003658b7d38693e083ee2e314bd8/.github/ISSUE_TEMPLATE/bug_report.yml), then include the complete implementation brief from **Outcome** through **Implementation and verification**. Name the symptom and affected area in the title. Check an intake item only when it is verified. Keep the Feedback identity marker when applicable.
 
 ```markdown
 <!-- feedback-task:{task UUID} -->
+
+## Before submitting
+
+- [ ] Searched existing reports and recorded any match.
+- [ ] Included enough evidence to reproduce or investigate the failure.
+
+## Area
+
+{Affected product surface or workflow.}
 
 ## Steps to reproduce
 
@@ -22,22 +31,26 @@ Adapt the [T3 Code bug report form](https://github.com/pingdotgg/t3code/blob/ade
 
 {What the person sees instead, including repeatability or frequency if known. Distinguish firsthand observations from reported behavior.}
 
-## Impact and environment
+## Outcome
 
-{What this interrupts, the tested environment, and the affected version or commit if verified. State when the deployed version is unknown. Include a verified workaround if available.}
+{Who needs the fix, what the bug interrupts, and what they will be able to do once it works.}
+
+## Source and reproduction
+
+{Source link and applicable Feedback metadata from the general template. Record the tested environment, fixture or data conditions, measured evidence, and verified version or commit. State when the deployed version is unknown. Include a verified workaround when available. Use the opening for the minimal steps and this section for the details needed to recreate the result.}
 
 ## Visual evidence
 
 {Embed reviewed evidence images with captions near the claims they support.}
 
-## Source and investigation
+## Finished experience and scope
 
-{Source link and applicable Feedback metadata from the general template. Record measured evidence, relevant code and tests, known scope, and separately labelled hypotheses.}
+{Describe the corrected experience and observable acceptance conditions. Cover relevant states, navigation, reload, and layouts. Name the behavior and data to preserve, related work, exclusions, and unresolved decisions.}
 
 ## Implementation and verification
 
 - [ ] Reproduce the failure with a stable fixture and assert the user-visible result. Record the baseline failure before changing code.
-- [ ] Trace the relevant path and test the suspected cause. State what needs to be confirmed before selecting a fix.
+- [ ] Trace the relevant path using links to inspected files and tests. Separate observed behavior from hypotheses and verify the cause before selecting a fix.
 - [ ] Make the smallest scoped fix. Identify adjacent behavior and data that must be preserved.
 - [ ] Show the regression passes and check relevant controls and edge cases. Record the candidate revision, commands, observed results, and before/after images for visual changes in the PR.
 ```

@@ -75,7 +75,7 @@ Completion criterion: one repository and one existing issue, or a justified no-m
 
 ## 3. Build the issue content
 
-Read [the issue template](references/issue-template.md) when drafting. For bugs, use its reproduction-first opening and ordered fix checklist. For other work, use the general implementation template. Apply the visual evidence rules to every GitHub issue this workflow creates or updates. Retain source requirements and acceptance criteria faithfully, including constraints, dependencies, dates, and relevant links. Preserve meaningful list order. Separate source requirements, confirmed user decisions, observed facts, assumptions, and proposals. Omit credentials and unnecessary personal data while preserving the requirement they support. Respect repository visibility and audience.
+Read [the issue template](references/issue-template.md) when drafting. For bugs, use the T3-style opening followed by the complete implementation brief. For other work, use the general implementation template. Apply the visual evidence rules to every GitHub issue this workflow creates or updates. Retain source requirements and acceptance criteria faithfully, including constraints, dependencies, dates, and relevant links. Preserve meaningful list order. Separate source requirements, confirmed user decisions, observed facts, assumptions, and proposals. Omit credentials and unnecessary personal data while preserving the requirement they support. Respect repository visibility and audience.
 
 For non-bug work, explain the plan in this order:
 
