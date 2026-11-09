@@ -414,6 +414,15 @@
       }
     }
   },
+  "life-log": {
+    "path": "skills/operations/life-log",
+    "files": {
+      "SKILL.md": {
+        "sha256": "60a220c1ef42682cacd29f6cafe2472d1ec0b0c6b729da2725ecd46c7c11ea5e",
+        "executable": false
+      }
+    }
+  },
   "mac-rescue": {
     "path": "skills/operations/mac-rescue",
     "files": {
