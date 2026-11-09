@@ -1,0 +1,4 @@
+interface:
+  display_name: "ScaleHQ"
+  short_description: "Connect GitHub issues to the right Feedback boards"
+  default_prompt: "Use $scalehq to check all my GitHub issues, reuse the correct Feedback boards and tasks, and create missing boards or tasks with the issue URL in each task description."

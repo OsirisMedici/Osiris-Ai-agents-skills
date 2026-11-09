@@ -583,6 +583,23 @@
       }
     }
   },
+  "scalehq": {
+    "path": "skills/operations/scalehq",
+    "files": {
+      "SKILL.md": {
+        "sha256": "d785b2832480b507e9b94ee4fe56b1532fa5ab1049d592772aa52c95bca554db",
+        "executable": false
+      },
+      "agents/openai.yaml": {
+        "sha256": "0ec4e309c76c08464df8eb08544933158b65bb780e2b3c30c8d67d218e3ff9f6",
+        "executable": false
+      },
+      "references/access.md": {
+        "sha256": "887163014a73542521cf00ebf857134369b9746404e8fd5af2ea0401d6ed2182",
+        "executable": false
+      }
+    }
+  },
   "sol-loop": {
     "path": "skills/engineering/sol-loop",
     "files": {
