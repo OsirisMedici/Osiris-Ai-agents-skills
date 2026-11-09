@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "reviewed_on": "2026-11-09",
+  "package": "scalehq",
+  "path": "skills/operations/scalehq",
+  "source": "Custom owner-requested issue-to-Feedback workflow maintained in an authorized private project workspace. Only reusable package files were collected.",
+  "publication_base_commit": "408fe1d79d5598ae02aba1133fd1dec804f1bac9",
+  "package_publication_commit": "d30e030aa14129622dbd7b318f49a9fbfaddf2ac",
+  "files": [
+    {
+      "path": "SKILL.md",
+      "source_sha256": "7f31b007bae58778dca80d3fe491b54cfcfa0159b797c66a24252e55b202babc",
+      "published_sha256": "d785b2832480b507e9b94ee4fe56b1532fa5ab1049d592772aa52c95bca554db",
+      "transformed": true
+    },
+    {
+      "path": "agents/openai.yaml",
+      "source_sha256": "0ec4e309c76c08464df8eb08544933158b65bb780e2b3c30c8d67d218e3ff9f6",
+      "published_sha256": "0ec4e309c76c08464df8eb08544933158b65bb780e2b3c30c8d67d218e3ff9f6",
+      "transformed": false
+    },
+    {
+      "path": "references/access.md",
+      "source_sha256": "fa4efc78900452c53ad1962aeab52e25e7250614dc3e9d622350e812220e8922",
+      "published_sha256": "887163014a73542521cf00ebf857134369b9746404e8fd5af2ea0401d6ed2182",
+      "transformed": true
+    }
+  ],
+  "transformations": [
+    "Replaced private repository pointers with discovery from the authorized project configuration.",
+    "Removed client-specific routing examples, named account assignment defaults, and private inventory counts.",
+    "Retained the public Feedback entrypoint, reusable API discovery hints, complete pagination, duplicate prevention, and saved-description verification.",
+    "Kept the local workspace-linked package as a separate private variant."
+  ],
+  "excluded": [
+    "Client/account mappings, private repository and issue URLs, live board/task IDs, inventory evidence, execution receipts, credentials, and browser state.",
+    "Unrelated local-only packages, system packages, and plugin/vendor collections."
+  ],
+  "validation": {
+    "skill_creator": "quick_validate.py passed on the curated package.",
+    "secret_scan": "Gitleaks 8.30.1 found no leaks in the curated publication batch. Manual review checked private content and portable workspace discovery.",
+    "remote_readback": "The three published package files match the reviewed curated copy byte for byte.",
+    "live_workflow": "Issue reconciliation and Feedback mutations were not run during skill publication."
+  },
+  "local_sync": {
+    "installed": [],
+    "updated": [],
+    "preserved_variants": [
+      "osiris-brand",
+      "babysit-pr",
+      "osiris-t3",
+      "scalehq"
+    ],
+    "variant_note": "ScaleHQ remains linked to its private working checkout. Existing differing packages were preserved for review.",
+    "unreviewed_local_candidates": [
+      "canvas-visualize"
+    ]
+  },
+  "attribution": "Custom owner-requested workflow. No new license was added."
+}

@@ -11,7 +11,7 @@ Public source library for Osiris's reusable operations, creative, product, and t
 | Creative and product | [content-engine-osiris](skills/creative/content-engine-osiris/SKILL.md), [eden-ingestion-pattern](skills/creative/eden-ingestion-pattern/SKILL.md), [eden-workspace-feel](skills/creative/eden-workspace-feel/SKILL.md), [hatch-pet](skills/creative/hatch-pet/SKILL.md), [osiris-tweets](skills/creative/osiris-tweets/SKILL.md), [osiris-brand](skills/creative/osiris-brand/SKILL.md), [product-motion](skills/creative/product-motion/SKILL.md), [stich](skills/creative/stich/SKILL.md), [tesseract-design](skills/creative/tesseract-design/SKILL.md), [tesseract-editor](skills/creative/tesseract-editor/SKILL.md), [tesseract-motion](skills/creative/tesseract-motion/SKILL.md), [tesseract-video](skills/creative/tesseract-video/SKILL.md), [edits-video-workflow](skills/creative/edits-video-workflow/SKILL.md), [weftcut](skills/creative/weftcut/SKILL.md), [working-todo-builder](skills/creative/working-todo-builder/SKILL.md) |
 | YouTube | [youtube-cleaner](skills/youtube/youtube-cleaner/SKILL.md), [youtube-watch-later](skills/youtube/youtube-watch-later/SKILL.md) |
 | Engineering workflows (VPS) | [babysit-pr](skills/engineering/babysit-pr/SKILL.md), [council](skills/engineering/council/SKILL.md), [file-pr](skills/engineering/file-pr/SKILL.md), [full-send](skills/engineering/full-send/SKILL.md), [full-stop](skills/engineering/full-stop/SKILL.md), [leaving-pr-comments](skills/engineering/leaving-pr-comments/SKILL.md), [modernize](skills/engineering/modernize/SKILL.md), [sol-loop](skills/engineering/sol-loop/SKILL.md), [takeover](skills/engineering/takeover/SKILL.md) |
-| Issue workflows | [feedback-to-issue](skills/operations/feedback-to-issue/SKILL.md), [feedback-to-issue-cleanup](skills/operations/feedback-to-issue-cleanup/SKILL.md), [github-issue-report](skills/operations/github-issue-report/SKILL.md), [github-issue-to-pdf](skills/operations/github-issue-to-pdf/SKILL.md), [issue-work-log](skills/operations/issue-work-log/SKILL.md) |
+| Issue workflows | [ScaleHQ](skills/operations/scalehq/SKILL.md), [feedback-to-issue](skills/operations/feedback-to-issue/SKILL.md), [feedback-to-issue-cleanup](skills/operations/feedback-to-issue-cleanup/SKILL.md), [github-issue-report](skills/operations/github-issue-report/SKILL.md), [github-issue-to-pdf](skills/operations/github-issue-to-pdf/SKILL.md), [issue-work-log](skills/operations/issue-work-log/SKILL.md) |
 | Writing | [unslop](skills/writing/unslop/SKILL.md) |
 | Tools | [cli-hub-meta-skill](skills/tools/cli-hub-meta-skill/SKILL.md), [osiris-skills-sync](skills/tools/osiris-skills-sync/SKILL.md) |
 
@@ -32,6 +32,10 @@ The [6 November sync](docs/skill-sync-2026-11-06.md) adds four packages and brin
 ## Personal writing skill, 9 November 2026
 
 Added [osiris-brand](skills/creative/osiris-brand/SKILL.md) for conversational personal writing with persistent private context and feedback. Its public package contains reusable instructions only. See the [source and validation record](docs/osiris-brand-sync-2026-11-09.json) for sanitization and local variants.
+
+## ScaleHQ skill, 9 November 2026
+
+Added [ScaleHQ](skills/operations/scalehq/SKILL.md) to audit and repair GitHub issue links on Feedback boards. The portable public package discovers project routing from the authorized private workspace. Client mappings, live record IDs, issue URLs, inventory snapshots, credentials, and execution receipts remain outside this library. See the [source and validation record](docs/scalehq-sync-2026-11-09.json).
 
 ## Install and use
 
