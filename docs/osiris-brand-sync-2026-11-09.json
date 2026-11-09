@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "reviewed_on": "2026-11-09",
+  "package": "osiris-brand",
+  "path": "skills/creative/osiris-brand",
+  "source": "Custom workflow maintained in the owner-authorized private writing workspace. Only reusable skill package files were collected.",
+  "publication_base_commit": "185d3bfc3f283cf58f6c16fc64af5cfc7d245c77",
+  "files": [
+    {
+      "path": "SKILL.md",
+      "source_sha256": "fd40f1b525738a99f21793f288375e4bf4f24690c81c1bec495cc8e1378f4b53",
+      "published_sha256": "a3fe8e3906d14d87a298ecbef80b8b0bb784538a3b5c9f9f197f46d9e7f1d8d9",
+      "transformed": true
+    },
+    {
+      "path": "agents/openai.yaml",
+      "source_sha256": "0a6f37965a45abedaed191df3d7ced9a0be3fec417d24f2672550c0954f8467f",
+      "published_sha256": "0a6f37965a45abedaed191df3d7ced9a0be3fec417d24f2672550c0954f8467f",
+      "transformed": false
+    }
+  ],
+  "transformations": [
+    "Removed exact private writing feedback and replaced it with retrieval from the authorized private record.",
+    "Replaced the checkout-relative installation assumption with portable registered-workspace discovery.",
+    "Kept the public package separate from private writing records and the local workspace-linked skill."
+  ],
+  "excluded": [
+    "Personal profile, voice record, drafts, feedback history, research snapshots, account details, private source URLs, credentials, and browser session state."
+  ],
+  "validation": {
+    "skill_creator": "quick_validate.py passed on the curated package.",
+    "secret_scan": "Gitleaks 8.30.1 found no leaks in the curated publication batch. Manual content review checked private records and portability.",
+    "live_workflow": "No writing, browsing, publication, or monitoring workflow was invoked during collection."
+  },
+  "local_sync": {
+    "installed": [
+      "edits-video-workflow"
+    ],
+    "updated": [
+      "feedback-to-issue"
+    ],
+    "preserved_variants": [
+      "babysit-pr",
+      "osiris-t3",
+      "osiris-brand"
+    ],
+    "variant_note": "The local osiris-brand remains linked to its private working checkout. Sync did not replace it with the portable public package. Pre-existing variants remain unresolved.",
+    "backup": "The sync helper retained the prior feedback-to-issue package in its local backup store."
+  },
+  "attribution": "Custom owner-requested workflow. No new license was added."
+}
