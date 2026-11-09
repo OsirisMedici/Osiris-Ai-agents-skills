@@ -1,0 +1,4 @@
+interface:
+  display_name: "Osiris brand"
+  short_description: "Write personal posts with Osiris and learn his voice"
+  default_prompt: "Use $osiris-brand to talk through what I want to say, draft it with me, and learn from my feedback."

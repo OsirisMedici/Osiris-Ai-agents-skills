@@ -481,6 +481,19 @@
       }
     }
   },
+  "osiris-brand": {
+    "path": "skills/creative/osiris-brand",
+    "files": {
+      "SKILL.md": {
+        "sha256": "a3fe8e3906d14d87a298ecbef80b8b0bb784538a3b5c9f9f197f46d9e7f1d8d9",
+        "executable": false
+      },
+      "agents/openai.yaml": {
+        "sha256": "0a6f37965a45abedaed191df3d7ced9a0be3fec417d24f2672550c0954f8467f",
+        "executable": false
+      }
+    }
+  },
   "osiris-skills-sync": {
     "path": "skills/tools/osiris-skills-sync",
     "files": {
