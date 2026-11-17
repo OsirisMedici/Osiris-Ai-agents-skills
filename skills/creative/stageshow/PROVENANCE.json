@@ -1,0 +1,22 @@
+{
+  "name": "stageshow",
+  "upstream_name": "stageshow",
+  "repository": "benjitaylor/skills",
+  "commit": "299140fafd08df55a9c234e610c3f64af3f45531",
+  "path": "stageshow",
+  "license_file": null,
+  "original_entry_sha256": "e4df76406d63644d5051d79855c3f7931d48fdbe9aec15b3d5c12a2601aa2de6",
+  "adapter": "Scale integration entry point; preserved attribution and notices",
+  "omitted": [
+    "scripts/jumps.mjs",
+    "scripts/layout.mjs",
+    "scripts/film.mjs",
+    "scripts/film-checks.mjs",
+    "scripts/browser.mjs",
+    "scripts/layout-core.mjs",
+    "scripts/verification.mjs",
+    "scripts/motion-watch.mjs",
+    "scripts/jumps-core.mjs"
+  ],
+  "runtime_dependencies_installed": false
+}

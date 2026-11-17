@@ -1,0 +1,4 @@
+interface:
+  display_name: "Life Compass"
+  short_description: "Plan future priorities and realistic time blocks"
+  default_prompt: "Use $life-compass to plan my day around my priorities and existing commitments."

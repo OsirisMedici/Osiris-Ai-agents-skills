@@ -1,0 +1,4 @@
+interface:
+  display_name: "Yumsss"
+  short_description: "Log meals, nutrition and weight from chat"
+  default_prompt: "Use $yumsss to save the meals, drinks, portions or weight I report in chat to my existing food diary."

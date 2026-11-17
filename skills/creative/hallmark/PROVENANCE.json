@@ -1,0 +1,26 @@
+{
+  "name": "hallmark",
+  "upstream_name": "hallmark",
+  "repository": "Nutlope/hallmark",
+  "commit": "7e213cb6feb4ef82733bd66a0600b2e54ca0994c",
+  "path": "skills/hallmark",
+  "license_file": "Nutlope.txt",
+  "original_entry_sha256": "25a1ff92d925b2389e8409f42fb8ad7e033fceca8b5d1f07ed4ca4c28da53dc3",
+  "adapter": "Scale integration entry point; preserved attribution and notices",
+  "omitted": [
+    "scripts/capture.test.mjs",
+    "scripts/sloplint-render.mjs",
+    "scripts/capture.mjs",
+    "scripts/refcheck.mjs",
+    "scripts/lint-hook.mjs",
+    "scripts/theme.test.mjs",
+    "scripts/install-hook.mjs",
+    "scripts/reroll-exhaustion.test.mjs",
+    "scripts/picture.mjs",
+    "scripts/install.mjs",
+    "scripts/fixtures",
+    "scripts/sloplint-render.test.mjs",
+    "scripts/imagegen.mjs"
+  ],
+  "runtime_dependencies_installed": false
+}

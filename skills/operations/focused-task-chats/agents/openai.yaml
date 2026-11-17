@@ -1,0 +1,4 @@
+interface:
+  display_name: "Focused task chats"
+  short_description: "One outcome per task chat, one concise brief"
+  default_prompt: "Apply the focused task chat convention while coordinating this work."

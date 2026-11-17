@@ -1,0 +1,68 @@
+# Source-backed client reviews
+
+## Account and workbook discovery
+
+Start with the authorized private client registry, then verify live identity and ownership. Meta tool namespace names are not client identities: a connector named for one account may expose other accounts. Match the actual account ID, business identity and currency. Verify queryability before querying. Follow the connector's field-context and continuation requirements.
+
+Use the matching client CRM registry/read helper where configured. If it is missing, use authorized connected CRM tools or the visible in-app Browser to read/export the correct location. Another client's credential is never a fallback. CRM reads and Meta reads are read-only for this workflow.
+
+Resolve source and destination independently. A lead/outcomes workbook supplies records; its client name does not make it the output destination. A test, comparison or explicit new-spreadsheet request creates a separate native spreadsheet named **Client | Marketing review comparison**. Use one dated tab for a single project sector. Separate Residential and Hospitality into dated sector tabs within that workbook, each with its own Ads, Leads and Actions. Verify the new file ID differs from every source/reference/master ID before writes. Preserve source files and their tabs. Keep comparison files separate from the approved production registry until adopted. For an exact comparison copy, copy the full native source workbook, then trim the copy only.
+
+For an ordinary recurring review, search for the verified client marketing workbook, **Client | Marketing reviews**, and append a dated tab such as **17 Oct–15 Nov 2026**. Add a numeric suffix for another run over the same period. A new client workbook copies the complete native master. Use an existing approved review tab as an exemplar only after verifying its layout. Writing into a legacy outcomes workbook requires explicit user selection of that file as the destination.
+
+## Scope and counts
+
+Record the ads account timezone/currency, inclusive reporting dates, invocation/data cutoff and extraction time. For a newly created output, set its native spreadsheet timezone to the verified reporting timezone before writing dates, and keep money headers/number formats explicit about the account currency. A legacy workbook timezone is not the reporting timezone. During a read-only comparison, report a mismatch rather than silently changing date behaviour. Preserve the known precision of timestamps; do not invent an extraction time when only its date is available. Match all campaign metrics to the same window. Count unique real paid submissions separately from DMs; exclude documented tests. Use actual enquiry timestamps, not a synced social contact's CRM creation date. Follow-ups and human notes can be read up to the recorded review cutoff; do not imply they describe a past CRM state.
+
+Use immutable Meta lead IDs and CRM contact IDs for joins; normalize phone/email privately when needed. Keep phone, email and WhatsApp out of this report. A Meta “qualified leads” result label or a successful CAPI workflow is not proof of sales qualification.
+
+Ads rows represent campaigns. List every included ad set by its exact name, linked to that ad-set ID. Do not duplicate campaign spend across ad-set rows. Keep campaign delivery status in the campaign cell annotation, rather than replacing the campaign name with shorthand. Report link CTR and link CPC, not CTR(all) or CPC(all). Validate every metric header against layout.json and its actual underlying metric; reference sheets can contain typos. In particular, the Impressions column must be labelled Impressions, not a second Form CPL. Treat an observed reference typo as a gap to report, not an instruction to copy it.
+
+CPL = spend / paid forms. CPM = spend / impressions * 1000. Link CTR = link clicks / impressions. Link CPC = spend / link clicks. Totals use summed underlying counts and spend, not averages of campaign rates. Unavailable is distinct from zero; empty denominators do not become errors or invented values.
+
+## Three independent components
+
+Keep Ads, Leads and Actions beside one another on one dated tab. They have separate column spans, with seven truly empty columns between them. The approved base spans are A:J, R:AA, AI:AK. Increase rows only to fit actual records; trim unused exemplar data. Apply the compact row policy in layout.json after copying and populating a review. Body rows use a fixed 72 px height and top-aligned wrapped text. Source-only group headers use 26 px; when Ads or Actions also occupy that physical row, retain the body height. Use the specified title, section, column-header and footer heights. Preserve each complete cell value, formula, hyperlink, manual note and line break. Long text has a compact preview and remains readable by opening the cell or formula bar. Skip row auto-resize: a long note or ad-set list must not stretch every side-by-side component.
+
+Changing the lead table must not shift the ads table. When expanding or shrinking a component, use bounded cell operations in its own columns rather than whole-sheet row/column insertions that affect neighbouring components. Extra real notes expand only the lead component; move Actions right as needed to keep seven empty columns.
+
+Apply the text roles from layout.json, including the compact bold muted-green Main blocker text. Retain Arial, grid lines/table borders, compact padding and the reference styles: dark green Ads header, blue/neutral Leads header, amber Actions header. Keep source-group header rows distinct. Do not introduce charts, sales-decision columns, appointment stages, supplier enquiries or precise lead rankings.
+
+## Leads, notes and predictions
+
+Use the source's actual capture channel: Facebook lead form, Instagram lead form, Instagram DM, or another evidenced channel. Campaign names are not platform evidence. Within each source group, sort by stated budget descending, with undecided/missing last. Sort ranges by their lower bound and its first stated currency unit: 75 L–1 Cr sorts below 1 Cr+, even though the range contains both units. Preserve stable code + name CRM links across periods.
+
+Map project-answer columns to the actual form questions for the tab's sector. Keep every asked question and its raw answers, including an asked question with missing responses. Omit only fields absent from that form, not fields merely empty for some leads. Use clear sector-specific labels, such as Budget planned or Cost per key, and Work needed or Hotel experience. Use the verified client mapping rather than slash-combined headings. Group by capture source only, with budget descending and unknown last. A different source form does not justify losing its project answers or adding contact details. Extra real notes and project fields change only the Lead component width; Actions follows after seven empty columns.
+
+Include only campaigns attributable to the tab's sector. Preserve raw campaign spend, forms, impressions and link clicks, then recalculate weighted totals from that subset. Assign a campaign once. If one campaign spans sectors and source reporting cannot separate it, resolve that evidence before displaying sector spend; copying the whole campaign into both tabs double-counts it. Preserve the original source and verify every lead, raw answer, exact link and human note across the union of sector tabs before removing a combined output tab.
+
+Link the Ad / creative header to the complete client Drive library or run index, as in approved reference, so reviewers can browse the ads from the sheet. Verify public Viewer access for that header target as well as each individual ad file. The ad cell contains two lines: the full exact ad code/name linked to its Drive reference, then `Ad set: <exact source ad-set name>` on the next line. Link only the ad-name text using rich text runs; keep the ad-set line plain and wrapped. Resolve the ad set from the source ad ID, not from similarly named creative files. If it is unavailable, write `Ad set: Not captured` rather than guessing. Unattributed DMs remain explicitly unattributed. Keep one main blocker per lead. Colour and blocker are marketing analysis; preserve raw answers.
+
+Verify exact link destinations per lead, not merely the CRM location or link count. Native Sheets can normalize a single rich link into userEnteredFormat.textFormat.link; preserve both that form and textFormatRuns. Writing values or replacing runs can clear a whole-cell link. Apply each cell's own link after value writes when needed, then read it back. Shared body formatting must exclude link metadata so it cannot copy one contact's URL onto other names.
+
+**Note 1 is for human-entered notes only.** Copy exact wording from actual manual note records, preserving line breaks and spelling. Leave it empty when none exists. Conversations, generated summaries, proposed follow-ups and automated workflow messages do not become manual notes. Add Note 2/Note 3 only when actual additional notes exist. Keep author/date/source IDs in the private evidence manifest, outside the note wording. Source-sheet placeholders such as `No GHL notes found` are not human notes and remain empty in the report. Preserve manual notes already entered by a human in the destination.
+
+Colour the full lead row lightly:
+- Sage: promising, explicitly a marketing-team prediction. It does not assert a sales-confirmed qualified lead.
+- Rose: low fit or potential spam, explicitly a marketing prediction. A recorded rejection/unqualification can support this estimate, but the colour itself does not change CRM status.
+- Cream: verify fit, including possible-spam checks.
+
+Use client-specific approved fit criteria and actual enquiries. Budget is the first sorting criterion, not a universal rejection threshold. Contact city may differ from project site. Name/language alone does not establish spam. Obvious test names, placeholders, repeated junk, unusable answers, duplicates and contradictory project details can trigger verification. Keep a suspected-spam lead as “Possible spam / verify” until evidence supports rejection. Preserve its exact name and answers. Generated analysis belongs in the blocker, colours or Actions component, never in human note columns.
+
+## Annotation and writing policy
+
+Use approved reference's light annotation approach. Leave ordinary project-answer and empty cells free of generated cell notes. Keep source-row pointers, raw field IDs, manual-note author IDs/dates and classification rationales in the private evidence manifest. Preserve actual human-authored cell notes/comments when editing an existing output; remove generated boilerplate only when authorized. A visible Note column contains only actual verbatim manual note text.
+
+One useful header note can explain a column. A concise annotation on the exact ad link may retain ad/creative identity or a genuine attribution exception, as in approved reference. Store repeated calculation provenance privately; show the metric definition once in the footer. A specific uncertainty can have one short exception note, not the same warning on every row. Do not generate per-cell 'Source: ...', 'Values preserved ...', 'Marketing-team prediction ...' or 'Copied verbatim ...' boilerplate. Do not create threaded comments as part of report generation.
+
+Campaign Quality / media-buyer finding cells report actual campaign-level budget, scope, vacancy, location or missing-detail patterns in the reviewed evidence. State the sample/denominator limit once in the metric footer. Keep the Total finding cell empty unless it adds a useful aggregate finding. Actions contain concise operating evidence and an action within the media buyer's control. Retain notes-copied counts, placeholders removed, formatting checks, source-row pointers and repeated qualification disclaimers privately. A sector tab's source headings simply say Facebook lead form or Instagram lead form, without repeating the sector. Preserve human note wording even when long.
+
+## Comparison acceptance
+
+Inspect both saved native outputs. Check destination IDs, the three components, fonts/colours/borders, independent column widths, seven-column gaps, row-height policy, capture-source grouping, budget basis, exact names/links, manual-note columns and weighted metrics. Check logical roles rather than fixed coordinates when actual extra notes shift Actions. Different lead counts, project forms, source groups, campaign counts and real note counts are expected data differences, not reasons to add/remove data to mimic approved reference. Show concrete SOP gaps and fix the retained rules; leave reference data/styles intact unless requested. A validator passing counts/formulas is not visual acceptance.
+
+## Save and acceptance
+
+Build a normalized model with the fields accepted by scripts/review_plan.py. Record metric sources, classification rationale and note/asset provenance privately. Apply the annotation policy above; do not copy the private audit manifest into cells. Verify the resulting plan, then saved native cells, URLs, effective colours, notes and formulas. Inspect all components in the in-app Browser at a readable zoom, including the longest names/answers and compact long-note previews. Confirm that selecting a clipped preview exposes the complete unchanged cell text. Preserve the grid and seven-column gaps.
+
+Read back every linked Drive file's public viewer permission and recorded ad identity. Verify workbook sharing remains restricted. Verify earlier tabs' cell values/formulas and dimensions are unchanged. Stop after those checks pass; do not repeatedly rescan sources without a new concern.

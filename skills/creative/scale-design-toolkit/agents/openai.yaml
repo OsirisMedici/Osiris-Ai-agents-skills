@@ -1,0 +1,6 @@
+interface:
+  display_name: "Scale design toolkit"
+  short_description: "Shared design references, briefs and review workflow"
+  default_prompt: "Use $scale-design-toolkit to design or review this project within its existing product and brand."
+policy:
+  allow_implicit_invocation: true

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Recordly to YouTube"
+  short_description: "Publish full recordings with a title and thumbnail"
+  default_prompt: "Use $recordly-to-youtube to transcribe my latest recording, create a title and thumbnail, and publish the full video to my YouTube channel."

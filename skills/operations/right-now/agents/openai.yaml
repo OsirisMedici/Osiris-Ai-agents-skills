@@ -1,0 +1,4 @@
+interface:
+  display_name: "Right Now"
+  short_description: "Choose five next actions from your live plan and tasks"
+  default_prompt: "Use $right-now to check my current Life Compass block, ask my work mode with native choices, and suggest five useful actions from my live Feedback tasks."

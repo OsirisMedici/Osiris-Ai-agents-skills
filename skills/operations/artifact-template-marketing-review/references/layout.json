@@ -1,0 +1,193 @@
+{
+  "version": 1,
+  "workbook_name": "{client} | Marketing reviews",
+  "tab_name": "{period}",
+  "rerun": "append numeric suffix; never overwrite",
+  "blocks": {
+    "ads": {
+      "start_column": 0,
+      "width": 10,
+      "columns": [
+        "Campaign",
+        "Ad sets included",
+        "Spend (₹)",
+        "Paid forms",
+        "Form CPL (₹)",
+        "Impressions",
+        "CPM (₹)",
+        "Link CTR",
+        "Link CPC (₹)",
+        "Quality / media-buyer finding"
+      ],
+      "pixel_widths": [
+        245,
+        300,
+        110,
+        80,
+        100,
+        105,
+        85,
+        85,
+        90,
+        280
+      ]
+    },
+    "leads": {
+      "start_column": 17,
+      "base_width": 10,
+      "columns": [
+        "Code + name / CRM",
+        "Budget planned",
+        "City",
+        "Work needed",
+        "Home stage",
+        "Home size (sq ft, as entered)",
+        "Preferred start",
+        "Main blocker",
+        "Ad / creative",
+        "Note 1"
+      ],
+      "pixel_widths": [
+        190,
+        140,
+        110,
+        140,
+        160,
+        170,
+        110,
+        100,
+        260,
+        190
+      ]
+    },
+    "actions": {
+      "base_start_column": 34,
+      "width": 3,
+      "columns": [
+        "Review area",
+        "Evidence / gap",
+        "Media-buyer action / due date"
+      ],
+      "pixel_widths": [
+        220,
+        720,
+        380
+      ]
+    }
+  },
+  "gap_columns": 7,
+  "gap_pixel_width": 24,
+  "minimum_manual_note_columns": 1,
+  "palette": {
+    "promising": "#E4EEE0",
+    "low_fit_or_potential_spam": "#FBE1E1",
+    "verify_fit": "#FFF8E1"
+  },
+  "note_policy": "verbatim manual notes only; no note means empty",
+  "colour_policy": "marketing prediction, not sales qualification",
+  "gridlines": true,
+  "table_borders": true,
+  "freeze_rows": 1,
+  "ad_cell": {
+    "line_1": "exact ad code and name, linked to Drive reference",
+    "line_2": "Ad set: exact source ad-set name",
+    "missing_adset": "Ad set: Not captured"
+  },
+  "row_layout": {
+    "mode": "compact_fixed_height",
+    "title_px": 36,
+    "subtitle_px": 26,
+    "section_px": 30,
+    "column_header_px": 42,
+    "body_px": 72,
+    "source_header_px": 26,
+    "footer_px": 36,
+    "vertical_alignment": "TOP",
+    "long_text": "Preserve complete cell values and line breaks. Show a compact preview; open the cell or formula bar to read the full text.",
+    "shared_rows": "A source-header row uses body height when Ads or Actions also contain data on that physical row.",
+    "autoresize": "Do not autoResizeDimensions for report rows. Long notes and ad-set lists must not stretch all components."
+  },
+  "destination_policy": {
+    "normal_review": "append dated tab to verified client marketing workbook",
+    "comparison_or_explicit_new_spreadsheet": "create a separate native workbook; source/reference/master IDs must differ from output ID",
+    "legacy_outcomes_workbook": "source only unless explicitly selected as destination",
+    "comparison_name": "{client} | Marketing review comparison",
+    "preserve_reference": true
+  },
+  "annotation_policy": {
+    "default": "no generated cell notes on project answers, blockers or manual-note cells",
+    "private_manifest": [
+      "source row",
+      "field IDs",
+      "manual-note author/date/ID",
+      "classification rationale",
+      "calculation provenance"
+    ],
+    "useful_exceptions": [
+      "one helpful header explanation",
+      "exact ad identity and genuine attribution uncertainty"
+    ],
+    "human_notes": "preserve actual human cell notes and threaded comments"
+  },
+  "text_roles": {
+    "font_family": "Arial",
+    "title": {
+      "font_size": 18,
+      "bold": true
+    },
+    "subtitle": {
+      "font_size": 10,
+      "bold": false
+    },
+    "ads_section": {
+      "font_size": 12,
+      "bold": true,
+      "fill": "#274E13",
+      "text": "#FFFFFF"
+    },
+    "leads_section": {
+      "font_size": 15,
+      "bold": true,
+      "fill": "#FFFFFF",
+      "text": "#294F6D"
+    },
+    "actions_section": {
+      "font_size": 12,
+      "bold": true,
+      "fill": "#F6E8C8",
+      "text": "#78541D"
+    },
+    "column_header": {
+      "font_size": 10,
+      "bold": true
+    },
+    "body": {
+      "font_size": 11,
+      "bold": false
+    },
+    "blocker": {
+      "font_size": 10,
+      "bold": true,
+      "text": "#536047"
+    },
+    "padding_px": {
+      "top": 5,
+      "right": 7,
+      "bottom": 5,
+      "left": 7
+    }
+  },
+  "ad_header": {
+    "label": "Ad / creative",
+    "link": "verified client Drive ad library or complete run index",
+    "access": "public reader; no private lead material"
+  },
+  "sector_tabs": {
+    "naming": "{sector} | {period} when distinct project forms exist; otherwise {period}",
+    "components": "Ads, Leads and Actions together on each tab",
+    "campaigns": "verified sector subset, allocated once; weighted totals recalculated",
+    "lead_fields": "only actual questions from the sector form; preserve all asked fields and missing answers",
+    "lead_width": "code/name + mapped project fields + blocker + ad + actual notes",
+    "source_headers": "capture channel only, without repeated sector labels"
+  }
+}

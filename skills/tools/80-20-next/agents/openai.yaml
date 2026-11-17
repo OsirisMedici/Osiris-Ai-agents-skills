@@ -1,0 +1,4 @@
+interface:
+  display_name: "80/20 Next Steps"
+  short_description: "Find three high-impact next steps from this chat"
+  default_prompt: "Use $80-20-next to review this chat and give me the highest-impact prompts to send next."

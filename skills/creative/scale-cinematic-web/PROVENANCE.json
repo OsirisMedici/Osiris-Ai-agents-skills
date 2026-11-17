@@ -1,0 +1,16 @@
+{
+  "name": "scale-cinematic-web",
+  "upstream_name": "motionsites-web-builder",
+  "repository": "Motionsites-AI/claude-skill",
+  "commit": "faa30d512e3973e58675c72101a7ef42ed37ae83",
+  "path": "plugins/motionsites-web-builder/skills/motionsites-web-builder",
+  "license_file": "Motionsites-AI.txt",
+  "original_entry_sha256": "bac1e1f79e5fd72b253c978e64f708a828b94c3512ec4d1e2eb13d3204e79035",
+  "adapter": "Scale integration entry point; preserved attribution and notices",
+  "omitted": [
+    "examples",
+    "media",
+    "scripts"
+  ],
+  "runtime_dependencies_installed": false
+}

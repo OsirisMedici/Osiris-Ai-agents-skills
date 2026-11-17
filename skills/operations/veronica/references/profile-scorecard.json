@@ -1,0 +1,33 @@
+{
+  "profile": "Veronica / Radhika-inspired",
+  "rubric_version": 1,
+  "sample_date": null,
+  "reviewer": null,
+  "transcript_or_audio_reference": null,
+  "style_ratings_0_to_4": {
+    "directness_weight_20": {"rating": null, "evidence": null},
+    "natural_language_weight_20": {"rating": null, "evidence": null},
+    "context_and_listening_weight_20": {"rating": null, "evidence": null},
+    "appropriate_depth_weight_15": {"rating": null, "evidence": null},
+    "candid_reasoning_weight_15": {"rating": null, "evidence": null},
+    "situational_banter_weight_10": {"rating": null, "evidence": null}
+  },
+  "style_fit_score": null,
+  "style_coverage_percent": 0,
+  "audio_ratings_0_to_4": {
+    "intelligibility_weight_30": {"rating": null, "evidence": null},
+    "natural_flow_weight_30": {"rating": null, "evidence": null},
+    "expressive_fit_weight_25": {"rating": null, "evidence": null},
+    "turn_timing_weight_15": {"rating": null, "evidence": null}
+  },
+  "audio_delivery_score": null,
+  "audio_coverage_percent": 0,
+  "required_checks": {
+    "truthfulness": "not_assessed",
+    "scope": "not_assessed",
+    "feminine_hindi_self_reference": "not_assessed",
+    "manual_profile_selection": "not_assessed"
+  },
+  "next_correction": null,
+  "status": "not_measured"
+}

@@ -1,0 +1,7 @@
+interface:
+  display_name: "Marketing review"
+  short_description: "Create Google Sheets with the Marketing review template"
+  icon_large: "./assets/preview.png"
+  default_prompt: "Use $artifact-template-marketing-review for a named client and reporting period, creating a separate spreadsheet for tests/comparisons and using separate Residential and Hospitality tabs with three components each, actual form fields only, compact grid-lined rows, exact attribution, and verbatim manual notes."
+policy:
+  allow_implicit_invocation: true

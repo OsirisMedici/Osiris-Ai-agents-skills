@@ -1,0 +1,4 @@
+interface:
+  display_name: "Canvas Visualize"
+  short_description: "Create and revise editable Canvas Whiteboard diagrams"
+  default_prompt: "Use $canvas-visualize to turn this material into an editable diagram on my Canvas Whiteboard."

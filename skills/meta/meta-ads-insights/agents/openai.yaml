@@ -1,0 +1,4 @@
+interface:
+  display_name: "Meta Ads Insights"
+  short_description: "Connect accounts, audit ads, and plan campaigns"
+  default_prompt: "Use $meta-ads-insights to review the selected ad account, compare lead efficiency, and prepare a campaign plan without changing live ads."

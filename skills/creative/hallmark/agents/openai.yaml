@@ -1,0 +1,6 @@
+interface:
+  display_name: "Hallmark"
+  short_description: "Reviewed design specialist for Scale projects"
+  default_prompt: "Use $hallmark for this design task within the current project scope."
+policy:
+  allow_implicit_invocation: true

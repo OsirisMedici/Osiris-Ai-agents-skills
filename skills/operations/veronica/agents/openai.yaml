@@ -1,0 +1,4 @@
+interface:
+  display_name: "Veronica"
+  short_description: "Talk in voice while one operator carries out the work"
+  default_prompt: "Use $veronica with my selected conversation profile, keep this as my voice home base, reuse the owning execution chat or create one in ScaleHQ when needed, and report verified results."

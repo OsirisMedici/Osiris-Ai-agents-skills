@@ -1,0 +1,12 @@
+{
+  "name": "pick-ui-library",
+  "upstream_name": "pick-ui-library",
+  "repository": "emilkowalski/skills",
+  "commit": "715c1807e08c497cfd1dc4feb450a2a3300ef2a9",
+  "path": "skills/pick-ui-library",
+  "license_file": "emilkowalski.txt",
+  "original_entry_sha256": "675fdce308683256ed617351a9b74d23457a5fbd0a562d9831b9c764b8c5e682",
+  "adapter": "Scale integration entry point; preserved attribution and notices",
+  "omitted": [],
+  "runtime_dependencies_installed": false
+}
