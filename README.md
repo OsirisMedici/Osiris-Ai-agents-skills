@@ -13,7 +13,7 @@ Public source library for Osiris's reusable operations, creative, product, and t
 | Engineering workflows | [babysit-pr](skills/engineering/babysit-pr/SKILL.md), [council](skills/engineering/council/SKILL.md), [file-pr](skills/engineering/file-pr/SKILL.md), [full-send](skills/engineering/full-send/SKILL.md), [full-stop](skills/engineering/full-stop/SKILL.md), [leaving-pr-comments](skills/engineering/leaving-pr-comments/SKILL.md), [modernize](skills/engineering/modernize/SKILL.md), [sol-loop](skills/engineering/sol-loop/SKILL.md), [takeover](skills/engineering/takeover/SKILL.md), [pick-ui-library](skills/engineering/pick-ui-library/SKILL.md) |
 | Issue workflows | [ScaleHQ](skills/operations/scalehq/SKILL.md), [feedback-to-issue](skills/operations/feedback-to-issue/SKILL.md), [feedback-to-issue-cleanup](skills/operations/feedback-to-issue-cleanup/SKILL.md), [github-issue-report](skills/operations/github-issue-report/SKILL.md), [github-issue-to-pdf](skills/operations/github-issue-to-pdf/SKILL.md), [issue-work-log](skills/operations/issue-work-log/SKILL.md) |
 | Writing | [unslop](skills/writing/unslop/SKILL.md) |
-| Tools | [cli-hub-meta-skill](skills/tools/cli-hub-meta-skill/SKILL.md), [osiris-skills-sync](skills/tools/osiris-skills-sync/SKILL.md), [80-20-next](skills/tools/80-20-next/SKILL.md) |
+| Tools | [cli-hub-meta-skill](skills/tools/cli-hub-meta-skill/SKILL.md), [osiris-skills-sync](skills/tools/osiris-skills-sync/SKILL.md), [80-20-next](skills/tools/80-20-next/SKILL.md), [new-chat](skills/tools/new-chat/SKILL.md) |
 
 ## Collection status
 
@@ -42,6 +42,12 @@ Added [ScaleHQ](skills/operations/scalehq/SKILL.md) to audit and repair GitHub i
 Added 16 reviewed custom and deliberately adapted packages, bringing the library to 65 skills. New packages cover voice coordination, planning, food and watchlist records, marketing reviews, Meta insights, design, diagrams and full-recording YouTube uploads. See the [publication notes](docs/skill-sync-2026-11-17.md) and [source inventory](docs/skill-sync-2026-11-17.json) for package hashes, transformations, exclusions and validation.
 
 Public copies omit private account and calendar IDs, diary records, client mappings, native client templates and private board links. Existing installed variants and existing public packages were preserved. The imported upstream engineering/orchestration collection remains inventory-only.
+
+## Independent new-chat handoff, 19 November 2026
+
+Added [new-chat](skills/tools/new-chat/SKILL.md). Use `$new-chat Your task` to create one independent chat with a single handoff. Questions and results stay in the new chat; the origin stops after launch verification. This does not change ordinary coordinated delegation or app notifications.
+
+The library now contains 66 skill packages. See the [source and validation record](docs/new-chat-publication-2026-11-19.json). Reopen an agent session if its skill list has not refreshed.
 
 ## Install and use
 

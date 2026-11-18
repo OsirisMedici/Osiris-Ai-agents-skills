@@ -1,0 +1,32 @@
+{
+  "skill": "new-chat",
+  "published_path": "skills/tools/new-chat",
+  "category": "tools",
+  "date": "2026-11-19",
+  "provenance": "Custom workflow created at the owner's explicit request.",
+  "source": "User-global new-chat package, with provider links to the same canonical installation.",
+  "files_sha256": {
+    "SKILL.md": "093c2950399aeb9659a404cbca2a776c3fc6f4de62d40ebfd755c8cc0f489eeb",
+    "agents/openai.yaml": "2ce0dd61fced50e521b1bca403052387ad4bb5fa17f290d182e899e9d340dbdf"
+  },
+  "transformations": [],
+  "exclusions": [
+    "Unrelated chat history and project artifacts",
+    "Account and client records",
+    "Credentials and runtime exports",
+    "Other installed skill variants"
+  ],
+  "validation": {
+    "skill_creator_quick_validate": "passed",
+    "publication_gitleaks": "passed with no findings",
+    "editorial_privacy_review": "Passed; instructions contain no private identifiers, credentials or machine-specific paths.",
+    "local_and_published_bytes": "identical",
+    "live_new_chat_execution": "Not performed; publishing the package does not invoke it."
+  },
+  "vps_collection": "Outside this single-package publication. No VPS collection or overwrite performed.",
+  "dependencies": [
+    "Harness-supported user chat creation",
+    "Project listing for project selection"
+  ],
+  "scope": "Global installation provides discovery across local projects. Existing agent sessions may need reopening to refresh discovery."
+}
