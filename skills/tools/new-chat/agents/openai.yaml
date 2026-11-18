@@ -1,0 +1,4 @@
+interface:
+  display_name: "New chat"
+  short_description: "Send one task to an independent new chat"
+  default_prompt: "Use $new-chat to send the following task to one independent new chat, with no ongoing coordination."
