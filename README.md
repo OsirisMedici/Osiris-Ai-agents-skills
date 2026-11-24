@@ -7,7 +7,7 @@ Reusable skills for creative work, software development, marketing, operations a
 ## Catalog
 
 <!-- skill-catalog:begin -->
-104 skills across 10 categories. Click **Open skill** to read its instructions and requirements.
+105 skills across 10 categories. Click **Open skill** to read its instructions and requirements.
 
 ### Creative and product design
 
@@ -144,6 +144,7 @@ These three older workflows are retained for reference. Use [creative](skills/cr
 | --- | --- | --- |
 | `80-20-next` | Turn a chat's latest results into three ranked next steps with prompts ready to paste. | [Open skill](skills/tools/80-20-next/SKILL.md) |
 | `cli-hub-meta-skill` | Find agent-friendly command line tools for a requested professional workflow. | [Open skill](skills/tools/cli-hub-meta-skill/SKILL.md) |
+| `gap-check` | Score delivered work against its original plan or inspiration and explain the gaps, causes and fixes. | [Open skill](skills/tools/gap-check/SKILL.md) |
 | `new-chat` | Launch one independent chat with a focused handoff and leave its follow-up there. | [Open skill](skills/tools/new-chat/SKILL.md) |
 | `osiris-skills-sync` | Install and update this library, or publish reviewed additions while preserving local variants. | [Open skill](skills/tools/osiris-skills-sync/SKILL.md) |
 | `usage` | Read Claude usage limits and reset times through the user's authorized signed-in account. | [Open skill](skills/tools/usage/SKILL.md) |
@@ -202,6 +203,8 @@ Workspace paths in the public packages describe layouts to resolve in your own s
 The custom vault research workflow is published as `vault-research` so it can coexist with a separate engineering skill named `research`. The legacy index workflow uses its original frontmatter command, `blueprint-index`.
 
 ## Publication records
+
+The [gap-check publication record](docs/gap-check-publication-2026-11-24.json) records its source, file hashes and validation.
 
 The [24 November 2026 publication record](docs/skill-sync-2026-11-24.md) covers the latest additions, public-copy transformations, exclusions and checks. The [source inventory](docs/skill-sync-2026-11-24.json) records hashes and provenance. The [sync inventory](docs/skill-sync-inventory.json) lists every published package and file hash.
 

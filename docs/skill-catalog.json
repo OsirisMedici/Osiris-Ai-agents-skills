@@ -32,6 +32,7 @@
   "full-send": "Complete authorized development through testing, review and a merged pull request.",
   "full-stop": "Complete development and review, then leave the pull request ready for the user to merge.",
   "future-project": "Extract a build idea from supplied content and save its mechanism, relevance and smallest version.",
+  "gap-check": "Score delivered work against its original plan or inspiration and explain the gaps, causes and fixes.",
   "ghl-visual-newsletter-by-scale": "Create reusable native GoHighLevel newsletters and verify their saved previews.",
   "github-issue-report": "Turn a GitHub issue into a client progress report PDF with outcomes and proof images.",
   "github-issue-to-pdf": "Export a GitHub issue as a continuous light-mode PDF preserving its text and useful proof.",

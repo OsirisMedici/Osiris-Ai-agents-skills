@@ -1,0 +1,25 @@
+{
+  "skill": "gap-check",
+  "published_path": "skills/tools/gap-check",
+  "category": "tools",
+  "date": "2026-11-24",
+  "provenance": "Custom workflow created and published at the owner's explicit request.",
+  "source": "User-global gap-check package.",
+  "files_sha256": {
+    "SKILL.md": "10c3b5d550b4e65b010e0e31f2d9c5f09af445bf4ea9b049093cd19e4a2c257b",
+    "agents/openai.yaml": "bc67a628445b277e5c0b9ba706fb11dc862b0ba9595c4d027d9b7f0408c36d21"
+  },
+  "transformations": [],
+  "exclusions": [
+    "Unrelated skills and local variants",
+    "Chat history and private execution records"
+  ],
+  "validation": {
+    "skill_creator_quick_validate": "passed",
+    "publication_gitleaks": "passed with no findings",
+    "editorial_privacy_review": "Passed; no account or client records, private identifiers, credentials or machine-specific paths.",
+    "local_and_published_bytes": "identical",
+    "live_review_execution": "Not performed; publishing does not invoke the workflow."
+  },
+  "vps_collection": "Outside this single-package publication; existing collection records remain authoritative."
+}
