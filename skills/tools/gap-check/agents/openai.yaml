@@ -1,0 +1,4 @@
+interface:
+  display_name: "Gap check"
+  short_description: "Score work against its original plan or inspiration"
+  default_prompt: "Use $gap-check to compare this output with my original plan or inspiration, score it out of 100, and explain the gaps, why they exist, and how to close them."

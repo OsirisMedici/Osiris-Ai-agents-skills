@@ -464,6 +464,19 @@
       }
     }
   },
+  "gap-check": {
+    "path": "skills/tools/gap-check",
+    "files": {
+      "SKILL.md": {
+        "sha256": "10c3b5d550b4e65b010e0e31f2d9c5f09af445bf4ea9b049093cd19e4a2c257b",
+        "executable": false
+      },
+      "agents/openai.yaml": {
+        "sha256": "bc67a628445b277e5c0b9ba706fb11dc862b0ba9595c4d027d9b7f0408c36d21",
+        "executable": false
+      }
+    }
+  },
   "ghl-visual-newsletter-by-scale": {
     "path": "skills/operations/ghl-visual-newsletter-by-scale",
     "files": {
