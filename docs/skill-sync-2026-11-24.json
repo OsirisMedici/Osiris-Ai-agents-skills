@@ -1,0 +1,1081 @@
+{
+  "date": "2026-11-24",
+  "repository": "OsirisMedici/Osiris-Ai-agents-skills",
+  "previous_revision": "c707b6b8dfb1aac1d0e146d3855c9afd880968ba",
+  "package_publication_revision": "f45557aba7b948812a57d10f0168c3a918947137",
+  "scope": "Missing custom user skills found in configured Mac user skill directories, project skill directories and the owning VPS user skill directories; existing public packages and local variants preserved.",
+  "added_packages": {
+    "crayon-scale": {
+      "path": "skills/creative/crayon-scale",
+      "source": "codex-user-skills/crayon-scale",
+      "classification": "custom-local-workflow",
+      "source_files": {
+        "SKILL.md": {
+          "sha256": "d625ac5e3ec5cada77aadce2f497198a3972d3e091d036055ce1db19fce74c2f",
+          "executable": false
+        },
+        "agents/openai.yaml": {
+          "sha256": "970007b4b0f5efb0f08ebd3135468b5eb64a98c6a1911a46b981e1a31e9b84de",
+          "executable": false
+        },
+        "references/connection.md": {
+          "sha256": "cf325d5a037ac4f04b0f32596a75cfe08d9ab867efdef3ea37c5faeb32df3f49",
+          "executable": false
+        },
+        "scripts/crayon_mcp.py": {
+          "sha256": "1321f951129956f6cf99e9e845e2ed05650cac328fcfbeb22bbc66b4816c5f98",
+          "executable": false
+        }
+      },
+      "files": {
+        "SKILL.md": {
+          "sha256": "10ef7944ef1f3b21c6abc4261072dff2e67b7dbe510419653f3cb08c3967801b",
+          "executable": false
+        },
+        "agents/openai.yaml": {
+          "sha256": "970007b4b0f5efb0f08ebd3135468b5eb64a98c6a1911a46b981e1a31e9b84de",
+          "executable": false
+        },
+        "references/connection.md": {
+          "sha256": "cf325d5a037ac4f04b0f32596a75cfe08d9ab867efdef3ea37c5faeb32df3f49",
+          "executable": false
+        },
+        "scripts/crayon_mcp.py": {
+          "sha256": "1321f951129956f6cf99e9e845e2ed05650cac328fcfbeb22bbc66b4816c5f98",
+          "executable": false
+        }
+      },
+      "transformed_files": [
+        "SKILL.md"
+      ],
+      "omitted_files": []
+    },
+    "full-flow": {
+      "path": "skills/engineering/full-flow",
+      "source": "codex-user-skills/full-flow",
+      "classification": "custom-adaptation",
+      "source_files": {
+        "SKILL.md": {
+          "sha256": "f1aa4949ecce945c5e352dc87c6687626aa99ef3994c641f781685d57c57f9ec",
+          "executable": false
+        },
+        "agents/openai.yaml": {
+          "sha256": "3ce2c53256e040b38b10336bd7ce198c2af92ad3b82a730956a522324e4f0b1e",
+          "executable": false
+        }
+      },
+      "files": {
+        "SKILL.md": {
+          "sha256": "87452e2078d5e8e09867c7d2a61f0b25600c664f24f30a21ac0cc43513532918",
+          "executable": false
+        },
+        "agents/openai.yaml": {
+          "sha256": "3ce2c53256e040b38b10336bd7ce198c2af92ad3b82a730956a522324e4f0b1e",
+          "executable": false
+        }
+      },
+      "transformed_files": [
+        "SKILL.md"
+      ],
+      "omitted_files": []
+    },
+    "ship-live": {
+      "path": "skills/engineering/ship-live",
+      "source": "codex-user-skills/ship-live",
+      "classification": "custom-local-workflow",
+      "source_files": {
+        "SKILL.md": {
+          "sha256": "466e9ab181a709d7de50c617a01178cb0cda3643b734d72fdf531e4f9e833050",
+          "executable": false
+        },
+        "agents/openai.yaml": {
+          "sha256": "4547521b325de1908b36f687698b2381ce31d29a300bfa66a80d4aae3bffdd2f",
+          "executable": false
+        }
+      },
+      "files": {
+        "SKILL.md": {
+          "sha256": "ab13daf2f46fa5905397a69589446ce434673395f84990c18b48b85158608289",
+          "executable": false
+        },
+        "agents/openai.yaml": {
+          "sha256": "4547521b325de1908b36f687698b2381ce31d29a300bfa66a80d4aae3bffdd2f",
+          "executable": false
+        }
+      },
+      "transformed_files": [
+        "SKILL.md"
+      ],
+      "omitted_files": []
+    },
+    "ads-to-calls": {
+      "path": "skills/marketing/ads-to-calls",
+      "source": "claude-user-skills/ads-to-calls",
+      "classification": "custom-local-workflow",
+      "source_files": {
+        "SKILL.md": {
+          "sha256": "336d4f2445f485575850a18e222163d699e7194a3eb80df2833e9e0fa2daf64b",
+          "executable": false
+        }
+      },
+      "files": {
+        "SKILL.md": {
+          "sha256": "da612fec66392349af0fd9a21f1926bcca76af9ef3ed7b115b0fafc370c7b6a6",
+          "executable": false
+        }
+      },
+      "transformed_files": [
+        "SKILL.md"
+      ],
+      "omitted_files": []
+    },
+    "capture": {
+      "path": "skills/knowledge/capture",
+      "source": "claude-user-skills/capture",
+      "classification": "custom-local-workflow",
+      "source_files": {
+        "SKILL.md": {
+          "sha256": "ee616f4184b8c759ab90f6f790204d67cf12f3fabdd8ccdf401809131c2889be",
+          "executable": false
+        }
+      },
+      "files": {
+        "SKILL.md": {
+          "sha256": "5d3fd589fbf1ba61e205e6454cb8425012110c29989cfb23b6f8511312e27a26",
+          "executable": false
+        }
+      },
+      "transformed_files": [
+        "SKILL.md"
+      ],
+      "omitted_files": []
+    },
+    "carousel": {
+      "path": "skills/legacy/carousel",
+      "source": "claude-user-skills/carousel",
+      "classification": "custom-local-workflow",
+      "source_files": {
+        "SKILL.md": {
+          "sha256": "fb14592283690695973905c4163e2190cf9bed7a484c7eb8b9aa965be3487496",
+          "executable": false
+        }
+      },
+      "files": {
+        "SKILL.md": {
+          "sha256": "043e3b290f22a3f54ec61a7befd796acfb70f5fb09bc1133f0c3b640b33657b4",
+          "executable": false
+        }
+      },
+      "transformed_files": [
+        "SKILL.md"
+      ],
+      "omitted_files": []
+    },
+    "client-research": {
+      "path": "skills/marketing/client-research",
+      "source": "claude-user-skills/client-research",
+      "classification": "custom-local-workflow",
+      "source_files": {
+        "SKILL.md": {
+          "sha256": "d023a9a1c2db2675ca5d5d49b5db930b2249bc8d4d9c35692f66fc36153d86b6",
+          "executable": false
+        }
+      },
+      "files": {
+        "SKILL.md": {
+          "sha256": "562a022aa37908453737614f29e804653f78093b64dbaf91913924cdc4622e05",
+          "executable": false
+        }
+      },
+      "transformed_files": [
+        "SKILL.md"
+      ],
+      "omitted_files": []
+    },
+    "client-update": {
+      "path": "skills/operations/client-update",
+      "source": "claude-user-skills/client-update",
+      "classification": "custom-local-workflow",
+      "source_files": {
+        "SKILL.md": {
+          "sha256": "1c82fbc1cd2744442c5e27548bfeccc4fb3a3cc27bb599863b0e3aa27cc32d51",
+          "executable": false
+        }
+      },
+      "files": {
+        "SKILL.md": {
+          "sha256": "f13699bf299ed281086f02cd70ca68d60e66e1d4e31af30bcee3f2ac57649ef6",
+          "executable": false
+        }
+      },
+      "transformed_files": [
+        "SKILL.md"
+      ],
+      "omitted_files": []
+    },
+    "cockpit": {
+      "path": "skills/operations/cockpit",
+      "source": "claude-user-skills/cockpit",
+      "classification": "custom-local-workflow",
+      "source_files": {
+        "SKILL.md": {
+          "sha256": "ac4ab7c6830da6a62b2e273648f2f48aee90f11390f0d413f1bc3377be385d6d",
+          "executable": false
+        }
+      },
+      "files": {
+        "SKILL.md": {
+          "sha256": "42974cc573925a40b27cabbcf89b6968097ff5af9d9337ae391188e61e6ff0f4",
+          "executable": false
+        }
+      },
+      "transformed_files": [
+        "SKILL.md"
+      ],
+      "omitted_files": []
+    },
+    "creative": {
+      "path": "skills/creative/creative",
+      "source": "claude-user-skills/creative",
+      "classification": "custom-local-workflow",
+      "source_files": {
+        "SKILL.md": {
+          "sha256": "30331e3bbe6fedc27e533326ac0638dfe87147d76d8ecce531591759e5048105",
+          "executable": false
+        }
+      },
+      "files": {
+        "SKILL.md": {
+          "sha256": "3a6e59b097c40826ecaeca35d35abf7631dde686deef91cc1321de8d1f3688de",
+          "executable": false
+        }
+      },
+      "transformed_files": [
+        "SKILL.md"
+      ],
+      "omitted_files": []
+    },
+    "end-of-day": {
+      "path": "skills/operations/end-of-day",
+      "source": "claude-user-skills/end-of-day",
+      "classification": "custom-local-workflow",
+      "source_files": {
+        "SKILL.md": {
+          "sha256": "06329cfb7d8966e070b689dd2717c51c839ecdedf27b81c164714930ea6b8241",
+          "executable": false
+        }
+      },
+      "files": {
+        "SKILL.md": {
+          "sha256": "558c2249b981d23d99c132cb3f74e3ff569c64b3615ce12a4c16efd3bb22207f",
+          "executable": false
+        }
+      },
+      "transformed_files": [
+        "SKILL.md"
+      ],
+      "omitted_files": []
+    },
+    "excalidraw-diagram": {
+      "path": "skills/creative/excalidraw-diagram",
+      "source": "claude-user-skills/excalidraw-diagram",
+      "classification": "custom-local-workflow",
+      "source_files": {
+        "SKILL.md": {
+          "sha256": "94cfb3f604c47cac9fbe2f10955cf290d8595bcc38b4fb0d99c89d943b2f87fa",
+          "executable": false
+        }
+      },
+      "files": {
+        "SKILL.md": {
+          "sha256": "e654e190e58178d5b9a6d28f20b320afdb425df22c1335a8c4c0aebb84d9f893",
+          "executable": false
+        }
+      },
+      "transformed_files": [
+        "SKILL.md"
+      ],
+      "omitted_files": []
+    },
+    "future-project": {
+      "path": "skills/knowledge/future-project",
+      "source": "claude-user-skills/future-project",
+      "classification": "custom-local-workflow",
+      "source_files": {
+        "SKILL.md": {
+          "sha256": "e6d55eda94e51b580da6ff9b90ac19f80eb7f196b6935163ce23780cd47c66cf",
+          "executable": false
+        }
+      },
+      "files": {
+        "SKILL.md": {
+          "sha256": "f6fb84b1459f9c9ba98489c847e0da42ab00ecb313ff039ce9bb9aed4a5500c7",
+          "executable": false
+        }
+      },
+      "transformed_files": [
+        "SKILL.md"
+      ],
+      "omitted_files": []
+    },
+    "good-morning": {
+      "path": "skills/operations/good-morning",
+      "source": "claude-user-skills/good-morning",
+      "classification": "custom-local-workflow",
+      "source_files": {
+        "SKILL.md": {
+          "sha256": "0246bad3d909a64d4116db2616da196f6557401fc3833ff4ac32fbcba0bdc6b8",
+          "executable": false
+        }
+      },
+      "files": {
+        "SKILL.md": {
+          "sha256": "95af16d729850dd3b54f6c7aa71067596bac3a7280d107e48cef467b9229fa98",
+          "executable": false
+        }
+      },
+      "transformed_files": [
+        "SKILL.md"
+      ],
+      "omitted_files": []
+    },
+    "hooks": {
+      "path": "skills/writing/hooks",
+      "source": "claude-user-skills/hooks",
+      "classification": "custom-local-workflow",
+      "source_files": {
+        "SKILL.md": {
+          "sha256": "665c09e175cd3d5058272640636e09308c5a8ca73015338cd38cd4902f72747d",
+          "executable": false
+        }
+      },
+      "files": {
+        "SKILL.md": {
+          "sha256": "94b8d1a6fd6a2e8045b563b8a7897e5716a0cae9b3dbba3b54c03f8cf6ef1c0f",
+          "executable": false
+        }
+      },
+      "transformed_files": [
+        "SKILL.md"
+      ],
+      "omitted_files": []
+    },
+    "idea": {
+      "path": "skills/knowledge/idea",
+      "source": "claude-user-skills/idea",
+      "classification": "custom-local-workflow",
+      "source_files": {
+        "SKILL.md": {
+          "sha256": "7500c148ed5ff38bbdae129f05cf416fa25eb97db04583a8a67e1e2b6a229112",
+          "executable": false
+        }
+      },
+      "files": {
+        "SKILL.md": {
+          "sha256": "bc725bb85df19a87f9424a58efc2ed374c7aba4233825ab30008620f3940817b",
+          "executable": false
+        }
+      },
+      "transformed_files": [
+        "SKILL.md"
+      ],
+      "omitted_files": []
+    },
+    "image-prompt-builder": {
+      "path": "skills/creative/image-prompt-builder",
+      "source": "claude-user-skills/image-prompt-builder",
+      "classification": "custom-local-workflow",
+      "source_files": {
+        "SKILL.md": {
+          "sha256": "fc0b9ee07fb149d59301d9c5f0cb0e6e3fabd67cee2fa79301177710951c5033",
+          "executable": false
+        },
+        "references/architecture-interior-terminology.md": {
+          "sha256": "07764f37c786d5c85e6d4b4c63294d59ecc5f7a60edaeacfd75d82238f98aa1e",
+          "executable": false
+        },
+        "references/editorial-layout-terminology.md": {
+          "sha256": "e0673d3487e8bb99fa4a381af54caaf835361d0e4b75e8a7d2ab64a62cc8c18b",
+          "executable": false
+        },
+        "references/higgsfield-omni-reference-syntax.md": {
+          "sha256": "fc6144cbb88a007acceceeea4b09b9270face380a309a81252019de70149ea4b",
+          "executable": false
+        },
+        "references/lighting-and-color.md": {
+          "sha256": "50250bb32a8cbd2db369622428b1e0566ab345ee3acfde259d47a04a361d40da",
+          "executable": false
+        },
+        "references/photography-terminology.md": {
+          "sha256": "e1cfbe25f646591e19bdc3ce6189240c48d8e0263690d9bb81123de006907dee",
+          "executable": false
+        }
+      },
+      "files": {
+        "SKILL.md": {
+          "sha256": "11d43fb60882e3b17e0c975c816a1ee0933c1a388e9889481fb9657fba174b1f",
+          "executable": false
+        },
+        "references/architecture-interior-terminology.md": {
+          "sha256": "07764f37c786d5c85e6d4b4c63294d59ecc5f7a60edaeacfd75d82238f98aa1e",
+          "executable": false
+        },
+        "references/editorial-layout-terminology.md": {
+          "sha256": "e0673d3487e8bb99fa4a381af54caaf835361d0e4b75e8a7d2ab64a62cc8c18b",
+          "executable": false
+        },
+        "references/higgsfield-omni-reference-syntax.md": {
+          "sha256": "06da26038bd772bb040b3569f505b1c60871b6c760f0feeb7a9c059718b29acd",
+          "executable": false
+        },
+        "references/lighting-and-color.md": {
+          "sha256": "50250bb32a8cbd2db369622428b1e0566ab345ee3acfde259d47a04a361d40da",
+          "executable": false
+        },
+        "references/photography-terminology.md": {
+          "sha256": "e1cfbe25f646591e19bdc3ce6189240c48d8e0263690d9bb81123de006907dee",
+          "executable": false
+        }
+      },
+      "transformed_files": [
+        "SKILL.md",
+        "references/higgsfield-omni-reference-syntax.md"
+      ],
+      "omitted_files": []
+    },
+    "ingest": {
+      "path": "skills/knowledge/ingest",
+      "source": "claude-user-skills/ingest",
+      "classification": "custom-local-workflow",
+      "source_files": {
+        "skill.md": {
+          "sha256": "852050db011aa28c708b00a8de94d7bb9b1b13f2bf41926483e15545a5bc41b5",
+          "executable": false
+        }
+      },
+      "files": {
+        "SKILL.md": {
+          "sha256": "1731dab321864bf6963034682bb85fb5fc134e472a7479f5025d0d7f9b3d460d",
+          "executable": false
+        }
+      },
+      "transformed_files": [
+        "SKILL.md"
+      ],
+      "omitted_files": [
+        "skill.md"
+      ]
+    },
+    "json-prompt-generator": {
+      "path": "skills/creative/json-prompt-generator",
+      "source": "claude-user-skills/json-prompt-generator",
+      "classification": "custom-local-workflow",
+      "source_files": {
+        "SKILL.md": {
+          "sha256": "d1e200df4d186f1e08422fb24938b1772df9f026f6801ce292ac23de46701d56",
+          "executable": false
+        }
+      },
+      "files": {
+        "SKILL.md": {
+          "sha256": "8abec61caf03b5bc4f3cbe45c9e3adc9525e8da8eef49495ed493ad7efc1c1cc",
+          "executable": false
+        }
+      },
+      "transformed_files": [
+        "SKILL.md"
+      ],
+      "omitted_files": []
+    },
+    "keystone": {
+      "path": "skills/operations/keystone",
+      "source": "claude-user-skills/keystone",
+      "classification": "custom-local-workflow",
+      "source_files": {
+        "SKILL.md": {
+          "sha256": "66ce58ee9d327f44d7471d86631cc73b7cbf3365bf017ab5ffb6dbd624e571bd",
+          "executable": false
+        }
+      },
+      "files": {
+        "SKILL.md": {
+          "sha256": "1343d842f22f80683666dc366d02521d8052685d02fe4f3046f7e8e5c8183db2",
+          "executable": false
+        }
+      },
+      "transformed_files": [
+        "SKILL.md"
+      ],
+      "omitted_files": []
+    },
+    "knowledge-capture": {
+      "path": "skills/knowledge/knowledge-capture",
+      "source": "claude-user-skills/knowledge-capture",
+      "classification": "custom-local-workflow",
+      "source_files": {
+        "SKILL.md": {
+          "sha256": "31726e8035ad23f7175bed416777955b19f549230b214f168176187defe22223",
+          "executable": false
+        }
+      },
+      "files": {
+        "SKILL.md": {
+          "sha256": "88d4954b7e752b7550889c91c7bb5b2b9f18e5a0c54dfd3bf7e97481c3023002",
+          "executable": false
+        }
+      },
+      "transformed_files": [
+        "SKILL.md"
+      ],
+      "omitted_files": []
+    },
+    "lint": {
+      "path": "skills/knowledge/lint",
+      "source": "claude-user-skills/lint",
+      "classification": "custom-local-workflow",
+      "source_files": {
+        "skill.md": {
+          "sha256": "da24ceb2054f1429f4a6f908390d2879e802bee77dcd4983e29b094728f58236",
+          "executable": false
+        }
+      },
+      "files": {
+        "SKILL.md": {
+          "sha256": "b6b3e6f8ef752259a97e127c13c0a92e6bbf9e63dbb0d4010f5dde3e3fed2357",
+          "executable": false
+        }
+      },
+      "transformed_files": [
+        "SKILL.md"
+      ],
+      "omitted_files": [
+        "skill.md"
+      ]
+    },
+    "obsidian-mind": {
+      "path": "skills/knowledge/obsidian-mind",
+      "source": "claude-user-skills/obsidian-mind",
+      "classification": "custom-local-workflow",
+      "source_files": {
+        "SKILL.md": {
+          "sha256": "90b00fccc11e2f51a5ec1d92ab6d02a4ef43bbac6a9c07d8fdfc6655b5350d13",
+          "executable": false
+        }
+      },
+      "files": {
+        "SKILL.md": {
+          "sha256": "89e4d0ba370b96acdfc9acc6a0d97c14fef82f64314c85cea1aaada23bf997ed",
+          "executable": false
+        }
+      },
+      "transformed_files": [
+        "SKILL.md"
+      ],
+      "omitted_files": []
+    },
+    "pitch-deck-pdf": {
+      "path": "skills/creative/pitch-deck-pdf",
+      "source": "claude-user-skills/pitch-deck-pdf",
+      "classification": "custom-local-workflow",
+      "source_files": {
+        "SKILL.md": {
+          "sha256": "0008824740e4eb836a48b3cc15ed6770b70aa90710b52c63d5e861f6644b623c",
+          "executable": false
+        },
+        "design.md": {
+          "sha256": "f70f740ae1cbfaa0e87a4ec914410cbb49829bc9df11214dfbed02bf351220bc",
+          "executable": false
+        },
+        "slides.md": {
+          "sha256": "4b07f9cec66273a59f77cc0842e3b581675b8aab4e5450dafe0f8fa3a2621087",
+          "executable": false
+        }
+      },
+      "files": {
+        "SKILL.md": {
+          "sha256": "ef2c534ddf232027f51fead063e63b1151a1c2a0ac11908c9d614c07a1c7d223",
+          "executable": false
+        },
+        "design.md": {
+          "sha256": "f70f740ae1cbfaa0e87a4ec914410cbb49829bc9df11214dfbed02bf351220bc",
+          "executable": false
+        },
+        "slides.md": {
+          "sha256": "4b07f9cec66273a59f77cc0842e3b581675b8aab4e5450dafe0f8fa3a2621087",
+          "executable": false
+        }
+      },
+      "transformed_files": [
+        "SKILL.md"
+      ],
+      "omitted_files": []
+    },
+    "power-list": {
+      "path": "skills/operations/power-list",
+      "source": "claude-user-skills/power-list",
+      "classification": "custom-local-workflow",
+      "source_files": {
+        "SKILL.md": {
+          "sha256": "f6d1a7b415f99b58891f44185e85af83b163ccead1113d0fb7dea102ab0daca5",
+          "executable": false
+        }
+      },
+      "files": {
+        "SKILL.md": {
+          "sha256": "a448fe6c7bd02be165fd59ceb924002d67ae520d219539b1368b0f90e7dbd183",
+          "executable": false
+        }
+      },
+      "transformed_files": [
+        "SKILL.md"
+      ],
+      "omitted_files": []
+    },
+    "reference": {
+      "path": "skills/creative/reference",
+      "source": "claude-user-skills/reference",
+      "classification": "custom-local-workflow",
+      "source_files": {
+        "SKILL.md": {
+          "sha256": "667515bfd8db976b0a6cbbbf896e10ce25ddfd443ef4366c31cb0c2d2f7a086d",
+          "executable": false
+        }
+      },
+      "files": {
+        "SKILL.md": {
+          "sha256": "0414341bd92583af1f03c379f94784229e9eb8bf077d5f1a2c69b69881a7ae1f",
+          "executable": false
+        }
+      },
+      "transformed_files": [
+        "SKILL.md"
+      ],
+      "omitted_files": []
+    },
+    "refresh": {
+      "path": "skills/operations/refresh",
+      "source": "claude-user-skills/refresh",
+      "classification": "custom-local-workflow",
+      "source_files": {
+        "SKILL.md": {
+          "sha256": "95a8aaa1abef34c802166d8cc5e3d035f3e38ceb0fb4a064329efdbbe9365301",
+          "executable": false
+        }
+      },
+      "files": {
+        "SKILL.md": {
+          "sha256": "a0483432c346ddbd45353052cda31bbfbfb3a48f23bc90acc2db8d0aba75186e",
+          "executable": false
+        }
+      },
+      "transformed_files": [
+        "SKILL.md"
+      ],
+      "omitted_files": []
+    },
+    "vault-research": {
+      "path": "skills/knowledge/vault-research",
+      "source": "claude-user-skills/research",
+      "classification": "custom-local-workflow",
+      "source_files": {
+        "SKILL.md": {
+          "sha256": "9b8b71bab29786095c4855e8d258e6ffd1a4a77e9e1d36a4d771d635eb0173ab",
+          "executable": false
+        }
+      },
+      "files": {
+        "SKILL.md": {
+          "sha256": "8dc5c0cc1904220ce4120d1986c9084f7afbe6c466da5d8d9423e7d8732ef3ee",
+          "executable": false
+        }
+      },
+      "transformed_files": [
+        "SKILL.md"
+      ],
+      "omitted_files": []
+    },
+    "blueprint-index": {
+      "path": "skills/legacy/blueprint-index",
+      "source": "claude-user-skills/scale-engine-blueprint-index",
+      "classification": "custom-local-workflow",
+      "source_files": {
+        "SKILL.md": {
+          "sha256": "5b59a2f379662c9fe6540b330dd86b79e124320fdb23e58969b7ee6683a0c29a",
+          "executable": false
+        }
+      },
+      "files": {
+        "SKILL.md": {
+          "sha256": "d9cff56a0c665ecb58fd0e1e617cdf7d5a29d9a523fa5574d8747127a4e557a5",
+          "executable": false
+        }
+      },
+      "transformed_files": [
+        "SKILL.md"
+      ],
+      "omitted_files": []
+    },
+    "scene-engine": {
+      "path": "skills/legacy/scene-engine",
+      "source": "claude-user-skills/scene-engine",
+      "classification": "custom-local-workflow",
+      "source_files": {
+        "SKILL.md": {
+          "sha256": "1761a36b9b6b67614deed11e9571273350d80e63410534c2e9aba907250d2b69",
+          "executable": false
+        }
+      },
+      "files": {
+        "SKILL.md": {
+          "sha256": "122d9ad23a8989571436ea004ec7863dd7297882a96a50a845a40b5cb532d3c6",
+          "executable": false
+        }
+      },
+      "transformed_files": [
+        "SKILL.md"
+      ],
+      "omitted_files": []
+    },
+    "team-standup": {
+      "path": "skills/operations/team-standup",
+      "source": "claude-user-skills/team-standup",
+      "classification": "custom-local-workflow",
+      "source_files": {
+        "SKILL.md": {
+          "sha256": "6f52ed05d4f770dba2273b88f5eddccc3387760e2cd09dacd540f8c3769ad2d4",
+          "executable": false
+        }
+      },
+      "files": {
+        "SKILL.md": {
+          "sha256": "bbe474d0f1ca194cc6e2fb26f4aa78f16eb8cbbad17a09ab7ef72c6421ac1d4b",
+          "executable": false
+        }
+      },
+      "transformed_files": [
+        "SKILL.md"
+      ],
+      "omitted_files": []
+    },
+    "therapy": {
+      "path": "skills/operations/therapy",
+      "source": "claude-user-skills/therapy",
+      "classification": "custom-local-workflow",
+      "source_files": {
+        "SKILL.md": {
+          "sha256": "2b928da9e77d591417c02ed3f223092c873c53991926b9334a6e150c3efaf71a",
+          "executable": false
+        }
+      },
+      "files": {
+        "SKILL.md": {
+          "sha256": "bc314be7b8efdb43c7bd06f3edad6da7c8c0bb97aef8b98dc18334403d3cc241",
+          "executable": false
+        }
+      },
+      "transformed_files": [
+        "SKILL.md"
+      ],
+      "omitted_files": []
+    },
+    "title": {
+      "path": "skills/writing/title",
+      "source": "claude-user-skills/title",
+      "classification": "custom-local-workflow",
+      "source_files": {
+        "SKILL.md": {
+          "sha256": "404162752495fff10acb236cccc1c2961565bd71466ab00296a84251d6e5c18e",
+          "executable": false
+        },
+        "reference/humanizer-blacklist.md": {
+          "sha256": "8158c3f67b3a8aebb344fd52a0346a12be3ec66a5f6f4224acbbc0ed1ccc0cc0",
+          "executable": false
+        },
+        "reference/reference-titles.md": {
+          "sha256": "9322db6e67dc8670bad2d896e23334084b4caa3541090740d996dd67dc3836a9",
+          "executable": false
+        },
+        "reference/techniques.md": {
+          "sha256": "7500c94f4bb3dad74bfac72852eec964adb60a30b7b1b2ad13f5708c087ec0a2",
+          "executable": false
+        }
+      },
+      "files": {
+        "SKILL.md": {
+          "sha256": "1ebb5c2b469f001b9110d9d2ce91445d4a1b435153049322a8d441ef7e69d9e4",
+          "executable": false
+        },
+        "reference/humanizer-blacklist.md": {
+          "sha256": "bb7d5883cb3170498b0def815cf7410e22f9e96391aa5f25e521b9d727f0d306",
+          "executable": false
+        },
+        "reference/reference-titles.md": {
+          "sha256": "57a5c01cc47bda242e0b75acbd72dda77e5e5d674f3c39771c225b57c04b769e",
+          "executable": false
+        },
+        "reference/techniques.md": {
+          "sha256": "87d4b6800a26256f961f4cd10b1df5603e76f2b41c8f29e479cffe15f1ad51da",
+          "executable": false
+        }
+      },
+      "transformed_files": [
+        "SKILL.md",
+        "reference/humanizer-blacklist.md",
+        "reference/reference-titles.md",
+        "reference/techniques.md"
+      ],
+      "omitted_files": []
+    },
+    "training": {
+      "path": "skills/operations/training",
+      "source": "claude-user-skills/training",
+      "classification": "custom-local-workflow",
+      "source_files": {
+        "SKILL.md": {
+          "sha256": "0f0c56f9cfd0d553c0cce8314544c05c3d1390b1fdad214c69eb0642f70bc97a",
+          "executable": false
+        }
+      },
+      "files": {
+        "SKILL.md": {
+          "sha256": "5e5da2ae662d7e14c9a0b4b8a6557cab70dbe39d7c4c650b06db4ce2fe7eb788",
+          "executable": false
+        }
+      },
+      "transformed_files": [
+        "SKILL.md"
+      ],
+      "omitted_files": []
+    },
+    "triage": {
+      "path": "skills/operations/triage",
+      "source": "claude-user-skills/triage",
+      "classification": "custom-local-workflow",
+      "source_files": {
+        "SKILL.md": {
+          "sha256": "c3313de61767cded8754b6bfca6ab3158846c0a21ea73cea50ffe07d52ecadfd",
+          "executable": false
+        }
+      },
+      "files": {
+        "SKILL.md": {
+          "sha256": "d5c3699759cd400bb2210d9bdd37ea5efeb5e90e6563d2eae004e652b2aad338",
+          "executable": false
+        }
+      },
+      "transformed_files": [
+        "SKILL.md"
+      ],
+      "omitted_files": []
+    },
+    "usage": {
+      "path": "skills/tools/usage",
+      "source": "claude-user-skills/usage",
+      "classification": "custom-local-workflow",
+      "source_files": {
+        "SKILL.md": {
+          "sha256": "385f7e17636a78d616be11b29d17c55d60c78fd7d390db5e932c5e2e983e8468",
+          "executable": false
+        },
+        "accounts.json": {
+          "sha256": "205301100988587e11a40aeb72a9e2147a16cfef30560438b0036afba9ba5bb7",
+          "executable": false
+        },
+        "check_usage.py": {
+          "sha256": "2529cf8ed89cefd0aeaa5ebb9f782f1aaec8d43a4f9971c6281f62d19e47db24",
+          "executable": false
+        }
+      },
+      "files": {
+        "SKILL.md": {
+          "sha256": "488240d7a5452501409436140938f814c5ae0298a7de17c21867b275c9ac72ca",
+          "executable": false
+        }
+      },
+      "transformed_files": [
+        "SKILL.md"
+      ],
+      "omitted_files": [
+        "accounts.json",
+        "check_usage.py"
+      ]
+    },
+    "verify": {
+      "path": "skills/tools/verify",
+      "source": "claude-user-skills/verify",
+      "classification": "custom-local-workflow",
+      "source_files": {
+        "SKILL.md": {
+          "sha256": "bd99e29ce2eced6263f0e4a651de4f59d8a8c7b63c33b2bddca5eff8dc541100",
+          "executable": false
+        }
+      },
+      "files": {
+        "SKILL.md": {
+          "sha256": "2f095979e645df29d043c23fb33ee08ce443c94337731353b449540941d1b4b0",
+          "executable": false
+        }
+      },
+      "transformed_files": [
+        "SKILL.md"
+      ],
+      "omitted_files": []
+    },
+    "visual": {
+      "path": "skills/creative/visual",
+      "source": "claude-user-skills/visual",
+      "classification": "custom-local-workflow",
+      "source_files": {
+        "SKILL.md": {
+          "sha256": "254c4708f6d3041a2a399dbaacb33b65055f8e3164f09561bc55483c5415971e",
+          "executable": false
+        }
+      },
+      "files": {
+        "SKILL.md": {
+          "sha256": "eb0d87f6b0702f1f1ec6acdf80c30ac2d737ce1c5cc572e97ec9fc9c1e4f0d96",
+          "executable": false
+        },
+        "references/architecture-interior-terminology.md": {
+          "sha256": "07764f37c786d5c85e6d4b4c63294d59ecc5f7a60edaeacfd75d82238f98aa1e",
+          "executable": false
+        },
+        "references/editorial-layout-terminology.md": {
+          "sha256": "e0673d3487e8bb99fa4a381af54caaf835361d0e4b75e8a7d2ab64a62cc8c18b",
+          "executable": false
+        },
+        "references/higgsfield-omni-reference-syntax.md": {
+          "sha256": "06da26038bd772bb040b3569f505b1c60871b6c760f0feeb7a9c059718b29acd",
+          "executable": false
+        },
+        "references/lighting-and-color.md": {
+          "sha256": "50250bb32a8cbd2db369622428b1e0566ab345ee3acfde259d47a04a361d40da",
+          "executable": false
+        },
+        "references/photography-terminology.md": {
+          "sha256": "e1cfbe25f646591e19bdc3ce6189240c48d8e0263690d9bb81123de006907dee",
+          "executable": false
+        }
+      },
+      "transformed_files": [
+        "SKILL.md",
+        "references/architecture-interior-terminology.md",
+        "references/editorial-layout-terminology.md",
+        "references/higgsfield-omni-reference-syntax.md",
+        "references/lighting-and-color.md",
+        "references/photography-terminology.md"
+      ],
+      "omitted_files": []
+    }
+  },
+  "total_library_skills": 104,
+  "active_packages": 101,
+  "legacy_packages": [
+    "blueprint-index",
+    "carousel",
+    "scene-engine"
+  ],
+  "renamed_commands": {
+    "claude-user-skills/research": "vault-research",
+    "claude-user-skills/scale-engine-blueprint-index": "blueprint-index"
+  },
+  "excluded_upstream_engineering_names": [
+    "arena",
+    "ask-matt",
+    "blast-radius",
+    "bro",
+    "code-review",
+    "codebase-design",
+    "diagnosing-bugs",
+    "domain-modeling",
+    "find-skills",
+    "grill-me",
+    "grill-with-docs",
+    "grilling",
+    "handoff",
+    "how",
+    "implement",
+    "improve-codebase-architecture",
+    "interrogate",
+    "principle-encode-lessons-in-structure",
+    "principle-laziness-protocol",
+    "principle-prove-it-works",
+    "principle-redesign-from-first-principles",
+    "principle-separate-before-serializing-shared-state",
+    "prototype",
+    "research",
+    "setup-matt-pocock-skills",
+    "show-me-your-work",
+    "tdd",
+    "teach",
+    "technical-writing",
+    "to-questionnaire",
+    "to-spec",
+    "to-tickets",
+    "wait-what",
+    "wayfinder",
+    "why",
+    "wizard",
+    "writing-for-agents"
+  ],
+  "other_exclusions": {
+    "humanizer": "Installed upstream collection, not a new custom publication.",
+    "remotion-best-practices": "Installed vendor collection.",
+    "find-skills": "Installed upstream discovery skill.",
+    "cua-driver": "Vendor-distributed GUI driver package on the VPS.",
+    "system_and_plugin_skills": "Bundled system packages and plugin caches remain outside this custom collection."
+  },
+  "vps_audit": {
+    "connection": "Verified owning user over the existing private fleet route.",
+    "roots": [
+      "~/.codex/skills",
+      "~/.claude/skills",
+      "~/.agents/skills"
+    ],
+    "missing_custom_packages": [],
+    "unpublished_vendor_packages": [
+      "cua-driver"
+    ],
+    "limits": "Configured owning user directories only; no claim about other users or unregistered installations."
+  },
+  "privacy_transformations": [
+    "Retained only reusable instructions, non-secret connection conventions and required references.",
+    "Removed client identities, staff rosters, specific client constraints and private examples.",
+    "Replaced personal account/calendar/task IDs, targets and operational mappings with destination discovery.",
+    "Omitted the usage account registry and credential/session extraction helper; public skill uses an authorized connected tool or visible signed-in interface.",
+    "Omitted the therapy personal profile and intimate examples; public copy provides reflective support without diagnosis.",
+    "Omitted internal title drafts and substituted clearly labeled synthetic examples.",
+    "Generalized machine-specific paths and removed container-specific export assumptions.",
+    "Included shared image-prompt terminology references directly in visual so it does not require a private source folder.",
+    "Preserved full-flow attribution to Matt Pocock; no new license added.",
+    "Normalized frontmatter command names and used explicit Markdown breaks where Git rejects trailing spaces."
+  ],
+  "validation": {
+    "counts": {
+      "skills": 38,
+      "yaml": 3,
+      "json": 0,
+      "python": 1
+    },
+    "errors": []
+  },
+  "isolated_install": {
+    "installed": 104,
+    "updated": 0,
+    "global_installed_skills_changed": false
+  },
+  "gitleaks": {
+    "version": "8.30.1",
+    "publication_batch_findings": 0,
+    "full_repository_findings": 0
+  },
+  "acceptance_limit": "Package integrity, catalog coverage, offline helper checks and isolated installation. None of the collected workflows was run against live client accounts, sent messages or deployed applications.",
+  "final_checks": {
+    "skill_packages_validated": 104,
+    "catalog_open_links": 104,
+    "readme_local_links_checked": 117,
+    "inventory_packages_verified": 104,
+    "repository_unit_tests_passed": 11,
+    "python_syntax_checks": 2
+  }
+}
