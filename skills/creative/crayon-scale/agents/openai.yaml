@@ -1,0 +1,4 @@
+interface:
+  display_name: "Crayon Scale"
+  short_description: "Turn product discussions into editable Crayon designs"
+  default_prompt: "Use $crayon-scale to design the product or feature we discussed in Crayon, ready for my feedback and a full-flow handoff."

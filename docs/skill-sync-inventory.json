@@ -12,6 +12,15 @@
       }
     }
   },
+  "ads-to-calls": {
+    "path": "skills/marketing/ads-to-calls",
+    "files": {
+      "SKILL.md": {
+        "sha256": "da612fec66392349af0fd9a21f1926bcca76af9ef3ed7b115b0fafc370c7b6a6",
+        "executable": false
+      }
+    }
+  },
   "artifact-template-marketing-review": {
     "path": "skills/operations/artifact-template-marketing-review",
     "files": {
@@ -62,6 +71,15 @@
       }
     }
   },
+  "blueprint-index": {
+    "path": "skills/legacy/blueprint-index",
+    "files": {
+      "SKILL.md": {
+        "sha256": "d9cff56a0c665ecb58fd0e1e617cdf7d5a29d9a523fa5574d8747127a4e557a5",
+        "executable": false
+      }
+    }
+  },
   "browser-fastpath": {
     "path": "skills/operations/browser-fastpath",
     "files": {
@@ -108,6 +126,24 @@
       }
     }
   },
+  "capture": {
+    "path": "skills/knowledge/capture",
+    "files": {
+      "SKILL.md": {
+        "sha256": "5d3fd589fbf1ba61e205e6454cb8425012110c29989cfb23b6f8511312e27a26",
+        "executable": false
+      }
+    }
+  },
+  "carousel": {
+    "path": "skills/legacy/carousel",
+    "files": {
+      "SKILL.md": {
+        "sha256": "043e3b290f22a3f54ec61a7befd796acfb70f5fb09bc1133f0c3b640b33657b4",
+        "executable": false
+      }
+    }
+  },
   "chat-rescue": {
     "path": "skills/operations/chat-rescue",
     "files": {
@@ -139,6 +175,33 @@
       }
     }
   },
+  "client-research": {
+    "path": "skills/marketing/client-research",
+    "files": {
+      "SKILL.md": {
+        "sha256": "562a022aa37908453737614f29e804653f78093b64dbaf91913924cdc4622e05",
+        "executable": false
+      }
+    }
+  },
+  "client-update": {
+    "path": "skills/operations/client-update",
+    "files": {
+      "SKILL.md": {
+        "sha256": "f13699bf299ed281086f02cd70ca68d60e66e1d4e31af30bcee3f2ac57649ef6",
+        "executable": false
+      }
+    }
+  },
+  "cockpit": {
+    "path": "skills/operations/cockpit",
+    "files": {
+      "SKILL.md": {
+        "sha256": "42974cc573925a40b27cabbcf89b6968097ff5af9d9337ae391188e61e6ff0f4",
+        "executable": false
+      }
+    }
+  },
   "content-engine-osiris": {
     "path": "skills/creative/content-engine-osiris",
     "files": {
@@ -161,6 +224,36 @@
     "files": {
       "SKILL.md": {
         "sha256": "598fb2c7cdd48ddd9643cb22999e1b624c357aa6579aa0af0e7268ae16a8a164",
+        "executable": false
+      }
+    }
+  },
+  "crayon-scale": {
+    "path": "skills/creative/crayon-scale",
+    "files": {
+      "SKILL.md": {
+        "sha256": "10ef7944ef1f3b21c6abc4261072dff2e67b7dbe510419653f3cb08c3967801b",
+        "executable": false
+      },
+      "agents/openai.yaml": {
+        "sha256": "970007b4b0f5efb0f08ebd3135468b5eb64a98c6a1911a46b981e1a31e9b84de",
+        "executable": false
+      },
+      "references/connection.md": {
+        "sha256": "cf325d5a037ac4f04b0f32596a75cfe08d9ab867efdef3ea37c5faeb32df3f49",
+        "executable": false
+      },
+      "scripts/crayon_mcp.py": {
+        "sha256": "1321f951129956f6cf99e9e845e2ed05650cac328fcfbeb22bbc66b4816c5f98",
+        "executable": false
+      }
+    }
+  },
+  "creative": {
+    "path": "skills/creative/creative",
+    "files": {
+      "SKILL.md": {
+        "sha256": "3a6e59b097c40826ecaeca35d35abf7631dde686deef91cc1321de8d1f3688de",
         "executable": false
       }
     }
@@ -224,6 +317,24 @@
       },
       "scripts/edits_mcp.py": {
         "sha256": "f93a38e1c6497c91b0e50994aa23ae8f779fc1802ab0358419b63ffa611e9caf",
+        "executable": false
+      }
+    }
+  },
+  "end-of-day": {
+    "path": "skills/operations/end-of-day",
+    "files": {
+      "SKILL.md": {
+        "sha256": "558c2249b981d23d99c132cb3f74e3ff569c64b3615ce12a4c16efd3bb22207f",
+        "executable": false
+      }
+    }
+  },
+  "excalidraw-diagram": {
+    "path": "skills/creative/excalidraw-diagram",
+    "files": {
+      "SKILL.md": {
+        "sha256": "e654e190e58178d5b9a6d28f20b320afdb425df22c1335a8c4c0aebb84d9f893",
         "executable": false
       }
     }
@@ -305,6 +416,19 @@
       }
     }
   },
+  "full-flow": {
+    "path": "skills/engineering/full-flow",
+    "files": {
+      "SKILL.md": {
+        "sha256": "87452e2078d5e8e09867c7d2a61f0b25600c664f24f30a21ac0cc43513532918",
+        "executable": false
+      },
+      "agents/openai.yaml": {
+        "sha256": "3ce2c53256e040b38b10336bd7ce198c2af92ad3b82a730956a522324e4f0b1e",
+        "executable": false
+      }
+    }
+  },
   "full-send": {
     "path": "skills/engineering/full-send",
     "files": {
@@ -327,6 +451,15 @@
       },
       "agents/openai.yaml": {
         "sha256": "6029e872a883aa06aad3426ab58289df016e4b0d23485719c71152603fec7d35",
+        "executable": false
+      }
+    }
+  },
+  "future-project": {
+    "path": "skills/knowledge/future-project",
+    "files": {
+      "SKILL.md": {
+        "sha256": "f6fb84b1459f9c9ba98489c847e0da42ab00ecb313ff039ce9bb9aed4a5500c7",
         "executable": false
       }
     }
@@ -407,6 +540,15 @@
       },
       "references/field-guide.md": {
         "sha256": "f2f2633b2ca7d5531bbe7072922b11757b78fdb349561feb376a716338082fcb",
+        "executable": false
+      }
+    }
+  },
+  "good-morning": {
+    "path": "skills/operations/good-morning",
+    "files": {
+      "SKILL.md": {
+        "sha256": "95af16d729850dd3b54f6c7aa71067596bac3a7280d107e48cef467b9229fa98",
         "executable": false
       }
     }
@@ -1113,6 +1255,62 @@
       }
     }
   },
+  "hooks": {
+    "path": "skills/writing/hooks",
+    "files": {
+      "SKILL.md": {
+        "sha256": "94b8d1a6fd6a2e8045b563b8a7897e5716a0cae9b3dbba3b54c03f8cf6ef1c0f",
+        "executable": false
+      }
+    }
+  },
+  "idea": {
+    "path": "skills/knowledge/idea",
+    "files": {
+      "SKILL.md": {
+        "sha256": "bc725bb85df19a87f9424a58efc2ed374c7aba4233825ab30008620f3940817b",
+        "executable": false
+      }
+    }
+  },
+  "image-prompt-builder": {
+    "path": "skills/creative/image-prompt-builder",
+    "files": {
+      "SKILL.md": {
+        "sha256": "11d43fb60882e3b17e0c975c816a1ee0933c1a388e9889481fb9657fba174b1f",
+        "executable": false
+      },
+      "references/architecture-interior-terminology.md": {
+        "sha256": "07764f37c786d5c85e6d4b4c63294d59ecc5f7a60edaeacfd75d82238f98aa1e",
+        "executable": false
+      },
+      "references/editorial-layout-terminology.md": {
+        "sha256": "e0673d3487e8bb99fa4a381af54caaf835361d0e4b75e8a7d2ab64a62cc8c18b",
+        "executable": false
+      },
+      "references/higgsfield-omni-reference-syntax.md": {
+        "sha256": "06da26038bd772bb040b3569f505b1c60871b6c760f0feeb7a9c059718b29acd",
+        "executable": false
+      },
+      "references/lighting-and-color.md": {
+        "sha256": "50250bb32a8cbd2db369622428b1e0566ab345ee3acfde259d47a04a361d40da",
+        "executable": false
+      },
+      "references/photography-terminology.md": {
+        "sha256": "e1cfbe25f646591e19bdc3ce6189240c48d8e0263690d9bb81123de006907dee",
+        "executable": false
+      }
+    }
+  },
+  "ingest": {
+    "path": "skills/knowledge/ingest",
+    "files": {
+      "SKILL.md": {
+        "sha256": "1731dab321864bf6963034682bb85fb5fc134e472a7479f5025d0d7f9b3d460d",
+        "executable": false
+      }
+    }
+  },
   "issue-work-log": {
     "path": "skills/operations/issue-work-log",
     "files": {
@@ -1134,6 +1332,33 @@
       },
       "scripts/proof_manifest.py": {
         "sha256": "96dea849c7a5c86bf3223ba2f22dc14b637ef1a233c441f91fbebd863f1dae6d",
+        "executable": false
+      }
+    }
+  },
+  "json-prompt-generator": {
+    "path": "skills/creative/json-prompt-generator",
+    "files": {
+      "SKILL.md": {
+        "sha256": "8abec61caf03b5bc4f3cbe45c9e3adc9525e8da8eef49495ed493ad7efc1c1cc",
+        "executable": false
+      }
+    }
+  },
+  "keystone": {
+    "path": "skills/operations/keystone",
+    "files": {
+      "SKILL.md": {
+        "sha256": "1343d842f22f80683666dc366d02521d8052685d02fe4f3046f7e8e5c8183db2",
+        "executable": false
+      }
+    }
+  },
+  "knowledge-capture": {
+    "path": "skills/knowledge/knowledge-capture",
+    "files": {
+      "SKILL.md": {
+        "sha256": "88d4954b7e752b7550889c91c7bb5b2b9f18e5a0c54dfd3bf7e97481c3023002",
         "executable": false
       }
     }
@@ -1169,6 +1394,15 @@
     "files": {
       "SKILL.md": {
         "sha256": "60a220c1ef42682cacd29f6cafe2472d1ec0b0c6b729da2725ecd46c7c11ea5e",
+        "executable": false
+      }
+    }
+  },
+  "lint": {
+    "path": "skills/knowledge/lint",
+    "files": {
+      "SKILL.md": {
+        "sha256": "b6b3e6f8ef752259a97e127c13c0a92e6bbf9e63dbb0d4010f5dde3e3fed2357",
         "executable": false
       }
     }
@@ -1282,6 +1516,15 @@
       }
     }
   },
+  "obsidian-mind": {
+    "path": "skills/knowledge/obsidian-mind",
+    "files": {
+      "SKILL.md": {
+        "sha256": "89e4d0ba370b96acdfc9acc6a0d97c14fef82f64314c85cea1aaada23bf997ed",
+        "executable": false
+      }
+    }
+  },
   "osiris-brand": {
     "path": "skills/creative/osiris-brand",
     "files": {
@@ -1375,6 +1618,32 @@
       }
     }
   },
+  "pitch-deck-pdf": {
+    "path": "skills/creative/pitch-deck-pdf",
+    "files": {
+      "SKILL.md": {
+        "sha256": "ef2c534ddf232027f51fead063e63b1151a1c2a0ac11908c9d614c07a1c7d223",
+        "executable": false
+      },
+      "design.md": {
+        "sha256": "f70f740ae1cbfaa0e87a4ec914410cbb49829bc9df11214dfbed02bf351220bc",
+        "executable": false
+      },
+      "slides.md": {
+        "sha256": "4b07f9cec66273a59f77cc0842e3b581675b8aab4e5450dafe0f8fa3a2621087",
+        "executable": false
+      }
+    }
+  },
+  "power-list": {
+    "path": "skills/operations/power-list",
+    "files": {
+      "SKILL.md": {
+        "sha256": "a448fe6c7bd02be165fd59ceb924002d67ae520d219539b1368b0f90e7dbd183",
+        "executable": false
+      }
+    }
+  },
   "product-motion": {
     "path": "skills/creative/product-motion",
     "files": {
@@ -1422,6 +1691,24 @@
       },
       "references/workflow.md": {
         "sha256": "d417cd68e23618192332ce1391707a829cb29ab5e8988a31b8260219cf377b98",
+        "executable": false
+      }
+    }
+  },
+  "reference": {
+    "path": "skills/creative/reference",
+    "files": {
+      "SKILL.md": {
+        "sha256": "0414341bd92583af1f03c379f94784229e9eb8bf077d5f1a2c69b69881a7ae1f",
+        "executable": false
+      }
+    }
+  },
+  "refresh": {
+    "path": "skills/operations/refresh",
+    "files": {
+      "SKILL.md": {
+        "sha256": "a0483432c346ddbd45353052cda31bbfbfb3a48f23bc90acc2db8d0aba75186e",
         "executable": false
       }
     }
@@ -1590,6 +1877,28 @@
       },
       "references/access.md": {
         "sha256": "887163014a73542521cf00ebf857134369b9746404e8fd5af2ea0401d6ed2182",
+        "executable": false
+      }
+    }
+  },
+  "scene-engine": {
+    "path": "skills/legacy/scene-engine",
+    "files": {
+      "SKILL.md": {
+        "sha256": "122d9ad23a8989571436ea004ec7863dd7297882a96a50a845a40b5cb532d3c6",
+        "executable": false
+      }
+    }
+  },
+  "ship-live": {
+    "path": "skills/engineering/ship-live",
+    "files": {
+      "SKILL.md": {
+        "sha256": "ab13daf2f46fa5905397a69589446ce434673395f84990c18b48b85158608289",
+        "executable": false
+      },
+      "agents/openai.yaml": {
+        "sha256": "4547521b325de1908b36f687698b2381ce31d29a300bfa66a80d4aae3bffdd2f",
         "executable": false
       }
     }
@@ -3094,6 +3403,15 @@
       }
     }
   },
+  "team-standup": {
+    "path": "skills/operations/team-standup",
+    "files": {
+      "SKILL.md": {
+        "sha256": "bbe474d0f1ca194cc6e2fb26f4aa78f16eb8cbbad17a09ab7ef72c6421ac1d4b",
+        "executable": false
+      }
+    }
+  },
   "tesseract-design": {
     "path": "skills/creative/tesseract-design",
     "files": {
@@ -3454,6 +3772,54 @@
       }
     }
   },
+  "therapy": {
+    "path": "skills/operations/therapy",
+    "files": {
+      "SKILL.md": {
+        "sha256": "bc314be7b8efdb43c7bd06f3edad6da7c8c0bb97aef8b98dc18334403d3cc241",
+        "executable": false
+      }
+    }
+  },
+  "title": {
+    "path": "skills/writing/title",
+    "files": {
+      "SKILL.md": {
+        "sha256": "1ebb5c2b469f001b9110d9d2ce91445d4a1b435153049322a8d441ef7e69d9e4",
+        "executable": false
+      },
+      "reference/humanizer-blacklist.md": {
+        "sha256": "bb7d5883cb3170498b0def815cf7410e22f9e96391aa5f25e521b9d727f0d306",
+        "executable": false
+      },
+      "reference/reference-titles.md": {
+        "sha256": "57a5c01cc47bda242e0b75acbd72dda77e5e5d674f3c39771c225b57c04b769e",
+        "executable": false
+      },
+      "reference/techniques.md": {
+        "sha256": "87d4b6800a26256f961f4cd10b1df5603e76f2b41c8f29e479cffe15f1ad51da",
+        "executable": false
+      }
+    }
+  },
+  "training": {
+    "path": "skills/operations/training",
+    "files": {
+      "SKILL.md": {
+        "sha256": "5e5da2ae662d7e14c9a0b4b8a6557cab70dbe39d7c4c650b06db4ce2fe7eb788",
+        "executable": false
+      }
+    }
+  },
+  "triage": {
+    "path": "skills/operations/triage",
+    "files": {
+      "SKILL.md": {
+        "sha256": "d5c3699759cd400bb2210d9bdd37ea5efeb5e90e6563d2eae004e652b2aad338",
+        "executable": false
+      }
+    }
+  },
   "unslop": {
     "path": "skills/writing/unslop",
     "files": {
@@ -3496,6 +3862,33 @@
       }
     }
   },
+  "usage": {
+    "path": "skills/tools/usage",
+    "files": {
+      "SKILL.md": {
+        "sha256": "488240d7a5452501409436140938f814c5ae0298a7de17c21867b275c9ac72ca",
+        "executable": false
+      }
+    }
+  },
+  "vault-research": {
+    "path": "skills/knowledge/vault-research",
+    "files": {
+      "SKILL.md": {
+        "sha256": "8dc5c0cc1904220ce4120d1986c9084f7afbe6c466da5d8d9423e7d8732ef3ee",
+        "executable": false
+      }
+    }
+  },
+  "verify": {
+    "path": "skills/tools/verify",
+    "files": {
+      "SKILL.md": {
+        "sha256": "2f095979e645df29d043c23fb33ee08ce443c94337731353b449540941d1b4b0",
+        "executable": false
+      }
+    }
+  },
   "veronica": {
     "path": "skills/operations/veronica",
     "files": {
@@ -3525,6 +3918,35 @@
       },
       "references/profiles/radhika.md": {
         "sha256": "fd7469a673d68aa72b89e9b26f980e1276f45a6fac83326794a4c99014fe0d46",
+        "executable": false
+      }
+    }
+  },
+  "visual": {
+    "path": "skills/creative/visual",
+    "files": {
+      "SKILL.md": {
+        "sha256": "eb0d87f6b0702f1f1ec6acdf80c30ac2d737ce1c5cc572e97ec9fc9c1e4f0d96",
+        "executable": false
+      },
+      "references/architecture-interior-terminology.md": {
+        "sha256": "07764f37c786d5c85e6d4b4c63294d59ecc5f7a60edaeacfd75d82238f98aa1e",
+        "executable": false
+      },
+      "references/editorial-layout-terminology.md": {
+        "sha256": "e0673d3487e8bb99fa4a381af54caaf835361d0e4b75e8a7d2ab64a62cc8c18b",
+        "executable": false
+      },
+      "references/higgsfield-omni-reference-syntax.md": {
+        "sha256": "06da26038bd772bb040b3569f505b1c60871b6c760f0feeb7a9c059718b29acd",
+        "executable": false
+      },
+      "references/lighting-and-color.md": {
+        "sha256": "50250bb32a8cbd2db369622428b1e0566ab345ee3acfde259d47a04a361d40da",
+        "executable": false
+      },
+      "references/photography-terminology.md": {
+        "sha256": "e1cfbe25f646591e19bdc3ce6189240c48d8e0263690d9bb81123de006907dee",
         "executable": false
       }
     }

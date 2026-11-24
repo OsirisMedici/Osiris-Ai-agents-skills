@@ -1,0 +1,4 @@
+interface:
+  display_name: "Ship live"
+  short_description: "Ship finished code to the official team app"
+  default_prompt: "Use $ship-live to deploy the finished changes from this chat to the official running app and verify that the team can use them."

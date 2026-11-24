@@ -1,0 +1,4 @@
+interface:
+  display_name: "Full Flow"
+  short_description: "Turn an outcome into built, reviewed and tested work"
+  default_prompt: "Use $full-flow to take this outcome through clarification, spec, tickets, implementation, review and retro while I am busy."
